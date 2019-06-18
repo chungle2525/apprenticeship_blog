@@ -1,7 +1,7 @@
 ---
 title: "Day 1"
 date: 2019-06-17T15:50:23+02:00
-draft: true
+draft: false
 ---
 My first day at HolidayCheck went really well, my first impression of the company was really great!
 
