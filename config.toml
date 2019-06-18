@@ -1,4 +1,5 @@
 baseURL = "https://leahchung.netlify.com/"
 languageCode = "en-us"
 title = "My apprenticeship"
+disqusShortname = "disqus_QGzhyqe5Uc"
 theme = "ananke"
