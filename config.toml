@@ -1,5 +1,6 @@
 baseURL = "http:leahchung.netlify.com"
 title = "My apprenticeship"
+author = "Leah Chung"
 # for smart copyright line, leave this blank and check [params.copyright]
 copyright = ""
 
@@ -128,3 +129,11 @@ hrefTargetBlank = true
 lang = "en"
 languageName = "English"
 weight = 1
+
+[outputs]
+home = [ "RSS", "HTML"]
+
+[outputFormats]
+[outputFormats.RSS]
+mediatype = "application/rss"
+baseName = "rss"
