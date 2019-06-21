@@ -1,20 +1,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on My apprenticeship</title>
-    <link>http:leahchung.netlify.com/posts/</link>
+    <link>https://leahchung.netlify.com/posts/</link>
     <description>Recent content in Posts on My apprenticeship</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Wed, 19 Jun 2019 15:50:23 +0200</lastBuildDate>
     
-        <atom:link href="http://leahchung.netlify.com/rss.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://leahchung.netlify.com/posts/rss.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Day 3</title>
-      <link>http:leahchung.netlify.com/posts/day3/</link>
+      <link>https://leahchung.netlify.com/posts/day3/</link>
       <pubDate>Wed, 19 Jun 2019 15:50:23 +0200</pubDate>
       
-      <guid>http:leahchung.netlify.com/posts/day3/</guid>
+      <guid>https://leahchung.netlify.com/posts/day3/</guid>
       <description>&lt;p&gt;Piling things onto my TODO list&lt;/p&gt;
 
 &lt;p&gt;My main focus today was to work on my blog. I deployed it to netlify yesterday (thank you to the former/current apprentice(s) for the recommendation), but it was a very simply blog theme. Today I worked on making it prettier :).&lt;/p&gt;
@@ -36,10 +36,10 @@
     
     <item>
       <title>Days 1 &amp; 2</title>
-      <link>http:leahchung.netlify.com/posts/my-first-post/</link>
+      <link>https://leahchung.netlify.com/posts/my-first-post/</link>
       <pubDate>Tue, 18 Jun 2019 15:50:23 +0200</pubDate>
       
-      <guid>http:leahchung.netlify.com/posts/my-first-post/</guid>
+      <guid>https://leahchung.netlify.com/posts/my-first-post/</guid>
       <description>&lt;p&gt;My first couple of days at HolidayCheck went really well, my first impression of the company was really great!&lt;/p&gt;
 
 &lt;p&gt;Upon arrival at HolidayCheck, I was greeted by current and former software engineer apprentices. After short introductions, I was shown to my desk. My equipment was all set, and I even recieved some gifts from the company! I was then introduced to everyone that Peri and I could find. There are many people and many names&amp;hellip; but the &amp;ldquo;National Specialties BBQ&amp;rdquo; helped me familiarize myself with some of the employees.&lt;/p&gt;
