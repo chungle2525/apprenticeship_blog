@@ -19,11 +19,7 @@
           {{- partial "extras/widget_area" ( dict "Widgets" $headerWidgets "Scope" . ) -}}
         </div>
         <div class='container'>
-          {{ if .RSSLink }}
-            <link href='{{.RSSLink}}' rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
-          {{ else if .Site.RSSLink }}
-            <link href='{{.RSSLink}}' rel="home" type="application/rss+xml" title="{{ .Site.Title }}" />
-          {{ end }}
+          <link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
         </div>
       </div>
 
