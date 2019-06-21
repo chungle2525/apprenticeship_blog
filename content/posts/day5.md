@@ -1,5 +1,6 @@
 ---
 title: "Day 5: FINALLY!!"
+layout: rss
 date: 2019-06-21T15:50:23+02:00
 draft: false
 ---

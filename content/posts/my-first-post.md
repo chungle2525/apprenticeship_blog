@@ -1,5 +1,6 @@
 ---
 title: "Days 1 & 2"
+layout: rss
 date: 2019-06-18T15:50:23+02:00
 draft: false
 ---

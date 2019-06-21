@@ -1,5 +1,6 @@
 ---
 title: "Day 3"
+layout: rss
 date: 2019-06-19T15:50:23+02:00
 draft: false
 ---
