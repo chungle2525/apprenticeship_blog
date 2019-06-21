@@ -4,10 +4,36 @@
     <link>https://leahchung.netlify.com/rss.xml</link>
     <description>Recent content on My apprenticeship</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 19 Jun 2019 15:50:23 +0200</lastBuildDate>
+    <lastBuildDate>Fri, 21 Jun 2019 15:50:23 +0200</lastBuildDate>
     
         <atom:link href="https://leahchung.netlify.com/rss.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Day 5: FINALLY!!</title>
+      <link>https://leahchung.netlify.com/posts/day5/</link>
+      <pubDate>Fri, 21 Jun 2019 15:50:23 +0200</pubDate>
+      
+      <guid>https://leahchung.netlify.com/posts/day5/</guid>
+      <description>&lt;p&gt;The title of this blog post does not refer to my feelings about this week being over. It refers to my feelings about successfully setting up the RSS for my blog (Thank you to my PPM Alvaro for suggesting better blog post titles. Your suggestion was well-received).&lt;/p&gt;
+
+&lt;p&gt;Today:&lt;br /&gt;
+After trying many methods to make my RSS feed link valid, I finally (FINALLY!) came to the solution which was in my config.toml file. The base URL was &amp;ldquo;http:leahchung.netlify.com&amp;rdquo; rather than &amp;ldquo;&lt;a href=&#34;https://leahchung.netlify.com&amp;quot;&#34; target=&#34;_blank&#34;&gt;https://leahchung.netlify.com&amp;quot;&lt;/a&gt;. Silly me. This one small change proved hours&amp;rsquo; worth of work to be useless, but that makes it all the more satisfying to see the green &amp;ldquo;congratulations!&amp;rdquo; on the page of the RSS-feed-link-validator website. Here is the link so if you want to share my joy: &lt;a href=&#34;https://validator.w3.org/feed/check.cgi?url=https%3A//leahchung.netlify.com/rss.xml&#34; target=&#34;_blank&#34;&gt;https://validator.w3.org/feed/check.cgi?url=https%3A//leahchung.netlify.com/rss.xml&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Next week:&lt;br /&gt;
+Next week, I plan to start my journey with Haskell. I got some recommendations to use Haskell Book which includes a lot of exercises. This sounds like it would be good for me because I learn best by doing (and doing again). I was also reminded that I can change my language at any time, so if I find Haskell too hair-pulling or unenjoyable, then I can switch to another.&lt;br /&gt;
+I also plan to start reading Software Craftsmanship and order a public speaking book. Public speaking is something that I have experience with because I taught discussion sections to students when I was an instructional aide at my University. Despite my practice, I am nowhere near perfect. It still frightens me, so hopefully a book will help calm some of these nerves.&lt;br /&gt;
+I also have to get better at the dailies. Wolfram suggested doing some research and deciding how to use the 15 minutes to gain/give as much as I can.&lt;/p&gt;
+
+&lt;p&gt;My first week:&lt;br /&gt;
+I can&amp;rsquo;t believe my first week at HolidayCheck is coming to an end! This week was filled with a lot of firsts for me. I joined my first (and second) coding kata, participated in my first mob programming session, made a lot of first impressions, and started my first real job (!). I plan to have many more firsts during my apprenticeship at HolidayCheck, and I&amp;rsquo;m really excited! In addition to all of this, I set up my blog, came up with an agenda for the next two months with Peri, and worked out ALMOST all of the administrative stuff (I just need that darn tax ID&amp;hellip;). Overall, I had a really good first week at HolidayCheck.&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;m excited for what is to come, but for now&amp;hellip;&lt;br /&gt;
+Prost to the freakin&amp;rsquo; weekend! (A Rihanna lyric with a German twist)&lt;/p&gt;
+
+&lt;p&gt;.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Day 3</title>
