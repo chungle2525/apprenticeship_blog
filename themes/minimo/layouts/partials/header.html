@@ -20,9 +20,9 @@
         </div>
         <div class='container'>
           {{ if .RSSLink }}
-            <link href="http://leahchung.netlify.com/rss.xml" rel="alternate" type="application/atom+xml" title="{{ .Site.Title }}" />
+            <link href={{.RSSLink}} rel="alternate" type="application/atom+xml" title="{{ .Site.Title }}" />
           {{ else if .Site.RSSLink }}
-            <link href="http://leahchung.netlify.com/rss.xml" rel="home" type="application/atom+xml" title="{{ .Site.Title }}" />
+            <link href={{.RSSLink}} rel="home" type="application/atom+xml" title="{{ .Site.Title }}" />
           {{ end }}
         </div>
       </div>
