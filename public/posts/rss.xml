@@ -4,60 +4,95 @@
     <link>https://leahchung.netlify.com/posts/</link>
     <description>Recent content in Posts on Leah&#39;s apprenticeship</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 21 Jun 2019 15:50:23 +0200</lastBuildDate>
+    <lastBuildDate>Mon, 24 Jun 2019 15:50:23 +0200</lastBuildDate>
     
         <atom:link href="https://leahchung.netlify.com/posts/rss.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Day 5: FINALLY!!</title>
+      <title>Day 5: Software Crafter and Haskell Programming</title>
       <link>https://leahchung.netlify.com/posts/day5/</link>
-      <pubDate>Fri, 21 Jun 2019 15:50:23 +0200</pubDate>
+      <pubDate>Mon, 24 Jun 2019 15:50:23 +0200</pubDate>
       
       <guid>https://leahchung.netlify.com/posts/day5/</guid>
-      <description>&lt;p&gt;The title of this blog post does not refer to my feelings about this week being over. It refers to my feelings about successfully setting up the RSS for my blog (Thank you to my PPM Alvaro for suggesting better blog post titles. Your suggestion was well-received).&lt;/p&gt;
-
-&lt;p&gt;Today:&lt;br /&gt;
-After trying many methods to make my RSS feed link valid, I finally (FINALLY!) came to the solution which was in my config.toml file. The base URL was &amp;ldquo;http:leahchung.netlify.com&amp;rdquo; rather than &amp;ldquo;&lt;a href=&#34;https://leahchung.netlify.com&amp;quot;&#34; target=&#34;_blank&#34;&gt;https://leahchung.netlify.com&amp;quot;&lt;/a&gt;. Silly me. This one small change proved hours&amp;rsquo; worth of work to be useless, but that makes it all the more satisfying to see the green &amp;ldquo;congratulations!&amp;rdquo; on the page of the RSS-feed-link-validator website. Here is the link so if you want to share my joy: &lt;a href=&#34;https://validator.w3.org/feed/check.cgi?url=https%3A//leahchung.netlify.com/rss.xml&#34; target=&#34;_blank&#34;&gt;https://validator.w3.org/feed/check.cgi?url=https%3A//leahchung.netlify.com/rss.xml&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Next week:&lt;br /&gt;
-Next week, I plan to start my journey with Haskell. I got some recommendations to use Haskell Book which includes a lot of exercises. This sounds like it would be good for me because I learn best by doing (and doing again). I was also reminded that I can change my language at any time, so if I find Haskell too hair-pulling or unenjoyable, then I can switch to another.&lt;br /&gt;
-I also plan to start reading Software Craftsmanship and order a public speaking book. Public speaking is something that I have experience with because I taught discussion sections to students when I was an instructional aide at my University. Despite my practice, I am nowhere near perfect. It still frightens me, so hopefully a book will help calm some of these nerves.&lt;br /&gt;
-I also have to get better at the dailies. Wolfram suggested doing some research and deciding how to use the 15 minutes to gain/give as much as I can.&lt;/p&gt;
-
-&lt;p&gt;My first week:&lt;br /&gt;
-I can&amp;rsquo;t believe my first week at HolidayCheck is coming to an end! This week was filled with a lot of firsts for me. I joined my first (and second) coding kata, participated in my first mob programming session, made a lot of first impressions, and started my first real job (!). I plan to have many more firsts during my apprenticeship at HolidayCheck, and I&amp;rsquo;m really excited! In addition to all of this, I set up my blog, came up with an agenda for the next two months with Peri, and worked out ALMOST all of the administrative stuff (I just need that darn tax ID&amp;hellip;). Overall, I had a really good first week at HolidayCheck.&lt;/p&gt;
-
-&lt;p&gt;I&amp;rsquo;m excited for what is to come, but for now&amp;hellip;&lt;br /&gt;
-Prost to the freakin&amp;rsquo; weekend! (A Rihanna lyric with a German twist)&lt;/p&gt;
-
-&lt;p&gt;.&lt;/p&gt;
+      <description>&lt;p&gt;Today I started reading The Software [Crafter] by Sandro Mancuso.
+&lt;br&gt;&lt;br&gt;
+Something that I find really interesting is the fact that &#34;seniority&#34; was measured by how incomprehensible one could make their code. If people did not understand some code, they immediately attributed it to the author&#39;s skill or wit. Equipped with this mindset, Sandro was very eager to please and impress his manager Namur when he started at a new company on a new team. He was given a task to complete in one week, created a working solution in two days, and proudly approached Namur for feedback. Sandro received a lot of feedback, but none of it was what he was anticipating. He was especially taken aback when Namur called the clever segment of code (created to try to impress Namur by being complicated and difficult to understand) &#34;disrespectful.&#34;
+&lt;br&gt;&lt;br&gt;
+It is interesting to see how the norms and mentalities have changed. In contrast to the former egocentric and uninclusive mindset, the modern developer has to collaborate and communicate and hold the mentality that they are working towards the same goal as their teammates. This is something that I fully understand and agree with, but I have little experience with it. The solutions to my university projects never had to be explained. Even when I worked on a team, the responsibilities were split and each person only cared for their own tasks. There was never the need or desire to refactor code, as nobody cared to make their solution better or more readable if they already recieved a grade and had moved on to a new project. We worked with the mentality that no one would ever really look at our code (apart from the graders who were usually also students and, quite frankly, trying get their work done as quickly as possible).
+&lt;br&gt;&lt;br&gt;
+This is something that should be emphasized in a computer science degree because working on a team is very often a requirement in this (and any other) industry. But, as of now, this is something that I know I will have to work on when I start working on a team. I&#39;m fully prepared for other eyes reviewing my code and giving feedback on how to make it better.
+&lt;br&gt;&lt;br&gt;
+The rest of my time was spent with the Haskell Programming book.
+The first chapter of the Haskell Programming book goes over lambda calculus. I have completed a unit on functional programming, and therefore lambda calculus, while at University, so this was not too foreign to me. Reading the chapter refreshed my memory, and I was able to work through the practice problems with no (or maybe a little) struggle. I just have to remember to evaluate the leftmost and &lt;i&gt;outermost&lt;/i&gt; lambdas first (normal order).
+&lt;br&gt;&lt;br&gt;
+Tomorrow is more of the same. I will continue reading the Software Crafter book and the Haskell Programming book. I setup my computer for the practice problems in the following chapter. Hopefully with these problems I will be able to integrate some vim and bash learning.
+&lt;br&gt;&lt;br&gt;
+Isn&#39;t it crazy that every weekday is so perfect and sunny, but every weekend is cloudy and/or rainy? When will this madness stop???? For some totally shocking information, please take a look at your Munich weather forecast for this weekend :)
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;/p&gt;
 </description>
     </item>
     
     <item>
-      <title>Day 3</title>
+      <title>Day 4: FINALLY!!</title>
+      <link>https://leahchung.netlify.com/posts/day4md/</link>
+      <pubDate>Fri, 21 Jun 2019 15:50:23 +0200</pubDate>
+      
+      <guid>https://leahchung.netlify.com/posts/day4md/</guid>
+      <description>&lt;p&gt;
+The title of this blog post does not refer to my feelings about this week being over. It refers to my feelings about successfully setting up the RSS for my blog (Thank you to my PPM Alvaro for suggesting better blog post titles. Your suggestion was well-received).
+&lt;br&gt;&lt;br&gt;
+Today:&lt;br&gt;
+After trying many methods to make my RSS feed link valid, I finally (FINALLY!) came to the solution which was in my config.toml file. The base URL was &#34;http:leahchung.netlify.com&#34; rather than &#34;https://leahchung.netlify.com&#34;. Silly me. This one small change proved hours&#39; worth of work to be useless, but that makes it all the more satisfying to see the green &#34;congratulations!&#34; on the page of the RSS-feed-link-validator website. Here is the link so if you want to share my joy: https://validator.w3.org/feed/check.cgi?url=https%3A//leahchung.netlify.com/rss.xml
+&lt;br&gt;&lt;br&gt;
+
+Next week:&lt;br&gt;
+Next week, I plan to start my journey with Haskell. I got some recommendations to use Haskell Book which includes a lot of exercises. This sounds like it would be good for me because I learn best by doing (and doing again). I was also reminded that I can change my language at any time, so if I find Haskell too hair-pulling or unenjoyable, then I can switch to another.  
+I also plan to start reading Software Craftsmanship and order a public speaking book. Public speaking is something that I have experience with because I taught discussion sections to students when I was an instructional aide at my University. Despite my practice, I am nowhere near perfect. It still frightens me, so hopefully a book will help calm some of these nerves.  
+I also have to get better at the dailies. Wolfram suggested doing some research and deciding how to use the 15 minutes to gain/give as much as I can.
+&lt;br&gt;&lt;br&gt;
+My first week:&lt;br&gt;  
+I can&#39;t believe my first week at HolidayCheck is coming to an end! This week was filled with a lot of firsts for me. I joined my first (and second) coding kata, participated in my first mob programming session, made a lot of first impressions, and started my first real job (!). I plan to have many more firsts during my apprenticeship at HolidayCheck, and I&#39;m really excited! In addition to all of this, I set up my blog, came up with an agenda for the next two months with Peri, and worked out ALMOST all of the administrative stuff (I just need that darn tax ID...). Overall, I had a really good first week at HolidayCheck.
+&lt;br&gt;&lt;br&gt;
+I&#39;m excited for what is to come, but for now...  
+Prost to the freakin&#39; weekend! (A Rihanna lyric with a German twist)
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Day 3: Piling things onto my TODO list</title>
       <link>https://leahchung.netlify.com/posts/day3/</link>
       <pubDate>Wed, 19 Jun 2019 15:50:23 +0200</pubDate>
       
       <guid>https://leahchung.netlify.com/posts/day3/</guid>
-      <description>&lt;p&gt;Piling things onto my TODO list&lt;/p&gt;
-
-&lt;p&gt;My main focus today was to work on my blog. I deployed it to netlify yesterday (thank you to the former/current apprentice(s) for the recommendation), but it was a very simply blog theme. Today I worked on making it prettier :).&lt;/p&gt;
-
-&lt;p&gt;I also met with my mentor, Peri, today. We went over my self-assessment and starting talking about my areas of focus for the next two months. My first area of concern is tooling. When it comes to git, vim and bash, I only know the things that I needed for my University projects. I never quite understood why I was doing the things I was. Then comes testing. The idea that was engrained in my head by my professors is to write tests before you write code. This is something that was always emphasized, but never enforced. Since I was eager to solve the problems, I RARELY did this. And by rarely I mean once or twice. As a result, I never learned how to write good test cases. There were requirements for our test cases to break the instructors&amp;rsquo; buggy code, but these were often completed last-minute, and therefore with little consideration.&lt;/p&gt;
-
-&lt;p&gt;The language I chose to learn is Haskell. I have some experience with functional programming but not enough to be comfortable with it. I think learning Haskell will be a challenge for me as it is for many people accustomed to, well, anything but functional programming.&lt;/p&gt;
-
-&lt;p&gt;So, to kill three birds with one stone, I will go through a Haskell book that has exercises and incorporate tests and tools when possible.&lt;/p&gt;
-
-&lt;p&gt;When this all gets overwhelming or boring, I intend to read The Software Crafter and a book on public speaking (More on this later).&lt;/p&gt;
-
-&lt;p&gt;Now, time for a day off. How convenient that I started work on a week with a public holiday :) - though this was completely a coincidence, I swear.&lt;/p&gt;
-
-&lt;p&gt;Since I spent a little more time on prettifying my blog, I will work on adding it to the HolidayCheck Apprentice page on Friday.&lt;/p&gt;
-
-&lt;p&gt;Ciao!&lt;/p&gt;</description>
+      <description>&lt;p&gt;
+My main focus today was to work on my blog. I deployed it to netlify yesterday (thank you to the former/current apprentice(s) for the recommendation), but it was a very simply blog theme. Today I worked on making it prettier :).
+&lt;br&gt;&lt;br&gt;
+I also met with my mentor, Peri, today. We went over my self-assessment and starting talking about my areas of focus for the next two months. My first area of concern is tooling. When it comes to git, vim and bash, I only know the things that I needed for my University projects. I never quite understood why I was doing the things I was. Then comes testing. The idea that was engrained in my head by my professors is to write tests before you write code. This is something that was always emphasized, but never enforced. Since I was eager to solve the problems, I RARELY did this. And by rarely I mean once or twice. As a result, I never learned how to write good test cases. There were requirements for our test cases to break the instructors&#39; buggy code, but these were often completed last-minute, and therefore with little consideration.
+&lt;br&gt;&lt;br&gt;
+The language I chose to learn is Haskell. I have some experience with functional programming but not enough to be comfortable with it. I think learning Haskell will be a challenge for me as it is for many people accustomed to, well, anything but functional programming.
+&lt;br&gt;&lt;br&gt;
+So, to kill three birds with one stone, I will go through a Haskell book that has exercises and incorporate tests and tools when possible.
+&lt;br&gt;&lt;br&gt;
+When this all gets overwhelming or boring, I intend to read The Software Crafter and a book on public speaking (More on this later).
+&lt;br&gt;&lt;br&gt;
+Now, time for a day off. How convenient that I started work on a week with a public holiday :) - though this was completely a coincidence, I swear.
+&lt;br&gt;&lt;br&gt;
+Since I spent a little more time on prettifying my blog, I will work on adding it to the HolidayCheck Apprentice page on Friday.
+&lt;br&gt;&lt;br&gt;
+Ciao!
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -66,20 +101,26 @@ Prost to the freakin&amp;rsquo; weekend! (A Rihanna lyric with a German twist)&l
       <pubDate>Tue, 18 Jun 2019 15:50:23 +0200</pubDate>
       
       <guid>https://leahchung.netlify.com/posts/my-first-post/</guid>
-      <description>&lt;p&gt;My first couple of days at HolidayCheck went really well, my first impression of the company was really great!&lt;/p&gt;
-
-&lt;p&gt;Upon arrival at HolidayCheck, I was greeted by current and former software engineer apprentices. After short introductions, I was shown to my desk. My equipment was all set, and I even recieved some gifts from the company! I was then introduced to everyone that Peri and I could find. There are many people and many names&amp;hellip; but the &amp;ldquo;National Specialties BBQ&amp;rdquo; helped me familiarize myself with some of the employees.&lt;/p&gt;
-
-&lt;p&gt;I got the chance to spend a lot of time with my PPM, Alvaro, throughout the day. He answered all the questions I had (and I&amp;rsquo;m sure many more to come), talked about his experience at HolidayCheck, and made me feel really comfortable with the whole onboarding process.&lt;/p&gt;
-
-&lt;p&gt;The rest of my time is spent going through a checklist of tasks from Wolfram, which consists of various things from exploring Logbook to organising a social event. I think I am making pretty good progress.
-Some of my tasks for the week are create a blog, write a blog post every day, and start a self-organization method. The self-organization method will take some research and consideration (right now I am just using the Notes app to keep track of things I want to accomplish today)&amp;hellip; so more on that later.&lt;/p&gt;
-
-&lt;p&gt;My plans for the rest of the day are to add my blog to HolidayCheck&amp;rsquo;s apprenticeship page, complete the self assessment, and ENJOY THE WEATHER!&lt;/p&gt;
-
-&lt;p&gt;Everyone has been super friendly and open, which has made the transition of starting a new job in a new country extremely pleasant. I&amp;rsquo;m excited for what is to come!&lt;/p&gt;
-
-&lt;p&gt;Bis Morgen:)&lt;/p&gt;</description>
+      <description>&lt;p&gt;
+My first couple of days at HolidayCheck went really well, my first impression of the company was really great!
+&lt;br&gt;&lt;br&gt;
+Upon arrival at HolidayCheck, I was greeted by current and former software engineer apprentices. After short introductions, I was shown to my desk. My equipment was all set, and I even recieved some gifts from the company! I was then introduced to everyone that Peri and I could find. There are many people and many names... but the &#34;National Specialties BBQ&#34; helped me familiarize myself with some of the employees.
+&lt;br&gt;&lt;br&gt;
+I got the chance to spend a lot of time with my PPM, Alvaro, throughout the day. He answered all the questions I had (and I&#39;m sure many more to come), talked about his experience at HolidayCheck, and made me feel really comfortable with the whole onboarding process.
+&lt;br&gt;&lt;br&gt;
+The rest of my time is spent going through a checklist of tasks from Wolfram, which consists of various things from exploring Logbook to organising a social event. I think I am making pretty good progress.
+Some of my tasks for the week are create a blog, write a blog post every day, and start a self-organization method. The self-organization method will take some research and consideration (right now I am just using the Notes app to keep track of things I want to accomplish today)... so more on that later.
+&lt;br&gt;&lt;br&gt;
+My plans for the rest of the day are to add my blog to HolidayCheck&#39;s apprenticeship page, complete the self assessment, and ENJOY THE WEATHER!
+&lt;br&gt;&lt;br&gt;
+Everyone has been super friendly and open, which has made the transition of starting a new job in a new country extremely pleasant. I&#39;m excited for what is to come!
+&lt;br&gt;&lt;br&gt;
+Bis Morgen:)
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;/p&gt;
+</description>
     </item>
     
   </channel>

@@ -1,27 +1,25 @@
 ---
-title: "Day 5: FINALLY!!"
+title: "Day 5: Software Crafter and Haskell Programming"
 layout: rss
-date: 2019-06-21T15:50:23+02:00
+date: 2019-06-24T15:50:23+02:00
 draft: false
 ---
 
-The title of this blog post does not refer to my feelings about this week being over. It refers to my feelings about successfully setting up the RSS for my blog (Thank you to my PPM Alvaro for suggesting better blog post titles. Your suggestion was well-received).
-
-Today:  
-After trying many methods to make my RSS feed link valid, I finally (FINALLY!) came to the solution which was in my config.toml file. The base URL was "http:leahchung.netlify.com" rather than "https://leahchung.netlify.com". Silly me. This one small change proved hours' worth of work to be useless, but that makes it all the more satisfying to see the green "congratulations!" on the page of the RSS-feed-link-validator website. Here is the link so if you want to share my joy: https://validator.w3.org/feed/check.cgi?url=https%3A//leahchung.netlify.com/rss.xml
-
-
-Next week:  
-Next week, I plan to start my journey with Haskell. I got some recommendations to use Haskell Book which includes a lot of exercises. This sounds like it would be good for me because I learn best by doing (and doing again). I was also reminded that I can change my language at any time, so if I find Haskell too hair-pulling or unenjoyable, then I can switch to another.  
-I also plan to start reading Software Craftsmanship and order a public speaking book. Public speaking is something that I have experience with because I taught discussion sections to students when I was an instructional aide at my University. Despite my practice, I am nowhere near perfect. It still frightens me, so hopefully a book will help calm some of these nerves.  
-I also have to get better at the dailies. Wolfram suggested doing some research and deciding how to use the 15 minutes to gain/give as much as I can.
-
-My first week:  
-I can't believe my first week at HolidayCheck is coming to an end! This week was filled with a lot of firsts for me. I joined my first (and second) coding kata, participated in my first mob programming session, made a lot of first impressions, and started my first real job (!). I plan to have many more firsts during my apprenticeship at HolidayCheck, and I'm really excited! In addition to all of this, I set up my blog, came up with an agenda for the next two months with Peri, and worked out ALMOST all of the administrative stuff (I just need that darn tax ID...). Overall, I had a really good first week at HolidayCheck.
-
-I'm excited for what is to come, but for now...  
-Prost to the freakin' weekend! (A Rihanna lyric with a German twist)
-
-
-
-.
+<p>Today I started reading The Software [Crafter] by Sandro Mancuso.
+<br><br>
+Something that I find really interesting is the fact that "seniority" was measured by how incomprehensible one could make their code. If people did not understand some code, they immediately attributed it to the author's skill or wit. Equipped with this mindset, Sandro was very eager to please and impress his manager Namur when he started at a new company on a new team. He was given a task to complete in one week, created a working solution in two days, and proudly approached Namur for feedback. Sandro received a lot of feedback, but none of it was what he was anticipating. He was especially taken aback when Namur called the clever segment of code (created to try to impress Namur by being complicated and difficult to understand) "disrespectful."
+<br><br>
+It is interesting to see how the norms and mentalities have changed. In contrast to the former egocentric and uninclusive mindset, the modern developer has to collaborate and communicate and hold the mentality that they are working towards the same goal as their teammates. This is something that I fully understand and agree with, but I have little experience with it. The solutions to my university projects never had to be explained. Even when I worked on a team, the responsibilities were split and each person only cared for their own tasks. There was never the need or desire to refactor code, as nobody cared to make their solution better or more readable if they already recieved a grade and had moved on to a new project. We worked with the mentality that no one would ever really look at our code (apart from the graders who were usually also students and, quite frankly, trying get their work done as quickly as possible).
+<br><br>
+This is something that should be emphasized in a computer science degree because working on a team is very often a requirement in this (and any other) industry. But, as of now, this is something that I know I will have to work on when I start working on a team. I'm fully prepared for other eyes reviewing my code and giving feedback on how to make it better.
+<br><br>
+The rest of my time was spent with the Haskell Programming book.
+The first chapter of the Haskell Programming book goes over lambda calculus. I have completed a unit on functional programming, and therefore lambda calculus, while at University, so this was not too foreign to me. Reading the chapter refreshed my memory, and I was able to work through the practice problems with no (or maybe a little) struggle. I just have to remember to evaluate the leftmost and <i>outermost</i> lambdas first (normal order).
+<br><br>
+Tomorrow is more of the same. I will continue reading the Software Crafter book and the Haskell Programming book. I setup my computer for the practice problems in the following chapter. Hopefully with these problems I will be able to integrate some vim and bash learning.
+<br><br>
+Isn't it crazy that every weekday is so perfect and sunny, but every weekend is cloudy and/or rainy? When will this madness stop???? For some totally shocking information, please take a look at your Munich weather forecast for this weekend :)
+<br>
+<br>
+<br>
+</p>
