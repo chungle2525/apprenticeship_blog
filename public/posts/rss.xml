@@ -4,10 +4,117 @@
     <link>https://leahchung.netlify.com/posts/</link>
     <description>Recent content in Posts on Leah&#39;s apprenticeship</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 24 Jun 2019 15:50:23 +0200</lastBuildDate>
+    <lastBuildDate>Thu, 27 Jun 2019 15:50:23 +0200</lastBuildDate>
     
         <atom:link href="https://leahchung.netlify.com/posts/rss.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Day 7: Getting acquianted with Haskell</title>
+      <link>https://leahchung.netlify.com/posts/day7/</link>
+      <pubDate>Thu, 27 Jun 2019 15:50:23 +0200</pubDate>
+      
+      <guid>https://leahchung.netlify.com/posts/day7/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;d like to start off by apologizing for the short blog post. I&amp;rsquo;ve been learning a lot of basics with Haskell so I dont have many interesting, noteworthy insights save the ones to follow. Enjoy 😃
+&lt;br&gt;
+&lt;br&gt;
+Today, I completed 3 chapters of the Haskell Book. This book is written for absolute beginners, not only to Haskell but also to programming in general. This really forced me to get into the &amp;ldquo;wearing the white belt&amp;rdquo; mindset, because I did not want to skim any part with the chances of skipping over something important for Haskell.
+&lt;br&gt;
+&lt;br&gt;
+I did come over a quite confusing problem that I will seek answers to:
+&lt;br&gt;
+&lt;code&gt; 6 / length [1, 2, 3] &lt;/code&gt;&lt;br&gt;
+&amp;hellip; does not work!
+&lt;br&gt;
+&lt;br&gt;
+The type of the length function returns:&lt;br /&gt;
+&lt;code&gt; length :: Foldable t =&amp;gt; t a -&amp;gt; Int &lt;/code&gt;
+&lt;br&gt;
+&lt;br&gt;
+For whatever reason,
+&lt;code&gt;6 `quot` length [1, 2, 3]&lt;/code&gt;&lt;br&gt;
+works just fine.
+&lt;br&gt;
+&lt;br&gt;
+More on the &amp;ldquo;why&amp;rdquo; later&amp;hellip;
+&lt;br&gt;
+&lt;br&gt;
+On a non-Haskell-related-note, yesterday, I accidentally pushed my RSS feed post and I did not have time to look over it today.&lt;br /&gt;
+Hopefully, I wont see any issues or catch missing information. If so, however, updates will be coming your way 😃
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;/p&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Day 6: Sweatshop</title>
+      <link>https://leahchung.netlify.com/posts/day6/</link>
+      <pubDate>Wed, 26 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://leahchung.netlify.com/posts/day6/</guid>
+      <description>&lt;p&gt;Today really flew by. My mornings always seem over in the blink of an eye because I have my apprenticeship daily and the morning Kata. But today, I had two meetings after the Kata. The first meeting was with Markus to discuss the RSS feed for his blog and try to fix it (to no avail). The second meeting was also with Markus to discuss our plans for the friday talks. We discussed potential schedules, topics, and logistics. We ended up settling on a topic (which will remain a secret for now), so I consider this meeting a success ☺️.&lt;/p&gt;
+
+&lt;p&gt;After this, I started creating a blog post for an RSS feed &amp;ldquo;how to&amp;rdquo; for those who create a blog with Hugo. Masha suggested doing this because it seems like other apprentices had trouble adding this feature to their Hugo blogs (unless, of course, if the feature was already implemented in their theme). Unfortunately, adding html text to a markdown file caused me a lot of trouble, so I was not able to finish it before my first workshop.&lt;/p&gt;
+
+&lt;p&gt;My first workshop, hosted by Jens, was about remote collaboration. It was very interesting to hear the insights of people in charge of facilitating remote meetings because I never thought about their perspective. I learned that, as a remote meeting facilitator, it can be very hard to gauge how well the team members are communicating with each other. With remote communication, a lot of the face-to-face interactions are lost (e.g. body language, small talk, immediate response, etc.). The absense of these minor yet important interactions makes it much more difficulat to communicate and create a good team vibe.&lt;/p&gt;
+
+&lt;p&gt;Unfortunately, I did not get a chance to work on any haskell today. So tomorrow, I will complete my RSS how-to post and work on Haskell.&lt;/p&gt;
+
+&lt;p&gt;But man, my brain is fried. The workshop was 3.5 hours long and in a room that had no AC. It was a great workshop and I learned a lot, but I went through 3 full bottles of water as a result of the heat (hense the title of this post). Time to go walk home in the heat&amp;hellip; to an apartment similarly with no AC. Please keep me in your prayers (I&amp;rsquo;m just being dramatic for fun. I &lt;i&gt;think&lt;/i&gt; I&amp;rsquo;ll survive. But I&amp;rsquo;d still appreciate some prayers😅).
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;/p&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>How to: Implement an RSS feed with Hugo</title>
+      <link>https://leahchung.netlify.com/posts/rss_howto/</link>
+      <pubDate>Wed, 26 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://leahchung.netlify.com/posts/rss_howto/</guid>
+      <description>&lt;p&gt;Here is a guide to help you add an RSS feed to your Hugo blog.
+&lt;br&gt;
+1. Edit the config.toml file:
+&lt;p style=&#34;margin-left: 20px&#34;&gt;a. Make sure the baseURL is valid (e.g. &#34;https://leahchung.netlify.com&#34;)&lt;br&gt;
+b. Add the following lines:&lt;br&gt;
+    &lt;code&gt;
+        [outputs]  
+        home = [ &#34;RSS&#34;, &#34;HTML&#34;]&lt;br&gt;&lt;br&gt;
+        [outputFormats]
+        [outputFormats.RSS]
+        mediatype = &#34;application/rss&#34;
+        baseName = &#34;rss&#34;
+    &lt;/code&gt;
+&lt;/p&gt;
+2. Edit the header.html file.
+&lt;p style=&#34;margin-left: 20px&#34;&gt;a. Add the following line: &lt;br&gt;
+    &lt;code&gt;
+        &amp;lt;link href=&#34;{{ .RSSLink }}&#34; rel=&#34;alternate&#34; type=&#34;application/rss+xml&#34; title=&#34;{{ .Site.Title }}&#34; /&amp;gt;&lt;br&gt;
+    &lt;/code&gt;
+    I added this in my &#39;header-widget&#39; div, but this will depend on your theme.
+&lt;/p&gt;
+3. Add an rss.xml file in the your_theme/layouts/ directory.  
+Then add the code found &lt;a href=&#34;https://gohugo.io/templates/rss/#the-embedded-rss-xml&#34;&gt;here.&lt;/a&gt;
+&lt;br&gt;
+&lt;br&gt;
+4. Add the following to the top of each post markdown file:  
+&lt;p style=&#34;margin-left: 20px&#34;&gt;
+    &lt;code&gt;
+        layout: rss
+    &lt;/code&gt;
+&lt;/p&gt;
+Voila! This should do the trick, but I suppose everyone&#39;s unique theme will create unique issues.  
+I hope you found this post useful!
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Day 5: Software Crafter and Haskell Programming</title>
