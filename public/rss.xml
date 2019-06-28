@@ -4,18 +4,22 @@
     <link>https://leahchung.netlify.com/</link>
     <description>Recent content on Leah&#39;s apprenticeship</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 28 Jun 2019 10:01:23 +0200</lastBuildDate>
+    <lastBuildDate>Fri, 28 Jun 2019 16:30:23 +0200</lastBuildDate>
     
         <atom:link href="https://leahchung.netlify.com/rss.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Day 8: </title>
+      <title>Day 8: (Only Sometimes) Go With Your Instinct</title>
       <link>https://leahchung.netlify.com/posts/day8/</link>
-      <pubDate>Fri, 28 Jun 2019 10:01:23 +0200</pubDate>
+      <pubDate>Fri, 28 Jun 2019 16:30:23 +0200</pubDate>
       
       <guid>https://leahchung.netlify.com/posts/day8/</guid>
-      <description>lasdjfalsdkjf</description>
+      <description>Today I worked on more Haskell. I also asked Sergii about the problem I shared in the previous post. As a reminder:
+ 6 / length [1, 2, 3] 
+does not work But, for whatever reason (which we now know),
+6 `quot` length [1, 2, 3]
+works just fine. The length function returns an Int, but it turns out that the &amp;lsquo;/&amp;rsquo; operator only works on the &amp;lsquo;Fractional&amp;rsquo; typeclass, of which &amp;lsquo;Int&amp;rsquo; is not an instance.</description>
     </item>
     
     <item>

@@ -4,18 +4,49 @@
     <link>https://leahchung.netlify.com/posts/</link>
     <description>Recent content in Posts on Leah&#39;s apprenticeship</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 28 Jun 2019 10:01:23 +0200</lastBuildDate>
+    <lastBuildDate>Fri, 28 Jun 2019 16:30:23 +0200</lastBuildDate>
     
         <atom:link href="https://leahchung.netlify.com/posts/rss.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Day 8: </title>
+      <title>Day 8: (Only Sometimes) Go With Your Instinct</title>
       <link>https://leahchung.netlify.com/posts/day8/</link>
-      <pubDate>Fri, 28 Jun 2019 10:01:23 +0200</pubDate>
+      <pubDate>Fri, 28 Jun 2019 16:30:23 +0200</pubDate>
       
       <guid>https://leahchung.netlify.com/posts/day8/</guid>
-      <description>&lt;p&gt;lasdjfalsdkjf&lt;/p&gt;
+      <description>&lt;p&gt;Today I worked on more Haskell. I also asked Sergii about the problem I shared in the previous post. As a reminder:&lt;br&gt;
+&lt;code&gt; 6 / length [1, 2, 3] &lt;/code&gt;&lt;br&gt;
+does not work
+&lt;br&gt;
+&lt;br&gt;
+But, for whatever reason (which we now know),&lt;br&gt;
+&lt;code&gt;6 `quot` length [1, 2, 3]&lt;/code&gt;&lt;br&gt;
+works just fine.
+&lt;br&gt;
+&lt;br&gt;
+The &lt;code&gt;length&lt;/code&gt; function returns an Int, but it turns out that the &amp;lsquo;/&amp;rsquo; operator only works on the &amp;lsquo;Fractional&amp;rsquo; typeclass, of which &amp;lsquo;Int&amp;rsquo; is not an instance. The &lt;code&gt;quot&lt;/code&gt; function works on instances of the &amp;lsquo;Integral&amp;rsquo; typeclass. Also, both functions require the arguments to be of the same type 😃
+&lt;br&gt;
+&lt;br&gt;
+Anyways&amp;hellip; Wolfram shared a video (in the #apprenticeship channel) of an Agile lightning talk. The speaker talks about the basics of TDD and shares the very first step, which is simply &amp;ldquo;Think.&amp;rdquo; This step was relevant in my talk with Peri today. He was talking about how it&amp;rsquo;s usually the case that the ideas we have (regarding our work) when we are lying in bed (e.g. &amp;ldquo;AH! So &lt;i&gt;that&amp;rsquo;s&lt;/i&gt; the solution to my problem&amp;rdquo;, or &amp;ldquo;I just came up with the greatest solution &amp;lsquo;y&amp;rsquo; to some universal problem &amp;lsquo;x.&amp;rsquo; I&amp;rsquo;m a genius!&amp;rdquo;) are usually not as great the second or third time we think over them.
+&lt;br&gt;
+&lt;br&gt;
+This has been relevant in many of my previous projects. I tend to jump on my first instinct on how to approach a problem, sometimes to later learn that either a) my instinct was wrong, or b) there was a much better solution. As shared in the video, the first step in TDD is just to think. It can be very powerful to practice TDD every day because it has the potential to make this process habit. I have participated in a few coding katas by now, and we always start off by reading the question and having some time to reflect and ask questions before we dive in. This is a process that is really good for me to practice.
+&lt;br&gt;
+&lt;br&gt;
+So, when it comes to programming (or I suppose work in general), it is always good to go beyond your insticts. Think about the negatives of your approach or the alternatives to your method.
+&lt;br&gt;
+&lt;br&gt;
+On the non-technical aspects of life, however, I do believe that it is good to go with your insticts 😉
+&lt;br&gt;
+&lt;br&gt;
+On the final note, my one-on-one with &lt;span&gt;&amp;#193;&lt;/span&gt;lvaro included some Espa&lt;span&gt;&amp;#241;&lt;/span&gt;ol! I&amp;rsquo;m very grateful for this because my Spanish is very rusty. Also, the language part of my brain has been in overdrive the past few weeks. More than once, I have answered German (which I &lt;i&gt;barely&lt;/i&gt; understood) with Spanish. Apparently I just have to exercise that part of my brain more 😅
+&lt;br&gt;
+&lt;br&gt;
+Here, I&amp;rsquo;ll go with the safe, universal farewell: 👋
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;&lt;/p&gt;
 </description>
     </item>
     

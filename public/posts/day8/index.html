@@ -2,18 +2,26 @@
 <html lang='en'><head>
   <meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'>
-<meta name='description' content='lasdjfalsdkjf'>
+<meta name='description' content='Today I worked on more Haskell. I also asked Sergii about the problem I shared in the previous post. As a reminder:
+ 6 / length [1, 2, 3] 
+does not work But, for whatever reason (which we now know),
+6 `quot` length [1, 2, 3]
+works just fine. The length function returns an Int, but it turns out that the &lsquo;/&rsquo; operator only works on the &lsquo;Fractional&rsquo; typeclass, of which &lsquo;Int&rsquo; is not an instance.'>
 <meta name='theme-color' content='#ffcd00'>
 
-<meta property='og:title' content='Day 8:  • Leah&#39;s apprenticeship'>
-<meta property='og:description' content='lasdjfalsdkjf'>
+<meta property='og:title' content='Day 8: (Only Sometimes) Go With Your Instinct • Leah&#39;s apprenticeship'>
+<meta property='og:description' content='Today I worked on more Haskell. I also asked Sergii about the problem I shared in the previous post. As a reminder:
+ 6 / length [1, 2, 3] 
+does not work But, for whatever reason (which we now know),
+6 `quot` length [1, 2, 3]
+works just fine. The length function returns an Int, but it turns out that the &lsquo;/&rsquo; operator only works on the &lsquo;Fractional&rsquo; typeclass, of which &lsquo;Int&rsquo; is not an instance.'>
 <meta property='og:url' content='https://leahchung.netlify.com/posts/day8/'>
 <meta property='og:site_name' content='Leah&#39;s apprenticeship'>
-<meta property='og:type' content='article'><meta property='article:section' content='posts'><meta property='article:published_time' content='2019-06-28T10:01:23&#43;02:00'/><meta property='article:modified_time' content='2019-06-28T10:01:23&#43;02:00'/><meta name='twitter:card' content='summary'>
+<meta property='og:type' content='article'><meta property='article:section' content='posts'><meta property='article:published_time' content='2019-06-28T16:30:23&#43;02:00'/><meta property='article:modified_time' content='2019-06-28T16:30:23&#43;02:00'/><meta name='twitter:card' content='summary'>
 
 <meta name="generator" content="Hugo 0.55.6" />
 
-  <title>Day 8:  • Leah&#39;s apprenticeship</title>
+  <title>Day 8: (Only Sometimes) Go With Your Instinct • Leah&#39;s apprenticeship</title>
   <link rel='canonical' href='https://leahchung.netlify.com/posts/day8/'>
   
   
@@ -106,7 +114,7 @@
     <style>.widget-breadcrumbs li:after{content:'\2f '}</style>
   <section class='widget widget-breadcrumbs sep-after'>
     <nav id='breadcrumbs'>
-      <ol><li><a href='/'>Leah&#39;s apprenticeship</a></li><li><a href='/posts/'>Posts</a></li><li><span>Day 8: </span></li></ol>
+      <ol><li><a href='/'>Leah&#39;s apprenticeship</a></li><li><a href='/posts/'>Posts</a></li><li><span>Day 8: (Only Sometimes) Go With Your Instinct</span></li></ol>
     </nav>
   </section></div>
         <div class='container'>
@@ -128,7 +136,7 @@
   <header class='header entry-header'>
   <div class='container sep-after'>
     <div class='header-info'>
-      <h1 class='title'>Day 8: </h1>
+      <h1 class='title'>Day 8: (Only Sometimes) Go With Your Instinct</h1>
       
 
     </div>
@@ -142,7 +150,7 @@
   
 </svg>
 <span class='screen-reader-text'>Posted on </span>
-  <time class='entry-date' datetime='2019-06-28T10:01:23&#43;02:00'>2019, Jun 28</time>
+  <time class='entry-date' datetime='2019-06-28T16:30:23&#43;02:00'>2019, Jun 28</time>
 </span>
 
   
@@ -153,7 +161,7 @@
   <polyline points="12 6 12 12 15 15"/>
   
 </svg>
-One min read
+3 mins read
 </span>
 
 
@@ -167,7 +175,38 @@ One min read
   
 
   <div class='container entry-content'>
-  <p>lasdjfalsdkjf</p>
+  <p>Today I worked on more Haskell. I also asked Sergii about the problem I shared in the previous post. As a reminder:<br>
+<code> 6 / length [1, 2, 3] </code><br>
+does not work
+<br>
+<br>
+But, for whatever reason (which we now know),<br>
+<code>6 `quot` length [1, 2, 3]</code><br>
+works just fine.
+<br>
+<br>
+The <code>length</code> function returns an Int, but it turns out that the &lsquo;/&rsquo; operator only works on the &lsquo;Fractional&rsquo; typeclass, of which &lsquo;Int&rsquo; is not an instance. The <code>quot</code> function works on instances of the &lsquo;Integral&rsquo; typeclass. Also, both functions require the arguments to be of the same type 😃
+<br>
+<br>
+Anyways&hellip; Wolfram shared a video (in the #apprenticeship channel) of an Agile lightning talk. The speaker talks about the basics of TDD and shares the very first step, which is simply &ldquo;Think.&rdquo; This step was relevant in my talk with Peri today. He was talking about how it&rsquo;s usually the case that the ideas we have (regarding our work) when we are lying in bed (e.g. &ldquo;AH! So <i>that&rsquo;s</i> the solution to my problem&rdquo;, or &ldquo;I just came up with the greatest solution &lsquo;y&rsquo; to some universal problem &lsquo;x.&rsquo; I&rsquo;m a genius!&rdquo;) are usually not as great the second or third time we think over them.
+<br>
+<br>
+This has been relevant in many of my previous projects. I tend to jump on my first instinct on how to approach a problem, sometimes to later learn that either a) my instinct was wrong, or b) there was a much better solution. As shared in the video, the first step in TDD is just to think. It can be very powerful to practice TDD every day because it has the potential to make this process habit. I have participated in a few coding katas by now, and we always start off by reading the question and having some time to reflect and ask questions before we dive in. This is a process that is really good for me to practice.
+<br>
+<br>
+So, when it comes to programming (or I suppose work in general), it is always good to go beyond your insticts. Think about the negatives of your approach or the alternatives to your method.
+<br>
+<br>
+On the non-technical aspects of life, however, I do believe that it is good to go with your insticts 😉
+<br>
+<br>
+On the final note, my one-on-one with <span>&#193;</span>lvaro included some Espa<span>&#241;</span>ol! I&rsquo;m very grateful for this because my Spanish is very rusty. Also, the language part of my brain has been in overdrive the past few weeks. More than once, I have answered German (which I <i>barely</i> understood) with Spanish. Apparently I just have to exercise that part of my brain more 😅
+<br>
+<br>
+Here, I&rsquo;ll go with the safe, universal farewell: 👋
+<br>
+<br>
+<br></p>
 
 </div>
 
