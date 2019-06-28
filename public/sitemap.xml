@@ -55,22 +55,12 @@
   </url>
   
   <url>
-    <loc>https://leahchung.netlify.com/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://leahchung.netlify.com/authors/</loc>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://leahchung.netlify.com/categories/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://leahchung.netlify.com/page/</loc>
     <priority>0</priority>
   </url>
   
