@@ -4,18 +4,86 @@
     <link>https://leahchung.netlify.com/rss.xml</link>
     <description>Recent content on Leah&#39;s apprenticeship</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 28 Jun 2019 09:20:23 +0200</lastBuildDate>
+    <lastBuildDate>Fri, 28 Jun 2019 10:01:23 +0200</lastBuildDate>
     
         <atom:link href="https://leahchung.netlify.com/rss.xml" rel="self" type="application/rss+xml" />
     
     
+    <item>
+      <title>Day 8: </title>
+      <link>https://leahchung.netlify.com/posts/day8/</link>
+      <pubDate>Fri, 28 Jun 2019 10:01:23 +0200</pubDate>
+      
+      <guid>https://leahchung.netlify.com/posts/day8/</guid>
+      <description>lasdjfalsdkjf</description>
+    </item>
     
+    <item>
+      <title>Day 7: Getting acquianted with Haskell</title>
+      <link>https://leahchung.netlify.com/posts/day7/</link>
+      <pubDate>Thu, 27 Jun 2019 15:50:23 +0200</pubDate>
+      
+      <guid>https://leahchung.netlify.com/posts/day7/</guid>
+      <description>I&amp;rsquo;d like to start off by apologizing for the short blog post. I&amp;rsquo;ve been learning a lot of basics with Haskell so I dont have many interesting, noteworthy insights save the ones to follow. Enjoy 😃 Today, I completed 3 chapters of the Haskell Book. This book is written for absolute beginners, not only to Haskell but also to programming in general. This really forced me to get into the &amp;ldquo;wearing the white belt&amp;rdquo; mindset, because I did not want to skim any part with the chances of skipping over something important for Haskell.</description>
+    </item>
     
+    <item>
+      <title>Day 6: Sweatshop</title>
+      <link>https://leahchung.netlify.com/posts/day6/</link>
+      <pubDate>Wed, 26 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://leahchung.netlify.com/posts/day6/</guid>
+      <description>Today really flew by. My mornings always seem over in the blink of an eye because I have my apprenticeship daily and the morning Kata. But today, I had two meetings after the Kata. The first meeting was with Markus to discuss the RSS feed for his blog and try to fix it (to no avail). The second meeting was also with Markus to discuss our plans for the friday talks.</description>
+    </item>
     
+    <item>
+      <title>How to: Implement an RSS feed with Hugo</title>
+      <link>https://leahchung.netlify.com/posts/rss_howto/</link>
+      <pubDate>Wed, 26 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://leahchung.netlify.com/posts/rss_howto/</guid>
+      <description>Here is a guide to help you add an RSS feed to your Hugo blog. 1. Edit the config.toml file: a. Make sure the baseURL is valid (e.g. &#34;https://leahchung.netlify.com&#34;)
+b. Add the following lines:
+ [outputs] home = [ &#34;RSS&#34;, &#34;HTML&#34;]
+[outputFormats] [outputFormats.RSS] mediatype = &#34;application/rss&#34; baseName = &#34;rss&#34;  2. Edit the header.html file. a. Add the following line:  &amp;lt;link href=&#34;{{ .RSSLink }}&#34; rel=&#34;alternate&#34; type=&#34;application/rss+xml&#34; title=&#34;{{ .Site.Title }}&#34; /&amp;gt;</description>
+    </item>
     
+    <item>
+      <title>Day 5: Software Crafter and Haskell Programming</title>
+      <link>https://leahchung.netlify.com/posts/day5/</link>
+      <pubDate>Mon, 24 Jun 2019 15:50:23 +0200</pubDate>
+      
+      <guid>https://leahchung.netlify.com/posts/day5/</guid>
+      <description>Today I started reading The Software [Crafter] by Sandro Mancuso. Something that I find really interesting is the fact that &#34;seniority&#34; was measured by how incomprehensible one could make their code. If people did not understand some code, they immediately attributed it to the author&#39;s skill or wit. Equipped with this mindset, Sandro was very eager to please and impress his manager Namur when he started at a new company on a new team.</description>
+    </item>
     
+    <item>
+      <title>Day 4: FINALLY!!</title>
+      <link>https://leahchung.netlify.com/posts/day4md/</link>
+      <pubDate>Fri, 21 Jun 2019 15:50:23 +0200</pubDate>
+      
+      <guid>https://leahchung.netlify.com/posts/day4md/</guid>
+      <description>The title of this blog post does not refer to my feelings about this week being over. It refers to my feelings about successfully setting up the RSS for my blog (Thank you to my PPM Alvaro for suggesting better blog post titles. Your suggestion was well-received). Today:
+After trying many methods to make my RSS feed link valid, I finally (FINALLY!) came to the solution which was in my config.</description>
+    </item>
     
+    <item>
+      <title>Day 3: Piling things onto my TODO list</title>
+      <link>https://leahchung.netlify.com/posts/day3/</link>
+      <pubDate>Wed, 19 Jun 2019 15:50:23 +0200</pubDate>
+      
+      <guid>https://leahchung.netlify.com/posts/day3/</guid>
+      <description>My main focus today was to work on my blog. I deployed it to netlify yesterday (thank you to the former/current apprentice(s) for the recommendation), but it was a very simply blog theme. Today I worked on making it prettier :). I also met with my mentor, Peri, today. We went over my self-assessment and starting talking about my areas of focus for the next two months. My first area of concern is tooling.</description>
+    </item>
     
+    <item>
+      <title>Days 1 &amp; 2</title>
+      <link>https://leahchung.netlify.com/posts/my-first-post/</link>
+      <pubDate>Tue, 18 Jun 2019 15:50:23 +0200</pubDate>
+      
+      <guid>https://leahchung.netlify.com/posts/my-first-post/</guid>
+      <description>My first couple of days at HolidayCheck went really well, my first impression of the company was really great! Upon arrival at HolidayCheck, I was greeted by current and former software engineer apprentices. After short introductions, I was shown to my desk. My equipment was all set, and I even recieved some gifts from the company! I was then introduced to everyone that Peri and I could find. There are many people and many names.</description>
+    </item>
     
   </channel>
 </rss>
