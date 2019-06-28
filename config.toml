@@ -104,7 +104,7 @@ username = "MunifTanjim"
 repository = "minimo"
 
 [params.search]
-client = "fuse" # algolia / fuse / lunr
+client = "fuse"
 
 [taxonomies]
 author = "authors"
@@ -126,7 +126,7 @@ languageName = "English"
 weight = 1
 
 [outputs]
-home = [ "RSS", "HTML"]
+home = ["HTML", "RSS", "JSON"]
 
 [outputFormats]
 [outputFormats.RSS]
