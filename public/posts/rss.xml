@@ -4,10 +4,20 @@
     <link>https://leahchung.netlify.com/posts/</link>
     <description>Recent content in Posts on Leah&#39;s apprenticeship</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 27 Jun 2019 15:50:23 +0200</lastBuildDate>
+    <lastBuildDate>Fri, 28 Jun 2019 09:20:23 +0200</lastBuildDate>
     
         <atom:link href="https://leahchung.netlify.com/posts/rss.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Day 8: </title>
+      <link>https://leahchung.netlify.com/posts/day8/</link>
+      <pubDate>Fri, 28 Jun 2019 09:20:23 +0200</pubDate>
+      
+      <guid>https://leahchung.netlify.com/posts/day8/</guid>
+      <description>&lt;p&gt;lasdjfalsdkjf&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Day 7: Getting acquianted with Haskell</title>
@@ -45,16 +55,6 @@ Hopefully, I wont see any issues or catch missing information. If so, however, u
 &lt;br&gt;
 &lt;br&gt;
 &lt;/p&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Day 8: </title>
-      <link>https://leahchung.netlify.com/posts/day8/</link>
-      <pubDate>Thu, 27 Jun 2019 08:50:23 +0200</pubDate>
-      
-      <guid>https://leahchung.netlify.com/posts/day8/</guid>
-      <description>&lt;p&gt;lasdjfalsdkjf&lt;/p&gt;
 </description>
     </item>
     
