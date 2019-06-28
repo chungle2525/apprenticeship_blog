@@ -1,0 +1,26 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pages on Leah&#39;s apprenticeship</title>
+    <link>https://leahchung.netlify.com/page/</link>
+    <description>Recent content in Pages on Leah&#39;s apprenticeship</description>
+    <generator>Hugo -- gohugo.io</generator>
+    
+        <atom:link href="https://leahchung.netlify.com/page/rss.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title></title>
+      <link>https://leahchung.netlify.com/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://leahchung.netlify.com/</guid>
+      <description>&lt;p&gt;type: page
+layout: search
+outputs:
+  - html
+  - json&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

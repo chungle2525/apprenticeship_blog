@@ -85,5 +85,14 @@ After trying many methods to make my RSS feed link valid, I finally (FINALLY!) c
       <description>My first couple of days at HolidayCheck went really well, my first impression of the company was really great! Upon arrival at HolidayCheck, I was greeted by current and former software engineer apprentices. After short introductions, I was shown to my desk. My equipment was all set, and I even recieved some gifts from the company! I was then introduced to everyone that Peri and I could find. There are many people and many names.</description>
     </item>
     
+    <item>
+      <title></title>
+      <link>https://leahchung.netlify.com/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://leahchung.netlify.com/</guid>
+      <description>type: page layout: search outputs: - html - json</description>
+    </item>
+    
   </channel>
 </rss>
