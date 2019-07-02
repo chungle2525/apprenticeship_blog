@@ -4,10 +4,35 @@
     <link>https://leahchung.netlify.com/posts/</link>
     <description>Recent content in Posts on Leah&#39;s apprenticeship</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 28 Jun 2019 16:30:23 +0200</lastBuildDate>
+    <lastBuildDate>Tue, 02 Jul 2019 04:50:23 +0200</lastBuildDate>
     
         <atom:link href="https://leahchung.netlify.com/posts/rss.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Day 9: Heartbeats</title>
+      <link>https://leahchung.netlify.com/posts/day9/</link>
+      <pubDate>Tue, 02 Jul 2019 04:50:23 +0200</pubDate>
+      
+      <guid>https://leahchung.netlify.com/posts/day9/</guid>
+      <description>&lt;p&gt;This morning started off with a difficult coding kata called &amp;ldquo;Double Cola.&amp;rdquo; Given a list of people in line for a vending machine, determine who buys the &lt;i&gt;n&lt;/i&gt;&amp;lsquo;th cola under the condition that every time a person drinks a cola, they are doubled (cloned) and these clones move to the end of the line. Our initial solution is to keep popping off and pushing onto the queue of people, but this is not an efficient solution (especially for large &lt;i&gt;n&lt;/i&gt; values, this broke Markus&amp;rsquo;s tddbin 😵). We know that there is a mathematical solution that will be more time and space efficient. We saw a couple of them online but were very confused about them&amp;hellip; so we will see if we continue to solve this tomorrow or move onto another problem.
+&lt;br&gt;
+&lt;br&gt;
+Our new summer intern joined our kata this morning because she had mentioned that she was unfamiliar with TDD and wanted to learn about it. No better way to learn something than by doing it (or, at least participate while watching others do it)! Of course this was a very foreign process to me way back when I started participating in the katas (a whopping 2 weeks ago - can you believe how fast time flies!?), so I understood her confusion. It can be quite unintuitive.
+&lt;br&gt;
+&lt;br&gt;
+Otherwise, I worked through more of the Haskell book which is starting to get a &lt;i&gt;bit&lt;/i&gt; dry. These past two chapters focus on types (type signatures, type inference, polymorphism, currying, partial application, etc.) which means that the reading is quite dense - at least to me. But the book does a nice job of eliding unecessary details and spreading out exercises nicely to periodically help pump the blood a little bit.
+&lt;br&gt;
+&lt;br&gt;
+I also talked to Ugurcan about the heartbeat he created! This heartbeat dashboard is in many rooms around the offices and displays the previous day&amp;rsquo;s data on the number of visitors, started bookings, and completed bookings on HolidayCheck. He and Wolfram were telling me that many people want to expand this tool, so I will see what input I can get and if it interests me to take this project further.
+&lt;br&gt;
+&lt;br&gt;
+TTFN
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Day 8: (Only Sometimes) Go With Your Instinct</title>

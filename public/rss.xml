@@ -4,10 +4,19 @@
     <link>https://leahchung.netlify.com/</link>
     <description>Recent content on Leah&#39;s apprenticeship</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 28 Jun 2019 16:30:23 +0200</lastBuildDate>
+    <lastBuildDate>Tue, 02 Jul 2019 04:50:23 +0200</lastBuildDate>
     
         <atom:link href="https://leahchung.netlify.com/rss.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Day 9: Heartbeats</title>
+      <link>https://leahchung.netlify.com/posts/day9/</link>
+      <pubDate>Tue, 02 Jul 2019 04:50:23 +0200</pubDate>
+      
+      <guid>https://leahchung.netlify.com/posts/day9/</guid>
+      <description>This morning started off with a difficult coding kata called &amp;ldquo;Double Cola.&amp;rdquo; Given a list of people in line for a vending machine, determine who buys the n&amp;lsquo;th cola under the condition that every time a person drinks a cola, they are doubled (cloned) and these clones move to the end of the line. Our initial solution is to keep popping off and pushing onto the queue of people, but this is not an efficient solution (especially for large n values, this broke Markus&amp;rsquo;s tddbin 😵).</description>
+    </item>
     
     <item>
       <title>Day 8: (Only Sometimes) Go With Your Instinct</title>
