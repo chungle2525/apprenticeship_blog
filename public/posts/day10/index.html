@@ -2,19 +2,19 @@
 <html lang='en'><head>
   <meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'>
-<meta name='description' content='This morning started off with a difficult coding kata called &ldquo;Double Cola.&rdquo; Given a list of people in line for a vending machine, determine who buys the n&lsquo;th cola under the condition that every time a person drinks a cola, they are doubled (cloned) and these clones move to the end of the line. Our initial solution is to keep popping off and pushing onto the queue of people, but this is not an efficient solution (especially for large n values, this broke Markus&rsquo;s tddbin 😵).'>
+<meta name='description' content='This morning started off with a difficult and fun kata called the Elevator Problem (thank you to Kay for suggesting it!). The task is to transport 20 people in 60 seconds, going to the floor to pick them up and dropping them off on their desired floor. The problem and simulator can be found here. We passed the level where the building was 3 stories high, but could not figure out an algorithm quick enough for a building with 4 stories.'>
 <meta name='theme-color' content='#ffcd00'>
 
-<meta property='og:title' content='Day 9: Heartbeats • Leah&#39;s apprenticeship'>
-<meta property='og:description' content='This morning started off with a difficult coding kata called &ldquo;Double Cola.&rdquo; Given a list of people in line for a vending machine, determine who buys the n&lsquo;th cola under the condition that every time a person drinks a cola, they are doubled (cloned) and these clones move to the end of the line. Our initial solution is to keep popping off and pushing onto the queue of people, but this is not an efficient solution (especially for large n values, this broke Markus&rsquo;s tddbin 😵).'>
-<meta property='og:url' content='https://leahchung.netlify.com/posts/day9/'>
+<meta property='og:title' content='Day 10: Heartbeats • Leah&#39;s apprenticeship'>
+<meta property='og:description' content='This morning started off with a difficult and fun kata called the Elevator Problem (thank you to Kay for suggesting it!). The task is to transport 20 people in 60 seconds, going to the floor to pick them up and dropping them off on their desired floor. The problem and simulator can be found here. We passed the level where the building was 3 stories high, but could not figure out an algorithm quick enough for a building with 4 stories.'>
+<meta property='og:url' content='https://leahchung.netlify.com/posts/day10/'>
 <meta property='og:site_name' content='Leah&#39;s apprenticeship'>
-<meta property='og:type' content='article'><meta property='article:section' content='posts'><meta property='article:published_time' content='2019-07-02T04:50:23&#43;02:00'/><meta property='article:modified_time' content='2019-07-02T04:50:23&#43;02:00'/><meta name='twitter:card' content='summary'>
+<meta property='og:type' content='article'><meta property='article:section' content='posts'><meta property='article:published_time' content='2019-07-03T04:50:23&#43;02:00'/><meta property='article:modified_time' content='2019-07-03T04:50:23&#43;02:00'/><meta name='twitter:card' content='summary'>
 
 <meta name="generator" content="Hugo 0.55.6" />
 
-  <title>Day 9: Heartbeats • Leah&#39;s apprenticeship</title>
-  <link rel='canonical' href='https://leahchung.netlify.com/posts/day9/'>
+  <title>Day 10: Heartbeats • Leah&#39;s apprenticeship</title>
+  <link rel='canonical' href='https://leahchung.netlify.com/posts/day10/'>
   
   
   <link rel='icon' href='/favicon.ico'>
@@ -106,7 +106,7 @@
     <style>.widget-breadcrumbs li:after{content:'\2f '}</style>
   <section class='widget widget-breadcrumbs sep-after'>
     <nav id='breadcrumbs'>
-      <ol><li><a href='/'>Leah&#39;s apprenticeship</a></li><li><a href='/posts/'>Posts</a></li><li><span>Day 9: Heartbeats</span></li></ol>
+      <ol><li><a href='/'>Leah&#39;s apprenticeship</a></li><li><a href='/posts/'>Posts</a></li><li><span>Day 10: Heartbeats</span></li></ol>
     </nav>
   </section></div>
         <div class='container'>
@@ -128,7 +128,7 @@
   <header class='header entry-header'>
   <div class='container sep-after'>
     <div class='header-info'>
-      <h1 class='title'>Day 9: Heartbeats</h1>
+      <h1 class='title'>Day 10: Heartbeats</h1>
       
 
     </div>
@@ -142,7 +142,7 @@
   
 </svg>
 <span class='screen-reader-text'>Posted on </span>
-  <time class='entry-date' datetime='2019-07-02T04:50:23&#43;02:00'>2019, Jul 02</time>
+  <time class='entry-date' datetime='2019-07-03T04:50:23&#43;02:00'>2019, Jul 03</time>
 </span>
 
   
@@ -167,19 +167,22 @@
   
 
   <div class='container entry-content'>
-  <p>This morning started off with a difficult coding kata called &ldquo;Double Cola.&rdquo; Given a list of people in line for a vending machine, determine who buys the <i>n</i>&lsquo;th cola under the condition that every time a person drinks a cola, they are doubled (cloned) and these clones move to the end of the line. Our initial solution is to keep popping off and pushing onto the queue of people, but this is not an efficient solution (especially for large <i>n</i> values, this broke Markus&rsquo;s tddbin 😵). We know that there is a mathematical solution that will be more time and space efficient. We saw a couple of them online but were very confused about them&hellip; so we will see if we continue to solve this tomorrow or move onto another problem.
+  <p>This morning started off with a difficult and <i>fun</i> kata called the Elevator Problem (thank you to Kay for suggesting it!). The task is to transport 20 people in 60 seconds, going to the floor to pick them up and dropping them off on their desired floor. The problem and simulator can be found <a href="https://play.elevatorsaga.com/">here</a>.
 <br>
 <br>
-Our new summer intern joined our kata this morning because she had mentioned that she was unfamiliar with TDD and wanted to learn about it. No better way to learn something than by doing it (or, at least participate while watching others do it)! Of course this was a very foreign process to me way back when I started participating in the katas (a whopping 2 weeks ago - can you believe how fast time flies!?), so I understood her confusion. It can be quite unintuitive.
+We passed the level where the building was 3 stories high, but could not figure out an algorithm quick enough for a building with 4 stories. To be continued&hellip; hopefully.
 <br>
 <br>
-Otherwise, I worked through more of the Haskell book which is starting to get a <i>bit</i> dry. These past two chapters focus on types (type signatures, type inference, polymorphism, currying, partial application, etc.) which means that the reading is quite dense - at least to me. But the book does a nice job of eliding unecessary details and spreading out exercises nicely to periodically help pump the blood a little bit.
+The rest of my day was spent with Haskell, which somehow feels like more of the same. I&rsquo;m chugging along this part (previously with the topic of Type Classes, and now just starting with functions!!!!!) with the golden promise of Haskellland (yes, 3 &lsquo;l&rsquo;s) in horizon 😃.
 <br>
 <br>
-I also talked to Ugurcan about the heartbeat he created! This heartbeat dashboard is in many rooms around the offices and displays the previous day&rsquo;s data on the number of visitors, started bookings, and completed bookings on HolidayCheck. He and Wolfram were telling me that many people want to expand this tool, so I will see what input I can get and if it interests me to take this project further.
+I also started to read some of the Mythical Man-Month, recommended by Wolfram. The first two chapters were a bit tough to read but shared some interesting analogies. One of which compares estimating completion of programming projects to estimating when an omelette will be done. Omelettes require a lot of patience. If the customer wants the omelette in 2 minutes, they have two choices: 1) eat a raw omelette after 2 minutes or 2) wait longer for the omelette to do its thang. The cook similarly has two choices: 1) turn up the heat with the risk of an unsalvageable omelette that is burnt on the outside and runny on the inside or 2) wait for the omelette to do its thang. I thought this was a fun analogy.
 <br>
 <br>
-TTFN
+There is also another part about the conceptual integrity of churches. The execution of building a church dures hundreds of years. Most of the time, the original plans are mostly adhered to and the architect&rsquo;s ideas are able to come to life through the hands of hundreds, maybe thousands of builders. Other churches, however, are made up of different parts, with each part representing a different design. I had heard about this analogy to programs in one of my University courses, and it is something that really stuck with me. It is such a good mindset to at least <i>aim</i> to make the concepts of your programs, applications, or systems portray a consistent (and timeless) set of design practices. I think the &ldquo;quick-fix&rdquo; mentality creates a mish-mosh product that is hard to pass on to any successor.
+<br>
+<br>
+That&rsquo;s all for today 😊
 <br>
 <br>
 <br></p>
@@ -212,7 +215,7 @@ TTFN
 
 <nav class='entry-nav'>
   <div class='container'><div class='prev-entry sep-before'>
-      <a href='/posts/day8/'>
+      <a href='/posts/day9/'>
         <span aria-hidden='true'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
   
   <line x1="20" y1="12" x2="4" y2="12"/>
@@ -220,17 +223,7 @@ TTFN
   
 </svg>
  Previous</span>
-        <span class='screen-reader-text'>Previous post: </span>Day 8: (Only Sometimes) Go With Your Instinct</a>
-    </div><div class='next-entry sep-before'>
-      <a href='/posts/day10/'>
-        <span class='screen-reader-text'>Next post: </span>Day 10: Heartbeats<span aria-hidden='true'>Next <svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
-  
-  <line x1="4" y1="12" x2="20" y2="12"/>
-  <polyline points="14 6 20 12 14 18"/>
-  
-</svg>
-</span>
-      </a>
+        <span class='screen-reader-text'>Previous post: </span>Day 9: Heartbeats</a>
     </div></div>
 </nav>
 

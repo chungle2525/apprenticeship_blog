@@ -4,10 +4,19 @@
     <link>https://leahchung.netlify.com/</link>
     <description>Recent content on Leah&#39;s apprenticeship</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 02 Jul 2019 04:50:23 +0200</lastBuildDate>
+    <lastBuildDate>Wed, 03 Jul 2019 04:50:23 +0200</lastBuildDate>
     
         <atom:link href="https://leahchung.netlify.com/rss.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Day 10: Heartbeats</title>
+      <link>https://leahchung.netlify.com/posts/day10/</link>
+      <pubDate>Wed, 03 Jul 2019 04:50:23 +0200</pubDate>
+      
+      <guid>https://leahchung.netlify.com/posts/day10/</guid>
+      <description>This morning started off with a difficult and fun kata called the Elevator Problem (thank you to Kay for suggesting it!). The task is to transport 20 people in 60 seconds, going to the floor to pick them up and dropping them off on their desired floor. The problem and simulator can be found here. We passed the level where the building was 3 stories high, but could not figure out an algorithm quick enough for a building with 4 stories.</description>
+    </item>
     
     <item>
       <title>Day 9: Heartbeats</title>
