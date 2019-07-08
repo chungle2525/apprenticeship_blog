@@ -1,5 +1,5 @@
 ---
-title: "Day 10: Heartbeats"
+title: "Day 10: Analogies"
 layout: rss
 date: 2019-07-03T4:50:23+02:00
 draft: false
@@ -16,7 +16,7 @@ The rest of my day was spent with Haskell, which somehow feels like more of the 
 I also started to read some of the Mythical Man-Month, recommended by Wolfram. The first two chapters were a bit tough to read but shared some interesting analogies. One of which compares estimating completion of programming projects to estimating when an omelette will be done. Omelettes require a lot of patience. If the customer wants the omelette in 2 minutes, they have two choices: 1) eat a raw omelette after 2 minutes or 2) wait longer for the omelette to do its thang. The cook similarly has two choices: 1) turn up the heat with the risk of an unsalvageable omelette that is burnt on the outside and runny on the inside or 2) wait for the omelette to do its thang. I thought this was a fun analogy.
 <br>
 <br>
-There is also another part about the conceptual integrity of churches. The execution of building a church dures hundreds of years. Most of the time, the original plans are mostly adhered to and the architect's ideas are able to come to life through the hands of hundreds, maybe thousands of builders. Other churches, however, are made up of different parts, with each part representing a different design. I had heard about this analogy to programs in one of my University courses, and it is something that really stuck with me. It is such a good mindset to at least <i>aim</i> to make the concepts of your programs, applications, or systems portray a consistent (and timeless) set of design practices. I think the "quick-fix" mentality creates a mish-mosh product that is hard to pass on to any successor.
+There is also another part about the conceptual integrity of churches. The execution of building a church dures hundreds of years. Most of the time, the original plans are mostly adhered to and the architect's ideas are able to come to life through the hands of hundreds, maybe thousands of builders. Other churches, however, are made up of different parts, with each part representing a different design. I had heard about this analogy to programs in one of my university courses, and it is something that really stuck with me. It is such a good mindset to at least <i>aim</i> to make the concepts of your programs, applications, or systems portray a consistent (and timeless) set of design practices. I think the "quick-fix" mentality creates a mish-mosh product that is hard to pass on to any successor.
 <br>
 <br>
 That's all for today :blush:

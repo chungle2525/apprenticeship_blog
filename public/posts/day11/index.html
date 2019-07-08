@@ -2,19 +2,19 @@
 <html lang='en'><head>
   <meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'>
-<meta name='description' content='This morning started off with a difficult coding kata called &ldquo;Double Cola.&rdquo; Given a list of people in line for a vending machine, determine who buys the n&lsquo;th cola under the condition that every time a person drinks a cola, they are doubled (cloned) and these clones move to the end of the line. Our initial solution is to keep popping off and pushing onto the queue of people, but this is not an efficient solution (especially for large n values, this broke Markus&rsquo;s tddbin 😵).'>
+<meta name='description' content='It&rsquo;s so weird that it is already my fourth week at HolidayCheck. Time is flying (I just realized that I have probably said this at the beginning of every week of my (adultish) life). Today, I worked through more of the Haskell Programming book. I went over pattern matching, case examples, and higher order functions. Though the book does a good job explaining the why&rsquo;s and how&rsquo;s, functional programming still feels quite unintuitive to me.'>
 <meta name='theme-color' content='#ffcd00'>
 
-<meta property='og:title' content='Day 9: Heartbeats • Leah&#39;s apprenticeship'>
-<meta property='og:description' content='This morning started off with a difficult coding kata called &ldquo;Double Cola.&rdquo; Given a list of people in line for a vending machine, determine who buys the n&lsquo;th cola under the condition that every time a person drinks a cola, they are doubled (cloned) and these clones move to the end of the line. Our initial solution is to keep popping off and pushing onto the queue of people, but this is not an efficient solution (especially for large n values, this broke Markus&rsquo;s tddbin 😵).'>
-<meta property='og:url' content='https://leahchung.netlify.com/posts/day9/'>
+<meta property='og:title' content='Day 11: The fourth week already?!?! • Leah&#39;s apprenticeship'>
+<meta property='og:description' content='It&rsquo;s so weird that it is already my fourth week at HolidayCheck. Time is flying (I just realized that I have probably said this at the beginning of every week of my (adultish) life). Today, I worked through more of the Haskell Programming book. I went over pattern matching, case examples, and higher order functions. Though the book does a good job explaining the why&rsquo;s and how&rsquo;s, functional programming still feels quite unintuitive to me.'>
+<meta property='og:url' content='https://leahchung.netlify.com/posts/day11/'>
 <meta property='og:site_name' content='Leah&#39;s apprenticeship'>
-<meta property='og:type' content='article'><meta property='article:section' content='posts'><meta property='article:published_time' content='2019-07-02T04:50:23&#43;02:00'/><meta property='article:modified_time' content='2019-07-02T04:50:23&#43;02:00'/><meta name='twitter:card' content='summary'>
+<meta property='og:type' content='article'><meta property='article:section' content='posts'><meta property='article:published_time' content='2019-07-08T04:50:23&#43;02:00'/><meta property='article:modified_time' content='2019-07-08T04:50:23&#43;02:00'/><meta name='twitter:card' content='summary'>
 
 <meta name="generator" content="Hugo 0.55.6" />
 
-  <title>Day 9: Heartbeats • Leah&#39;s apprenticeship</title>
-  <link rel='canonical' href='https://leahchung.netlify.com/posts/day9/'>
+  <title>Day 11: The fourth week already?!?! • Leah&#39;s apprenticeship</title>
+  <link rel='canonical' href='https://leahchung.netlify.com/posts/day11/'>
   
   
   <link rel='icon' href='/favicon.ico'>
@@ -106,7 +106,7 @@
     <style>.widget-breadcrumbs li:after{content:'\2f '}</style>
   <section class='widget widget-breadcrumbs sep-after'>
     <nav id='breadcrumbs'>
-      <ol><li><a href='/'>Leah&#39;s apprenticeship</a></li><li><a href='/posts/'>Posts</a></li><li><span>Day 9: Heartbeats</span></li></ol>
+      <ol><li><a href='/'>Leah&#39;s apprenticeship</a></li><li><a href='/posts/'>Posts</a></li><li><span>Day 11: The fourth week already?!?!</span></li></ol>
     </nav>
   </section></div>
         <div class='container'>
@@ -128,7 +128,7 @@
   <header class='header entry-header'>
   <div class='container sep-after'>
     <div class='header-info'>
-      <h1 class='title'>Day 9: Heartbeats</h1>
+      <h1 class='title'>Day 11: The fourth week already?!?!</h1>
       
 
     </div>
@@ -142,7 +142,7 @@
   
 </svg>
 <span class='screen-reader-text'>Posted on </span>
-  <time class='entry-date' datetime='2019-07-02T04:50:23&#43;02:00'>2019, Jul 02</time>
+  <time class='entry-date' datetime='2019-07-08T04:50:23&#43;02:00'>2019, Jul 08</time>
 </span>
 
   
@@ -167,19 +167,27 @@
   
 
   <div class='container entry-content'>
-  <p>This morning started off with a difficult coding kata called &ldquo;Double Cola.&rdquo; Given a list of people in line for a vending machine, determine who buys the <i>n</i>&lsquo;th cola under the condition that every time a person drinks a cola, they are doubled (cloned) and these clones move to the end of the line. Our initial solution is to keep popping off and pushing onto the queue of people, but this is not an efficient solution (especially for large <i>n</i> values, this broke Markus&rsquo;s tddbin 😵). We know that there is a mathematical solution that will be more time and space efficient. We saw a couple of them online but were very confused about them&hellip; so we will see if we continue to solve this tomorrow or move onto another problem.
+  <p>It&rsquo;s so weird that it is already my fourth week at HolidayCheck. Time is flying (I just realized that I have probably said this at the beginning of every week of my (adultish) life).
 <br>
 <br>
-Our new summer intern joined our kata this morning because she had mentioned that she was unfamiliar with TDD and wanted to learn about it. No better way to learn something than by doing it (or, at least participate while watching others do it)! Of course this was a very foreign process to me way back when I started participating in the katas (a whopping 2 weeks ago - can you believe how fast time flies!?), so I understood her confusion. It can be quite unintuitive.
+Today, I worked through more of the Haskell Programming book. I went over pattern matching, case examples, and higher order functions. Though the book does a good job explaining the why&rsquo;s and how&rsquo;s, functional programming still feels quite unintuitive to me. One thing that is hard for me to conceptualize (and I tend to overthink) is function types. An example given in the book is:
 <br>
 <br>
-Otherwise, I worked through more of the Haskell book which is starting to get a <i>bit</i> dry. These past two chapters focus on types (type signatures, type inference, polymorphism, currying, partial application, etc.) which means that the reading is quite dense - at least to me. But the book does a nice job of eliding unecessary details and spreading out exercises nicely to periodically help pump the blood a little bit.
+<code>returnAfterApply :: (a -&gt; b) -&gt; a -&gt; c -&gt; b</code>
+<br>
+<code>returnAfterApply f a c = f a</code>
 <br>
 <br>
-I also talked to Ugurcan about the heartbeat he created! This heartbeat dashboard is in many rooms around the offices and displays the previous day&rsquo;s data on the number of visitors, started bookings, and completed bookings on HolidayCheck. He and Wolfram were telling me that many people want to expand this tool, so I will see what input I can get and if it interests me to take this project further.
+At first, only looking at the function type, I&rsquo;m thinking: Ok, returnAfterApply takes a function and returns a function that takes a function and returns something of type <i>b</i>??? 😅
 <br>
 <br>
-TTFN
+But then I look at the function definitions and I think: Ohhhh, so it takes three parameters: 1. a function <i>f</i> that takes some thing of type <i>a</i> and returns something of type <i>b</i>, 2. something of type <i>a</i>, and 3. something of type <i>c</i>. Then it applies the function <i>f</i> to <i>a</i> and returns whatever is returned by <i>f</i> (something of type <i>b</i>).
+<br>
+<br>
+Then all is good again in my brain. But still, I&rsquo;m prepared for more unintuition.
+<br>
+<br>
+Other things I did today include reading the Software Crafter book, doing part of a bash tutorial (which I really enjoy, thanks Masha!), and cloning the repo for Ugurcan&rsquo;s heartbeat project. I plan to make more progress on all of these things tomorrow as well. I feel like I have plenty to do, without feeling spread too thin. It&rsquo;s a good place to be 😎. But will it always be this good????
 <br>
 <br>
 <br></p>
@@ -212,7 +220,7 @@ TTFN
 
 <nav class='entry-nav'>
   <div class='container'><div class='prev-entry sep-before'>
-      <a href='/posts/day8/'>
+      <a href='/posts/day10/'>
         <span aria-hidden='true'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
   
   <line x1="20" y1="12" x2="4" y2="12"/>
@@ -220,17 +228,7 @@ TTFN
   
 </svg>
  Previous</span>
-        <span class='screen-reader-text'>Previous post: </span>Day 8: (Only Sometimes) Go With Your Instinct</a>
-    </div><div class='next-entry sep-before'>
-      <a href='/posts/day10/'>
-        <span class='screen-reader-text'>Next post: </span>Day 10: Analogies<span aria-hidden='true'>Next <svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
-  
-  <line x1="4" y1="12" x2="20" y2="12"/>
-  <polyline points="14 6 20 12 14 18"/>
-  
-</svg>
-</span>
-      </a>
+        <span class='screen-reader-text'>Previous post: </span>Day 10: Analogies</a>
     </div></div>
 </nav>
 

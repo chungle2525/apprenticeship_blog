@@ -4,13 +4,22 @@
     <link>https://leahchung.netlify.com/</link>
     <description>Recent content on Leah&#39;s apprenticeship</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 03 Jul 2019 04:50:23 +0200</lastBuildDate>
+    <lastBuildDate>Mon, 08 Jul 2019 04:50:23 +0200</lastBuildDate>
     
         <atom:link href="https://leahchung.netlify.com/rss.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Day 10: Heartbeats</title>
+      <title>Day 11: The fourth week already?!?!</title>
+      <link>https://leahchung.netlify.com/posts/day11/</link>
+      <pubDate>Mon, 08 Jul 2019 04:50:23 +0200</pubDate>
+      
+      <guid>https://leahchung.netlify.com/posts/day11/</guid>
+      <description>It&amp;rsquo;s so weird that it is already my fourth week at HolidayCheck. Time is flying (I just realized that I have probably said this at the beginning of every week of my (adultish) life). Today, I worked through more of the Haskell Programming book. I went over pattern matching, case examples, and higher order functions. Though the book does a good job explaining the why&amp;rsquo;s and how&amp;rsquo;s, functional programming still feels quite unintuitive to me.</description>
+    </item>
+    
+    <item>
+      <title>Day 10: Analogies</title>
       <link>https://leahchung.netlify.com/posts/day10/</link>
       <pubDate>Wed, 03 Jul 2019 04:50:23 +0200</pubDate>
       

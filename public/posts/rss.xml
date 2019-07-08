@@ -4,13 +4,46 @@
     <link>https://leahchung.netlify.com/posts/</link>
     <description>Recent content in Posts on Leah&#39;s apprenticeship</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 03 Jul 2019 04:50:23 +0200</lastBuildDate>
+    <lastBuildDate>Mon, 08 Jul 2019 04:50:23 +0200</lastBuildDate>
     
         <atom:link href="https://leahchung.netlify.com/posts/rss.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Day 10: Heartbeats</title>
+      <title>Day 11: The fourth week already?!?!</title>
+      <link>https://leahchung.netlify.com/posts/day11/</link>
+      <pubDate>Mon, 08 Jul 2019 04:50:23 +0200</pubDate>
+      
+      <guid>https://leahchung.netlify.com/posts/day11/</guid>
+      <description>&lt;p&gt;It&amp;rsquo;s so weird that it is already my fourth week at HolidayCheck. Time is flying (I just realized that I have probably said this at the beginning of every week of my (adultish) life).
+&lt;br&gt;
+&lt;br&gt;
+Today, I worked through more of the Haskell Programming book. I went over pattern matching, case examples, and higher order functions. Though the book does a good job explaining the why&amp;rsquo;s and how&amp;rsquo;s, functional programming still feels quite unintuitive to me. One thing that is hard for me to conceptualize (and I tend to overthink) is function types. An example given in the book is:
+&lt;br&gt;
+&lt;br&gt;
+&lt;code&gt;returnAfterApply :: (a -&amp;gt; b) -&amp;gt; a -&amp;gt; c -&amp;gt; b&lt;/code&gt;
+&lt;br&gt;
+&lt;code&gt;returnAfterApply f a c = f a&lt;/code&gt;
+&lt;br&gt;
+&lt;br&gt;
+At first, only looking at the function type, I&amp;rsquo;m thinking: Ok, returnAfterApply takes a function and returns a function that takes a function and returns something of type &lt;i&gt;b&lt;/i&gt;??? 😅
+&lt;br&gt;
+&lt;br&gt;
+But then I look at the function definitions and I think: Ohhhh, so it takes three parameters: 1. a function &lt;i&gt;f&lt;/i&gt; that takes some thing of type &lt;i&gt;a&lt;/i&gt; and returns something of type &lt;i&gt;b&lt;/i&gt;, 2. something of type &lt;i&gt;a&lt;/i&gt;, and 3. something of type &lt;i&gt;c&lt;/i&gt;. Then it applies the function &lt;i&gt;f&lt;/i&gt; to &lt;i&gt;a&lt;/i&gt; and returns whatever is returned by &lt;i&gt;f&lt;/i&gt; (something of type &lt;i&gt;b&lt;/i&gt;).
+&lt;br&gt;
+&lt;br&gt;
+Then all is good again in my brain. But still, I&amp;rsquo;m prepared for more unintuition.
+&lt;br&gt;
+&lt;br&gt;
+Other things I did today include reading the Software Crafter book, doing part of a bash tutorial (which I really enjoy, thanks Masha!), and cloning the repo for Ugurcan&amp;rsquo;s heartbeat project. I plan to make more progress on all of these things tomorrow as well. I feel like I have plenty to do, without feeling spread too thin. It&amp;rsquo;s a good place to be 😎. But will it always be this good????
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Day 10: Analogies</title>
       <link>https://leahchung.netlify.com/posts/day10/</link>
       <pubDate>Wed, 03 Jul 2019 04:50:23 +0200</pubDate>
       
@@ -27,7 +60,7 @@ The rest of my day was spent with Haskell, which somehow feels like more of the 
 I also started to read some of the Mythical Man-Month, recommended by Wolfram. The first two chapters were a bit tough to read but shared some interesting analogies. One of which compares estimating completion of programming projects to estimating when an omelette will be done. Omelettes require a lot of patience. If the customer wants the omelette in 2 minutes, they have two choices: 1) eat a raw omelette after 2 minutes or 2) wait longer for the omelette to do its thang. The cook similarly has two choices: 1) turn up the heat with the risk of an unsalvageable omelette that is burnt on the outside and runny on the inside or 2) wait for the omelette to do its thang. I thought this was a fun analogy.
 &lt;br&gt;
 &lt;br&gt;
-There is also another part about the conceptual integrity of churches. The execution of building a church dures hundreds of years. Most of the time, the original plans are mostly adhered to and the architect&amp;rsquo;s ideas are able to come to life through the hands of hundreds, maybe thousands of builders. Other churches, however, are made up of different parts, with each part representing a different design. I had heard about this analogy to programs in one of my University courses, and it is something that really stuck with me. It is such a good mindset to at least &lt;i&gt;aim&lt;/i&gt; to make the concepts of your programs, applications, or systems portray a consistent (and timeless) set of design practices. I think the &amp;ldquo;quick-fix&amp;rdquo; mentality creates a mish-mosh product that is hard to pass on to any successor.
+There is also another part about the conceptual integrity of churches. The execution of building a church dures hundreds of years. Most of the time, the original plans are mostly adhered to and the architect&amp;rsquo;s ideas are able to come to life through the hands of hundreds, maybe thousands of builders. Other churches, however, are made up of different parts, with each part representing a different design. I had heard about this analogy to programs in one of my university courses, and it is something that really stuck with me. It is such a good mindset to at least &lt;i&gt;aim&lt;/i&gt; to make the concepts of your programs, applications, or systems portray a consistent (and timeless) set of design practices. I think the &amp;ldquo;quick-fix&amp;rdquo; mentality creates a mish-mosh product that is hard to pass on to any successor.
 &lt;br&gt;
 &lt;br&gt;
 That&amp;rsquo;s all for today 😊
