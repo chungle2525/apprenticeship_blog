@@ -4,10 +4,22 @@
     <link>https://leahchung.netlify.com/</link>
     <description>Recent content on Leah&#39;s apprenticeship</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 08 Jul 2019 04:50:23 +0200</lastBuildDate>
+    <lastBuildDate>Wed, 10 Jul 2019 12:50:23 +0200</lastBuildDate>
     
         <atom:link href="https://leahchung.netlify.com/rss.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Days 12 &amp; 13: Homework</title>
+      <link>https://leahchung.netlify.com/posts/day12/</link>
+      <pubDate>Wed, 10 Jul 2019 12:50:23 +0200</pubDate>
+      
+      <guid>https://leahchung.netlify.com/posts/day12/</guid>
+      <description>Yesterday I spent my time completing the bash tutorial and going through the Haskell book. Here is something I came accross in the Haskell book yesterday, regarding function composition: &amp;ldquo;(.) :: [1](b -&amp;gt; c) -&amp;gt; [2](a -&amp;gt; b) -&amp;gt; [3](a -&amp;gt; c) In English:
+1. given a function b to c
+2. given a function a to b
+3. return a function a to c The result of (a -&amp;gt; b) is the argument of (b -&amp;gt; c) so this is how we get from an a argument to a c result.</description>
+    </item>
     
     <item>
       <title>Day 11: The fourth week already?!?!</title>

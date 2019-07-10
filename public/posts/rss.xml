@@ -4,10 +4,74 @@
     <link>https://leahchung.netlify.com/posts/</link>
     <description>Recent content in Posts on Leah&#39;s apprenticeship</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 08 Jul 2019 04:50:23 +0200</lastBuildDate>
+    <lastBuildDate>Wed, 10 Jul 2019 12:50:23 +0200</lastBuildDate>
     
         <atom:link href="https://leahchung.netlify.com/posts/rss.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Days 12 &amp; 13: Homework</title>
+      <link>https://leahchung.netlify.com/posts/day12/</link>
+      <pubDate>Wed, 10 Jul 2019 12:50:23 +0200</pubDate>
+      
+      <guid>https://leahchung.netlify.com/posts/day12/</guid>
+      <description>&lt;p&gt;Yesterday I spent my time completing the bash tutorial and going through the Haskell book.
+&lt;br&gt;
+&lt;br&gt;
+Here is something I came accross in the Haskell book yesterday, regarding function composition:
+&lt;br&gt;
+&lt;br&gt;
+&amp;ldquo;&lt;code&gt;(.) :: [1](b -&amp;gt; c) -&amp;gt; [2](a -&amp;gt; b) -&amp;gt; [3](a -&amp;gt; c)&lt;/code&gt;
+&lt;br&gt;
+&lt;br&gt;
+In English:&lt;br&gt;
+1. given a function &lt;i&gt;b&lt;/i&gt; to &lt;i&gt;c&lt;/i&gt;&lt;br&gt;
+2. given a function &lt;i&gt;a&lt;/i&gt; to &lt;i&gt;b&lt;/i&gt;&lt;br&gt;
+3. return a function &lt;i&gt;a&lt;/i&gt; to &lt;i&gt;c&lt;/i&gt;
+&lt;br&gt;
+&lt;br&gt;
+The result of (&lt;i&gt;a&lt;/i&gt; -&amp;gt; &lt;i&gt;b&lt;/i&gt;) is the argument of (&lt;i&gt;b&lt;/i&gt; -&amp;gt; &lt;i&gt;c&lt;/i&gt;) so this is how we get from an &lt;i&gt;a&lt;/i&gt; argument to a &lt;i&gt;c&lt;/i&gt; result. We’ve stitched the result of one function into being the argument of another.&amp;rdquo;
+&lt;br&gt;
+&lt;br&gt;
+This is another example of initially being very confused as a result of overthinking. I think point 3 is what really tripped me up. The wording of &amp;ldquo;returning a function&amp;rdquo; is weird to me, but the book does a nice job of explaining what exaclty happens. And for that, I am very grateful 😄.
+&lt;br&gt;
+&lt;br&gt;
+I also spoke with Wolfram and Markus (Scheuermann, not Heilig) about potential additions to Ugurcan&amp;rsquo;s Heartbeat project. We discussed making the information more personal, with hopes to spark conversation. Markus said something like &amp;ldquo;information that encourages action.&amp;rdquo; I think that&amp;rsquo;s a good mindset to have going forward with this project. Wolfram and I briefly discussed our first step: Come up with a way to have multiple urls on rotation, where one can easily add/remove urls displaying different information. Exciting!
+&lt;br&gt;
+&lt;br&gt;
+Today I did more Haskell and read some of the Software Crafter book. I also spent some time refreshing my memory on the short stories of Jorge Luis Borges (this urge was sparked when I saw the Haskell book quote him at the beginning of the recursion chapter), and I stumbled accross some information that he was incredibly racist and said awful things about black people. That was a disappointing tangent to which, oddly enough, the Haskell book led me.
+&lt;br&gt;
+&lt;br&gt;
+But back to the main path of focus: Recursion, hooray! Here&amp;rsquo;s one of the first examples they give, where a number &lt;i&gt;n&lt;/i&gt; is incremented &lt;i&gt;times&lt;/i&gt; times:
+&lt;br&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;incTimes :: (Eq a, Num a) =&amp;gt; a -&amp;gt; a -&amp;gt; a&lt;/code&gt;&lt;br&gt;
+&lt;code&gt;incTimes 0 n = n&lt;/code&gt;&lt;br&gt;
+&lt;code&gt;incTimes times n = 1 + (incTimes (times - 1) n)&lt;/code&gt;
+&lt;br&gt;
+&lt;br&gt;&lt;/p&gt;
+
+&lt;p&gt;Then the function is called like so:&lt;br&gt;
+&lt;code&gt;Prelude&amp;gt; incTimes 10 0&lt;/code&gt;&lt;br&gt;
+&lt;code&gt;10&lt;/code&gt;&lt;br&gt;
+&lt;code&gt;Prelude&amp;gt; incTimes 5 0&lt;/code&gt;&lt;br&gt;
+&lt;code&gt;5&lt;/code&gt;&lt;br&gt;
+&lt;code&gt;Prelude&amp;gt; incTimes 5 5&lt;/code&gt;&lt;br&gt;
+&lt;code&gt;10&lt;/code&gt;
+&lt;br&gt;
+&lt;br&gt;
+The only unintuitive thing, for me, is seeing &lt;code&gt;incTimes 0 n = n&lt;/code&gt;. It&amp;rsquo;s strange to see how this is how base cases (and, similarly, conditionals) are defined. It&amp;rsquo;s just weird not to see an &lt;i&gt;if&lt;/i&gt; in there.
+&lt;br&gt;
+&lt;br&gt;
+Otherwise, things are smooth sailing with Haskell. Things are also smooth sailing regarding my Bürgerbüro visits&amp;hellip; I finally got my tax ID!!!! The next step is the Ausländerbehörde, which is even more complicated and even more inaccessible 😅.
+&lt;br&gt;
+&lt;br&gt;
+More on recursion tomorrow 😄
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Day 11: The fourth week already?!?!</title>

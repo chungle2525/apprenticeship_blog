@@ -2,19 +2,25 @@
 <html lang='en'><head>
   <meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'>
-<meta name='description' content='It&rsquo;s so weird that it is already my fourth week at HolidayCheck. Time is flying (I just realized that I have probably said this at the beginning of every week of my (adultish) life). Today, I worked through more of the Haskell Programming book. I went over pattern matching, case examples, and higher order functions. Though the book does a good job explaining the why&rsquo;s and how&rsquo;s, functional programming still feels quite unintuitive to me.'>
+<meta name='description' content='Yesterday I spent my time completing the bash tutorial and going through the Haskell book. Here is something I came accross in the Haskell book yesterday, regarding function composition: &ldquo;(.) :: [1](b -&gt; c) -&gt; [2](a -&gt; b) -&gt; [3](a -&gt; c) In English:
+1. given a function b to c
+2. given a function a to b
+3. return a function a to c The result of (a -&gt; b) is the argument of (b -&gt; c) so this is how we get from an a argument to a c result.'>
 <meta name='theme-color' content='#ffcd00'>
 
-<meta property='og:title' content='Day 11: The fourth week already?!?! • Leah&#39;s apprenticeship'>
-<meta property='og:description' content='It&rsquo;s so weird that it is already my fourth week at HolidayCheck. Time is flying (I just realized that I have probably said this at the beginning of every week of my (adultish) life). Today, I worked through more of the Haskell Programming book. I went over pattern matching, case examples, and higher order functions. Though the book does a good job explaining the why&rsquo;s and how&rsquo;s, functional programming still feels quite unintuitive to me.'>
-<meta property='og:url' content='https://leahchung.netlify.com/posts/day11/'>
+<meta property='og:title' content='Days 12 &amp; 13: Homework • Leah&#39;s apprenticeship'>
+<meta property='og:description' content='Yesterday I spent my time completing the bash tutorial and going through the Haskell book. Here is something I came accross in the Haskell book yesterday, regarding function composition: &ldquo;(.) :: [1](b -&gt; c) -&gt; [2](a -&gt; b) -&gt; [3](a -&gt; c) In English:
+1. given a function b to c
+2. given a function a to b
+3. return a function a to c The result of (a -&gt; b) is the argument of (b -&gt; c) so this is how we get from an a argument to a c result.'>
+<meta property='og:url' content='https://leahchung.netlify.com/posts/day12/'>
 <meta property='og:site_name' content='Leah&#39;s apprenticeship'>
-<meta property='og:type' content='article'><meta property='article:section' content='posts'><meta property='article:published_time' content='2019-07-08T04:50:23&#43;02:00'/><meta property='article:modified_time' content='2019-07-08T04:50:23&#43;02:00'/><meta name='twitter:card' content='summary'>
+<meta property='og:type' content='article'><meta property='article:section' content='posts'><meta property='article:published_time' content='2019-07-10T12:50:23&#43;02:00'/><meta property='article:modified_time' content='2019-07-10T12:50:23&#43;02:00'/><meta name='twitter:card' content='summary'>
 
 <meta name="generator" content="Hugo 0.55.6" />
 
-  <title>Day 11: The fourth week already?!?! • Leah&#39;s apprenticeship</title>
-  <link rel='canonical' href='https://leahchung.netlify.com/posts/day11/'>
+  <title>Days 12 &amp; 13: Homework • Leah&#39;s apprenticeship</title>
+  <link rel='canonical' href='https://leahchung.netlify.com/posts/day12/'>
   
   
   <link rel='icon' href='/favicon.ico'>
@@ -106,7 +112,7 @@
     <style>.widget-breadcrumbs li:after{content:'\2f '}</style>
   <section class='widget widget-breadcrumbs sep-after'>
     <nav id='breadcrumbs'>
-      <ol><li><a href='/'>Leah&#39;s apprenticeship</a></li><li><a href='/posts/'>Posts</a></li><li><span>Day 11: The fourth week already?!?!</span></li></ol>
+      <ol><li><a href='/'>Leah&#39;s apprenticeship</a></li><li><a href='/posts/'>Posts</a></li><li><span>Days 12 &amp; 13: Homework</span></li></ol>
     </nav>
   </section></div>
         <div class='container'>
@@ -128,7 +134,7 @@
   <header class='header entry-header'>
   <div class='container sep-after'>
     <div class='header-info'>
-      <h1 class='title'>Day 11: The fourth week already?!?!</h1>
+      <h1 class='title'>Days 12 &amp; 13: Homework</h1>
       
 
     </div>
@@ -142,7 +148,7 @@
   
 </svg>
 <span class='screen-reader-text'>Posted on </span>
-  <time class='entry-date' datetime='2019-07-08T04:50:23&#43;02:00'>2019, Jul 08</time>
+  <time class='entry-date' datetime='2019-07-10T12:50:23&#43;02:00'>2019, Jul 10</time>
 </span>
 
   
@@ -153,7 +159,7 @@
   <polyline points="12 6 12 12 15 15"/>
   
 </svg>
-2 mins read
+3 mins read
 </span>
 
 
@@ -167,27 +173,58 @@
   
 
   <div class='container entry-content'>
-  <p>It&rsquo;s so weird that it is already my fourth week at HolidayCheck. Time is flying (I just realized that I have probably said this at the beginning of every week of my (adultish) life).
+  <p>Yesterday I spent my time completing the bash tutorial and going through the Haskell book.
 <br>
 <br>
-Today, I worked through more of the Haskell Programming book. I went over pattern matching, case examples, and higher order functions. Though the book does a good job explaining the why&rsquo;s and how&rsquo;s, functional programming still feels quite unintuitive to me. One thing that is hard for me to conceptualize (and I tend to overthink) is function types. An example given in the book is:
+Here is something I came accross in the Haskell book yesterday, regarding function composition:
 <br>
 <br>
-<code>returnAfterApply :: (a -&gt; b) -&gt; a -&gt; c -&gt; b</code>
-<br>
-<code>returnAfterApply f a c = f a</code>
+&ldquo;<code>(.) :: [1](b -&gt; c) -&gt; [2](a -&gt; b) -&gt; [3](a -&gt; c)</code>
 <br>
 <br>
-At first, only looking at the function type, I&rsquo;m thinking: Ok, returnAfterApply takes a function and returns a function that takes a function and returns something of type <i>b</i>??? 😅
+In English:<br>
+1. given a function <i>b</i> to <i>c</i><br>
+2. given a function <i>a</i> to <i>b</i><br>
+3. return a function <i>a</i> to <i>c</i>
 <br>
 <br>
-But then I look at the function definitions and I think: Ohhhh, so it takes three parameters: 1. a function <i>f</i> that takes some thing of type <i>a</i> and returns something of type <i>b</i>, 2. something of type <i>a</i>, and 3. something of type <i>c</i>. Then it applies the function <i>f</i> to <i>a</i> and returns whatever is returned by <i>f</i> (something of type <i>b</i>).
+The result of (<i>a</i> -&gt; <i>b</i>) is the argument of (<i>b</i> -&gt; <i>c</i>) so this is how we get from an <i>a</i> argument to a <i>c</i> result. We’ve stitched the result of one function into being the argument of another.&rdquo;
 <br>
 <br>
-Then all is good again in my brain. But still, I&rsquo;m prepared for more unintuition.
+This is another example of initially being very confused as a result of overthinking. I think point 3 is what really tripped me up. The wording of &ldquo;returning a function&rdquo; is weird to me, but the book does a nice job of explaining what exaclty happens. And for that, I am very grateful 😄.
 <br>
 <br>
-Other things I did today include reading the Software Crafter book, doing part of a bash tutorial (which I really enjoy, thanks Masha!), and cloning the repo for Ugurcan&rsquo;s heartbeat project. I plan to make more progress on all of these things tomorrow as well. I feel like I have plenty to do, without feeling spread too thin. It&rsquo;s a good place to be 😎. But will it always be this good????
+I also spoke with Wolfram and Markus (Scheuermann, not Heilig) about potential additions to Ugurcan&rsquo;s Heartbeat project. We discussed making the information more personal, with hopes to spark conversation. Markus said something like &ldquo;information that encourages action.&rdquo; I think that&rsquo;s a good mindset to have going forward with this project. Wolfram and I briefly discussed our first step: Come up with a way to have multiple urls on rotation, where one can easily add/remove urls displaying different information. Exciting!
+<br>
+<br>
+Today I did more Haskell and read some of the Software Crafter book. I also spent some time refreshing my memory on the short stories of Jorge Luis Borges (this urge was sparked when I saw the Haskell book quote him at the beginning of the recursion chapter), and I stumbled accross some information that he was incredibly racist and said awful things about black people. That was a disappointing tangent to which, oddly enough, the Haskell book led me.
+<br>
+<br>
+But back to the main path of focus: Recursion, hooray! Here&rsquo;s one of the first examples they give, where a number <i>n</i> is incremented <i>times</i> times:
+<br></p>
+
+<p><code>incTimes :: (Eq a, Num a) =&gt; a -&gt; a -&gt; a</code><br>
+<code>incTimes 0 n = n</code><br>
+<code>incTimes times n = 1 + (incTimes (times - 1) n)</code>
+<br>
+<br></p>
+
+<p>Then the function is called like so:<br>
+<code>Prelude&gt; incTimes 10 0</code><br>
+<code>10</code><br>
+<code>Prelude&gt; incTimes 5 0</code><br>
+<code>5</code><br>
+<code>Prelude&gt; incTimes 5 5</code><br>
+<code>10</code>
+<br>
+<br>
+The only unintuitive thing, for me, is seeing <code>incTimes 0 n = n</code>. It&rsquo;s strange to see how this is how base cases (and, similarly, conditionals) are defined. It&rsquo;s just weird not to see an <i>if</i> in there.
+<br>
+<br>
+Otherwise, things are smooth sailing with Haskell. Things are also smooth sailing regarding my Bürgerbüro visits&hellip; I finally got my tax ID!!!! The next step is the Ausländerbehörde, which is even more complicated and even more inaccessible 😅.
+<br>
+<br>
+More on recursion tomorrow 😄
 <br>
 <br>
 <br></p>
@@ -220,7 +257,7 @@ Other things I did today include reading the Software Crafter book, doing part o
 
 <nav class='entry-nav'>
   <div class='container'><div class='prev-entry sep-before'>
-      <a href='/posts/day10/'>
+      <a href='/posts/day11/'>
         <span aria-hidden='true'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
   
   <line x1="20" y1="12" x2="4" y2="12"/>
@@ -228,17 +265,7 @@ Other things I did today include reading the Software Crafter book, doing part o
   
 </svg>
  Previous</span>
-        <span class='screen-reader-text'>Previous post: </span>Day 10: Analogies</a>
-    </div><div class='next-entry sep-before'>
-      <a href='/posts/day12/'>
-        <span class='screen-reader-text'>Next post: </span>Days 12 &amp; 13: Homework<span aria-hidden='true'>Next <svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
-  
-  <line x1="4" y1="12" x2="20" y2="12"/>
-  <polyline points="14 6 20 12 14 18"/>
-  
-</svg>
-</span>
-      </a>
+        <span class='screen-reader-text'>Previous post: </span>Day 11: The fourth week already?!?!</a>
     </div></div>
 </nav>
 
