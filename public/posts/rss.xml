@@ -4,10 +4,58 @@
     <link>https://leahchung.netlify.com/posts/</link>
     <description>Recent content in Posts on Leah&#39;s apprenticeship</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 10 Jul 2019 12:50:23 +0200</lastBuildDate>
+    <lastBuildDate>Thu, 11 Jul 2019 12:50:23 +0200</lastBuildDate>
     
         <atom:link href="https://leahchung.netlify.com/posts/rss.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Day 14: Errors, Errors, go away</title>
+      <link>https://leahchung.netlify.com/posts/day14/</link>
+      <pubDate>Thu, 11 Jul 2019 12:50:23 +0200</pubDate>
+      
+      <guid>https://leahchung.netlify.com/posts/day14/</guid>
+      <description>&lt;p&gt;My day started normally with a long hike to work, a daily, and a kata. Today, Wolfram joined the kata, but neither Masha nor Kay could join and Markus had to leave early.
+&lt;br&gt;
+&lt;br&gt;
+Our current kata does not involve TDD (😱). The problem is called &amp;ldquo;&lt;a href=&#34;https://play.elevatorsaga.com&#34;&gt;Elevator Saga&lt;/a&gt;.&amp;rdquo; Each level provides a task to move &lt;i&gt;x&lt;/i&gt; amount of people in some amount of time, using only a certain number of elevators. The simulator is the main source of testing, which provides random input to test your solution.
+&lt;br&gt;
+&lt;br&gt;
+In the katas that I joined, we only made it to level 5. Our next step was to refactor to make it more readable and pass the simulation more often (😅). Wolfram was grilling me with all these questions: &amp;ldquo;What is your goal?&amp;rdquo;, &amp;ldquo;How do you know when you have improved?&amp;rdquo;, &amp;ldquo;What is your approach?&amp;rdquo;, &amp;ldquo;What do you want to learn from this problem?&amp;rdquo;. I never thought about neither these questions nor their answers. My approach was just to pass each level.
+&lt;br&gt;
+&lt;br&gt;
+So after explaining the half-baked solution to him, Wolfram suggested many ways to make the code more readable. He also taught me that creating an event listener inside of an event listener results in only creating the inner event listener when the outer even is triggered (and, it will do this &lt;i&gt;every&lt;/i&gt; time). This is &lt;i&gt;bad&lt;/i&gt;. My solution to this aspect was to create an event listener once for each floor object. There are many other ways in which the code needs to be improved. Right now when it is passing a floor on which people are waiting, the elevator does not pick them up. More on this tomorrow.
+&lt;br&gt;
+&lt;br&gt;
+I also worked on Haskell today which was focused on recursion. I was getting some pretty headache-y errors in the REPL when trying to create a function that took an integer &lt;i&gt;n&lt;/i&gt; and return a list that contains each digit, in order, of &lt;i&gt;n&lt;/i&gt;.
+&lt;br&gt;
+&lt;br&gt;
+Here is the error:
+&lt;p&gt;
+&lt;code&gt;Non type-variable argument in the constraint: Num [a]&lt;/code&gt;&lt;br&gt;
+&lt;code&gt;(Use FlexibleContexts to permit this)&lt;/code&gt;&lt;br&gt;
+&lt;code&gt;&amp;emsp; When checking the inferred type&lt;/code&gt;&lt;br&gt;
+&lt;code&gt;&amp;emsp; &amp;emsp; go :: forall a. (Integral a, Num [a]) =&amp;gt; a -&amp;gt; [a] -&amp;gt; [a]&lt;/code&gt;&lt;br&gt;
+&lt;code&gt;&amp;emsp; In an equation for ‘digits’:&lt;/code&gt;&lt;br&gt;
+&lt;code&gt;&amp;emsp; &amp;emsp; digits n&lt;/code&gt;&lt;br&gt;
+&lt;code&gt;&amp;emsp;&amp;emsp; &amp;emsp; = go n []&lt;/code&gt;&lt;br&gt;
+&lt;code&gt;&amp;emsp;&amp;emsp; &amp;emsp; where&lt;/code&gt;&lt;br&gt;
+&lt;code&gt; &amp;emsp;&amp;emsp; &amp;emsp; &amp;emsp; go num list&lt;/code&gt;&lt;br&gt;
+&lt;code&gt; &amp;emsp;&amp;emsp; &amp;emsp; &amp;emsp; | num == 0 = list&lt;/code&gt;&lt;br&gt;
+&lt;code&gt; &amp;emsp; &amp;emsp;&amp;emsp; &amp;emsp; | otherwise = go (num `div` 10) ([num `rem` 10] + list)&lt;/code&gt;&lt;br&gt;
+&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;It turns out I was creating my list incorrectly in the recursive call.
+&lt;br&gt;
+Instead of &lt;code&gt;([num `rem` 10] + list)&lt;/code&gt;, I need &lt;code&gt;((num `rem` 10) : list)&lt;/code&gt;. This was kind of hard to figure out because the error message is hard to interpret.
+&lt;br&gt;
+&lt;br&gt;
+Time to end my workday normally: with a long hike home. Only this time, it&amp;rsquo;s raining.
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Days 12 &amp; 13: Homework</title>

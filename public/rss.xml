@@ -4,10 +4,19 @@
     <link>https://leahchung.netlify.com/</link>
     <description>Recent content on Leah&#39;s apprenticeship</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 10 Jul 2019 12:50:23 +0200</lastBuildDate>
+    <lastBuildDate>Thu, 11 Jul 2019 12:50:23 +0200</lastBuildDate>
     
         <atom:link href="https://leahchung.netlify.com/rss.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Day 14: Errors, Errors, go away</title>
+      <link>https://leahchung.netlify.com/posts/day14/</link>
+      <pubDate>Thu, 11 Jul 2019 12:50:23 +0200</pubDate>
+      
+      <guid>https://leahchung.netlify.com/posts/day14/</guid>
+      <description>My day started normally with a long hike to work, a daily, and a kata. Today, Wolfram joined the kata, but neither Masha nor Kay could join and Markus had to leave early. Our current kata does not involve TDD (😱). The problem is called &amp;ldquo;Elevator Saga.&amp;rdquo; Each level provides a task to move x amount of people in some amount of time, using only a certain number of elevators. The simulator is the main source of testing, which provides random input to test your solution.</description>
+    </item>
     
     <item>
       <title>Days 12 &amp; 13: Homework</title>
