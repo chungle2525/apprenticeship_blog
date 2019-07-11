@@ -17,6 +17,7 @@
       <div class='header-widgets'>
         <div class='container'>
           {{- partial "extras/widget_area" ( dict "Widgets" $headerWidgets "Scope" . ) -}}
+          {{ template "_internal/google_analytics.html" . }}
         </div>
         <div class='container'>
           <link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
