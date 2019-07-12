@@ -4,10 +4,50 @@
     <link>https://leahchung.netlify.com/posts/</link>
     <description>Recent content in Posts on Leah&#39;s apprenticeship</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 11 Jul 2019 12:50:23 +0200</lastBuildDate>
+    <lastBuildDate>Fri, 12 Jul 2019 12:50:23 +0200</lastBuildDate>
     
         <atom:link href="https://leahchung.netlify.com/posts/rss.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Day 15: Meetings galore</title>
+      <link>https://leahchung.netlify.com/posts/day15/</link>
+      <pubDate>Fri, 12 Jul 2019 12:50:23 +0200</pubDate>
+      
+      <guid>https://leahchung.netlify.com/posts/day15/</guid>
+      <description>&lt;p&gt;Today was filled with meetings. I had the daily, the &amp;ldquo;Blindspot&amp;rdquo; meeting with Alvaro and his whole group of people of which he&amp;rsquo;s the PPM (not sure what to call this group), a meeting with Ugurcan concerning the setup of the Heartbeat project on my machine, a meeting with Wolfram, and my one-on-one with Alvaro. As a result, my Haskell book has collected (virtual) dust.
+&lt;br&gt;
+&lt;br&gt;
+I spent a lot of my non-meeting time with the Elevator Saga again. I was having a problem where I was creating an event listener for each floor object (for the event where a person presses the up button or down button) in a for-loop. Each of these event listeners would then add the current floor to a set of floors called &lt;i&gt;upButtonFloors&lt;/i&gt; and &lt;i&gt;downButtonFloors&lt;/i&gt;, respectively. The problem with the following code is that, if there are 5 floors, the value of &lt;i&gt;floorNum&lt;/i&gt; that was always being added to the sets is 5.
+&lt;br&gt;
+&lt;br&gt;
+&lt;code&gt;for (floorNum = 0; floorNum &amp;lt; floors.length; floorNum++) {&lt;/code&gt;&lt;br&gt;
+&lt;code&gt;&amp;emsp; &amp;emsp;floors[floorNum].on(&amp;ldquo;up_button_pressed&amp;rdquo;, function() {&lt;/code&gt;&lt;br&gt;
+&lt;code&gt;&amp;emsp; &amp;emsp; &amp;emsp; &amp;emsp;upButtonFloors.add(floorNum);&lt;/code&gt;&lt;br&gt;
+&lt;code&gt;&amp;emsp; &amp;emsp;}); &lt;/code&gt;&lt;br&gt;
+&lt;code&gt;&amp;emsp; &amp;emsp;floors[floorNum].on(&amp;ldquo;down_button_pressed&amp;rdquo;, function() {&lt;/code&gt;&lt;br&gt;
+&lt;code&gt;&amp;emsp; &amp;emsp; &amp;emsp; &amp;emsp;downButtonFloors.add(floorNum); &lt;/code&gt;&lt;br&gt;
+&lt;code&gt;&amp;emsp; &amp;emsp;});&lt;/code&gt;&lt;br&gt;
+&lt;code&gt;}&lt;/code&gt;&lt;br&gt;
+&lt;br&gt;
+This question turned my meeting with Wolfram into a JavaScript Closure meeting (instead of a meeting about ways to have the Heartbeat monitors rotate between different URLs). Wolfram taught me about the call stack and what happens with asynchronous instructions. We worked through a more general example in TDD bin that asynchronously added values to an array. We went over what works (and &lt;i&gt;why&lt;/i&gt;) and what doesn&amp;rsquo;t (and &lt;i&gt;why&lt;/i&gt;). It was a lot to digest, but going through this example made everything a lot clearer. In the end, we learned that simply adding a &amp;ldquo;let&amp;rdquo; will reduce the scope of &lt;i&gt;floorNum&lt;/i&gt; to just the body of the for loop, so when an event happens, the handler calls a function with the intended value. Though I know this is not a complete answer to &amp;ldquo;why this works.&amp;rdquo;
+&lt;br&gt;
+&lt;br&gt;
+If I were a more seasoned JavaScript programmer, I would have added the &lt;i&gt;let&lt;/i&gt; in the first place and therefore would not have run into this problem. But I&amp;rsquo;m glad I did because it led me to ask Wolfram, which led to an in depth explanation of what is happening under the hood and how to fix it. If I had added the &lt;i&gt;let&lt;/i&gt;, I would have no real understanding of the call stack, what happens when we call setTimeout(), and how asynchronous instructions are handled in JavaScript (which is single threaded, which I&amp;rsquo;m sure most of you know).
+&lt;br&gt;
+&lt;br&gt;
+Regarding the Heartbeat monitors, there are quite a few chrome extensions that rotate between different URLs (one has the name &amp;ldquo;Rotisserie,&amp;rdquo; which kind of displeases me because it makes me think of chicken) which, as of now, seems like the route I will take. The cool thing about this is that anyone who wants to add a feature may create their own application and add the link to the list of URLs on rotate. Alvaro was saying how this would be good for future apprentices/interns to contribute to as well. It would be an interesting why to learn how to create a web application while also adding value to the company!
+&lt;br&gt;
+&lt;br&gt;
+So, my day flew by and it has come to an end. Next week I will move on to Haskell lists 😄.
+&lt;br&gt;
+&lt;br&gt;
+And the sun is finally out 😎
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Day 14: Errors, Errors, go away</title>

@@ -4,10 +4,19 @@
     <link>https://leahchung.netlify.com/</link>
     <description>Recent content on Leah&#39;s apprenticeship</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 11 Jul 2019 12:50:23 +0200</lastBuildDate>
+    <lastBuildDate>Fri, 12 Jul 2019 12:50:23 +0200</lastBuildDate>
     
         <atom:link href="https://leahchung.netlify.com/rss.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Day 15: Meetings galore</title>
+      <link>https://leahchung.netlify.com/posts/day15/</link>
+      <pubDate>Fri, 12 Jul 2019 12:50:23 +0200</pubDate>
+      
+      <guid>https://leahchung.netlify.com/posts/day15/</guid>
+      <description>Today was filled with meetings. I had the daily, the &amp;ldquo;Blindspot&amp;rdquo; meeting with Alvaro and his whole group of people of which he&amp;rsquo;s the PPM (not sure what to call this group), a meeting with Ugurcan concerning the setup of the Heartbeat project on my machine, a meeting with Wolfram, and my one-on-one with Alvaro. As a result, my Haskell book has collected (virtual) dust. I spent a lot of my non-meeting time with the Elevator Saga again.</description>
+    </item>
     
     <item>
       <title>Day 14: Errors, Errors, go away</title>

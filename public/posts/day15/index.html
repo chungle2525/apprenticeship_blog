@@ -2,19 +2,19 @@
 <html lang='en'><head>
   <meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'>
-<meta name='description' content='My day started normally with a long hike to work, a daily, and a kata. Today, Wolfram joined the kata, but neither Masha nor Kay could join and Markus had to leave early. Our current kata does not involve TDD (😱). The problem is called &ldquo;Elevator Saga.&rdquo; Each level provides a task to move x amount of people in some amount of time, using only a certain number of elevators. The simulator is the main source of testing, which provides random input to test your solution.'>
+<meta name='description' content='Today was filled with meetings. I had the daily, the &ldquo;Blindspot&rdquo; meeting with Alvaro and his whole group of people of which he&rsquo;s the PPM (not sure what to call this group), a meeting with Ugurcan concerning the setup of the Heartbeat project on my machine, a meeting with Wolfram, and my one-on-one with Alvaro. As a result, my Haskell book has collected (virtual) dust. I spent a lot of my non-meeting time with the Elevator Saga again.'>
 <meta name='theme-color' content='#ffcd00'>
 
-<meta property='og:title' content='Day 14: Errors, Errors, go away • Leah&#39;s apprenticeship'>
-<meta property='og:description' content='My day started normally with a long hike to work, a daily, and a kata. Today, Wolfram joined the kata, but neither Masha nor Kay could join and Markus had to leave early. Our current kata does not involve TDD (😱). The problem is called &ldquo;Elevator Saga.&rdquo; Each level provides a task to move x amount of people in some amount of time, using only a certain number of elevators. The simulator is the main source of testing, which provides random input to test your solution.'>
-<meta property='og:url' content='https://leahchung.netlify.com/posts/day14/'>
+<meta property='og:title' content='Day 15: Meetings galore • Leah&#39;s apprenticeship'>
+<meta property='og:description' content='Today was filled with meetings. I had the daily, the &ldquo;Blindspot&rdquo; meeting with Alvaro and his whole group of people of which he&rsquo;s the PPM (not sure what to call this group), a meeting with Ugurcan concerning the setup of the Heartbeat project on my machine, a meeting with Wolfram, and my one-on-one with Alvaro. As a result, my Haskell book has collected (virtual) dust. I spent a lot of my non-meeting time with the Elevator Saga again.'>
+<meta property='og:url' content='https://leahchung.netlify.com/posts/day15/'>
 <meta property='og:site_name' content='Leah&#39;s apprenticeship'>
-<meta property='og:type' content='article'><meta property='article:section' content='posts'><meta property='article:published_time' content='2019-07-11T12:50:23&#43;02:00'/><meta property='article:modified_time' content='2019-07-11T12:50:23&#43;02:00'/><meta name='twitter:card' content='summary'>
+<meta property='og:type' content='article'><meta property='article:section' content='posts'><meta property='article:published_time' content='2019-07-12T12:50:23&#43;02:00'/><meta property='article:modified_time' content='2019-07-12T12:50:23&#43;02:00'/><meta name='twitter:card' content='summary'>
 
 <meta name="generator" content="Hugo 0.55.6" />
 
-  <title>Day 14: Errors, Errors, go away • Leah&#39;s apprenticeship</title>
-  <link rel='canonical' href='https://leahchung.netlify.com/posts/day14/'>
+  <title>Day 15: Meetings galore • Leah&#39;s apprenticeship</title>
+  <link rel='canonical' href='https://leahchung.netlify.com/posts/day15/'>
   
   
   <link rel='icon' href='/favicon.ico'>
@@ -117,7 +117,7 @@ if (!doNotTrack) {
     <style>.widget-breadcrumbs li:after{content:'\2f '}</style>
   <section class='widget widget-breadcrumbs sep-after'>
     <nav id='breadcrumbs'>
-      <ol><li><a href='/'>Leah&#39;s apprenticeship</a></li><li><a href='/posts/'>Posts</a></li><li><span>Day 14: Errors, Errors, go away</span></li></ol>
+      <ol><li><a href='/'>Leah&#39;s apprenticeship</a></li><li><a href='/posts/'>Posts</a></li><li><span>Day 15: Meetings galore</span></li></ol>
     </nav>
   </section>
 <script type="application/javascript">
@@ -153,7 +153,7 @@ if (!doNotTrack) {
   <header class='header entry-header'>
   <div class='container sep-after'>
     <div class='header-info'>
-      <h1 class='title'>Day 14: Errors, Errors, go away</h1>
+      <h1 class='title'>Day 15: Meetings galore</h1>
       
 
     </div>
@@ -167,7 +167,7 @@ if (!doNotTrack) {
   
 </svg>
 <span class='screen-reader-text'>Posted on </span>
-  <time class='entry-date' datetime='2019-07-11T12:50:23&#43;02:00'>2019, Jul 11</time>
+  <time class='entry-date' datetime='2019-07-12T12:50:23&#43;02:00'>2019, Jul 12</time>
 </span>
 
   
@@ -192,42 +192,34 @@ if (!doNotTrack) {
   
 
   <div class='container entry-content'>
-  <p>My day started normally with a long hike to work, a daily, and a kata. Today, Wolfram joined the kata, but neither Masha nor Kay could join and Markus had to leave early.
+  <p>Today was filled with meetings. I had the daily, the &ldquo;Blindspot&rdquo; meeting with Alvaro and his whole group of people of which he&rsquo;s the PPM (not sure what to call this group), a meeting with Ugurcan concerning the setup of the Heartbeat project on my machine, a meeting with Wolfram, and my one-on-one with Alvaro. As a result, my Haskell book has collected (virtual) dust.
 <br>
 <br>
-Our current kata does not involve TDD (😱). The problem is called &ldquo;<a href="https://play.elevatorsaga.com">Elevator Saga</a>.&rdquo; Each level provides a task to move <i>x</i> amount of people in some amount of time, using only a certain number of elevators. The simulator is the main source of testing, which provides random input to test your solution.
+I spent a lot of my non-meeting time with the Elevator Saga again. I was having a problem where I was creating an event listener for each floor object (for the event where a person presses the up button or down button) in a for-loop. Each of these event listeners would then add the current floor to a set of floors called <i>upButtonFloors</i> and <i>downButtonFloors</i>, respectively. The problem with the following code is that, if there are 5 floors, the value of <i>floorNum</i> that was always being added to the sets is 5.
 <br>
 <br>
-In the katas that I joined, we only made it to level 5. Our next step was to refactor to make it more readable and pass the simulation more often (😅). Wolfram was grilling me with all these questions: &ldquo;What is your goal?&rdquo;, &ldquo;How do you know when you have improved?&rdquo;, &ldquo;What is your approach?&rdquo;, &ldquo;What do you want to learn from this problem?&rdquo;. I never thought about neither these questions nor their answers. My approach was just to pass each level.
+<code>for (floorNum = 0; floorNum &lt; floors.length; floorNum++) {</code><br>
+<code>&emsp; &emsp;floors[floorNum].on(&ldquo;up_button_pressed&rdquo;, function() {</code><br>
+<code>&emsp; &emsp; &emsp; &emsp;upButtonFloors.add(floorNum);</code><br>
+<code>&emsp; &emsp;}); </code><br>
+<code>&emsp; &emsp;floors[floorNum].on(&ldquo;down_button_pressed&rdquo;, function() {</code><br>
+<code>&emsp; &emsp; &emsp; &emsp;downButtonFloors.add(floorNum); </code><br>
+<code>&emsp; &emsp;});</code><br>
+<code>}</code><br>
+<br>
+This question turned my meeting with Wolfram into a JavaScript Closure meeting (instead of a meeting about ways to have the Heartbeat monitors rotate between different URLs). Wolfram taught me about the call stack and what happens with asynchronous instructions. We worked through a more general example in TDD bin that asynchronously added values to an array. We went over what works (and <i>why</i>) and what doesn&rsquo;t (and <i>why</i>). It was a lot to digest, but going through this example made everything a lot clearer. In the end, we learned that simply adding a &ldquo;let&rdquo; will reduce the scope of <i>floorNum</i> to just the body of the for loop, so when an event happens, the handler calls a function with the intended value. Though I know this is not a complete answer to &ldquo;why this works.&rdquo;
 <br>
 <br>
-So after explaining the half-baked solution to him, Wolfram suggested many ways to make the code more readable. He also taught me that creating an event listener inside of an event listener results in only creating the inner event listener when the outer even is triggered (and, it will do this <i>every</i> time). This is <i>bad</i>. My solution to this aspect was to create an event listener once for each floor object. There are many other ways in which the code needs to be improved. Right now when it is passing a floor on which people are waiting, the elevator does not pick them up. More on this tomorrow.
+If I were a more seasoned JavaScript programmer, I would have added the <i>let</i> in the first place and therefore would not have run into this problem. But I&rsquo;m glad I did because it led me to ask Wolfram, which led to an in depth explanation of what is happening under the hood and how to fix it. If I had added the <i>let</i>, I would have no real understanding of the call stack, what happens when we call setTimeout(), and how asynchronous instructions are handled in JavaScript (which is single threaded, which I&rsquo;m sure most of you know).
 <br>
 <br>
-I also worked on Haskell today which was focused on recursion. I was getting some pretty headache-y errors in the REPL when trying to create a function that took an integer <i>n</i> and return a list that contains each digit, in order, of <i>n</i>.
+Regarding the Heartbeat monitors, there are quite a few chrome extensions that rotate between different URLs (one has the name &ldquo;Rotisserie,&rdquo; which kind of displeases me because it makes me think of chicken) which, as of now, seems like the route I will take. The cool thing about this is that anyone who wants to add a feature may create their own application and add the link to the list of URLs on rotate. Alvaro was saying how this would be good for future apprentices/interns to contribute to as well. It would be an interesting why to learn how to create a web application while also adding value to the company!
 <br>
 <br>
-Here is the error:
-<p>
-<code>Non type-variable argument in the constraint: Num [a]</code><br>
-<code>(Use FlexibleContexts to permit this)</code><br>
-<code>&emsp; When checking the inferred type</code><br>
-<code>&emsp; &emsp; go :: forall a. (Integral a, Num [a]) =&gt; a -&gt; [a] -&gt; [a]</code><br>
-<code>&emsp; In an equation for ‘digits’:</code><br>
-<code>&emsp; &emsp; digits n</code><br>
-<code>&emsp;&emsp; &emsp; = go n []</code><br>
-<code>&emsp;&emsp; &emsp; where</code><br>
-<code> &emsp;&emsp; &emsp; &emsp; go num list</code><br>
-<code> &emsp;&emsp; &emsp; &emsp; | num == 0 = list</code><br>
-<code> &emsp; &emsp;&emsp; &emsp; | otherwise = go (num `div` 10) ([num `rem` 10] + list)</code><br>
-</p></p>
-
-<p>It turns out I was creating my list incorrectly in the recursive call.
-<br>
-Instead of <code>([num `rem` 10] + list)</code>, I need <code>((num `rem` 10) : list)</code>. This was kind of hard to figure out because the error message is hard to interpret.
+So, my day flew by and it has come to an end. Next week I will move on to Haskell lists 😄.
 <br>
 <br>
-Time to end my workday normally: with a long hike home. Only this time, it&rsquo;s raining.
+And the sun is finally out 😎
 <br>
 <br>
 <br></p>
@@ -260,7 +252,7 @@ Time to end my workday normally: with a long hike home. Only this time, it&rsquo
 
 <nav class='entry-nav'>
   <div class='container'><div class='prev-entry sep-before'>
-      <a href='/posts/day12/'>
+      <a href='/posts/day14/'>
         <span aria-hidden='true'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
   
   <line x1="20" y1="12" x2="4" y2="12"/>
@@ -268,17 +260,7 @@ Time to end my workday normally: with a long hike home. Only this time, it&rsquo
   
 </svg>
  Previous</span>
-        <span class='screen-reader-text'>Previous post: </span>Days 12 &amp; 13: Homework</a>
-    </div><div class='next-entry sep-before'>
-      <a href='/posts/day15/'>
-        <span class='screen-reader-text'>Next post: </span>Day 15: Meetings galore<span aria-hidden='true'>Next <svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
-  
-  <line x1="4" y1="12" x2="20" y2="12"/>
-  <polyline points="14 6 20 12 14 18"/>
-  
-</svg>
-</span>
-      </a>
+        <span class='screen-reader-text'>Previous post: </span>Day 14: Errors, Errors, go away</a>
     </div></div>
 </nav>
 
