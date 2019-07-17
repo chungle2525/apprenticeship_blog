@@ -2,19 +2,21 @@
 <html lang='en'><head>
   <meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'>
-<meta name='description' content='Today was filled with meetings. I had the daily, the &ldquo;Blindspot&rdquo; meeting with Alvaro and his whole group of people of which he&rsquo;s the PPM (not sure what to call this group), a meeting with Ugurcan concerning the setup of the Heartbeat project on my machine, a meeting with Wolfram, and my one-on-one with Alvaro. As a result, my Haskell book has collected (virtual) dust. I spent a lot of my non-meeting time with the Elevator Saga again.'>
+<meta name='description' content='For some reason, the task of blogging has totally escaped me the past couple of days. I&rsquo;ve completed the Haskell chapters on recursion and lists, and I feel pretty accomplished! I&rsquo;m currently learning about folding lists, which is not as pleasant. Here&rsquo;s an exercise from the book: The following fold has an error. Fix it and then test it in your REPL. foldr const &lsquo;a&rsquo; [1..5]
+If we check the type of const (a function that takes two arguments and returns the first), we get: const :: a -&gt; b -&gt; a Now, let&rsquo;s check the type of foldr: foldr :: Foldable t =&gt; (a -&gt; b -&gt; b) -&gt; b -&gt; t a -&gt; b Do you see the problem?'>
 <meta name='theme-color' content='#ffcd00'>
 
-<meta property='og:title' content='Day 15: Meetings galore • Leah&#39;s apprenticeship'>
-<meta property='og:description' content='Today was filled with meetings. I had the daily, the &ldquo;Blindspot&rdquo; meeting with Alvaro and his whole group of people of which he&rsquo;s the PPM (not sure what to call this group), a meeting with Ugurcan concerning the setup of the Heartbeat project on my machine, a meeting with Wolfram, and my one-on-one with Alvaro. As a result, my Haskell book has collected (virtual) dust. I spent a lot of my non-meeting time with the Elevator Saga again.'>
-<meta property='og:url' content='https://leahchung.netlify.com/posts/day15/'>
+<meta property='og:title' content='Blog 16: New plans • Leah&#39;s apprenticeship'>
+<meta property='og:description' content='For some reason, the task of blogging has totally escaped me the past couple of days. I&rsquo;ve completed the Haskell chapters on recursion and lists, and I feel pretty accomplished! I&rsquo;m currently learning about folding lists, which is not as pleasant. Here&rsquo;s an exercise from the book: The following fold has an error. Fix it and then test it in your REPL. foldr const &lsquo;a&rsquo; [1..5]
+If we check the type of const (a function that takes two arguments and returns the first), we get: const :: a -&gt; b -&gt; a Now, let&rsquo;s check the type of foldr: foldr :: Foldable t =&gt; (a -&gt; b -&gt; b) -&gt; b -&gt; t a -&gt; b Do you see the problem?'>
+<meta property='og:url' content='https://leahchung.netlify.com/posts/day16/'>
 <meta property='og:site_name' content='Leah&#39;s apprenticeship'>
-<meta property='og:type' content='article'><meta property='article:section' content='posts'><meta property='article:published_time' content='2019-07-12T12:50:23&#43;02:00'/><meta property='article:modified_time' content='2019-07-12T12:50:23&#43;02:00'/><meta name='twitter:card' content='summary'>
+<meta property='og:type' content='article'><meta property='article:section' content='posts'><meta property='article:published_time' content='2019-07-17T12:50:23&#43;02:00'/><meta property='article:modified_time' content='2019-07-17T12:50:23&#43;02:00'/><meta name='twitter:card' content='summary'>
 
 <meta name="generator" content="Hugo 0.55.6" />
 
-  <title>Day 15: Meetings galore • Leah&#39;s apprenticeship</title>
-  <link rel='canonical' href='https://leahchung.netlify.com/posts/day15/'>
+  <title>Blog 16: New plans • Leah&#39;s apprenticeship</title>
+  <link rel='canonical' href='https://leahchung.netlify.com/posts/day16/'>
   
   
   <link rel='icon' href='/favicon.ico'>
@@ -117,7 +119,7 @@ if (!doNotTrack) {
     <style>.widget-breadcrumbs li:after{content:'\2f '}</style>
   <section class='widget widget-breadcrumbs sep-after'>
     <nav id='breadcrumbs'>
-      <ol><li><a href='/'>Leah&#39;s apprenticeship</a></li><li><a href='/posts/'>Posts</a></li><li><span>Day 15: Meetings galore</span></li></ol>
+      <ol><li><a href='/'>Leah&#39;s apprenticeship</a></li><li><a href='/posts/'>Posts</a></li><li><span>Blog 16: New plans</span></li></ol>
     </nav>
   </section>
 <script type="application/javascript">
@@ -153,7 +155,7 @@ if (!doNotTrack) {
   <header class='header entry-header'>
   <div class='container sep-after'>
     <div class='header-info'>
-      <h1 class='title'>Day 15: Meetings galore</h1>
+      <h1 class='title'>Blog 16: New plans</h1>
       
 
     </div>
@@ -167,7 +169,7 @@ if (!doNotTrack) {
   
 </svg>
 <span class='screen-reader-text'>Posted on </span>
-  <time class='entry-date' datetime='2019-07-12T12:50:23&#43;02:00'>2019, Jul 12</time>
+  <time class='entry-date' datetime='2019-07-17T12:50:23&#43;02:00'>2019, Jul 17</time>
 </span>
 
   
@@ -192,34 +194,65 @@ if (!doNotTrack) {
   
 
   <div class='container entry-content'>
-  <p>Today was filled with meetings. I had the daily, the &ldquo;Blindspot&rdquo; meeting with Alvaro and his whole group of people of which he&rsquo;s the PPM (not sure what to call this group), a meeting with Ugurcan concerning the setup of the Heartbeat project on my machine, a meeting with Wolfram, and my one-on-one with Alvaro. As a result, my Haskell book has collected (virtual) dust.
+  <p>For some reason, the task of blogging has totally escaped me the past couple of days. I&rsquo;ve completed the Haskell chapters on recursion and lists, and I feel pretty accomplished! I&rsquo;m currently learning about folding lists, which is not as pleasant. Here&rsquo;s an exercise from the book:
 <br>
 <br>
-I spent a lot of my non-meeting time with the Elevator Saga again. I was having a problem where I was creating an event listener for each floor object (for the event where a person presses the up button or down button) in a for-loop. Each of these event listeners would then add the current floor to a set of floors called <i>upButtonFloors</i> and <i>downButtonFloors</i>, respectively. The problem with the following code is that, if there are 5 floors, the value of <i>floorNum</i> that was always being added to the sets is 5.
+The following fold has an error. Fix it and then test it in your REPL.
+<br>
+<code>foldr const &lsquo;a&rsquo; [1..5]</code><br>
+<br>
+If we check the type of <code>const</code> (a function that takes two arguments and returns the first), we get:
+<br>
+<code>const :: a -&gt; b -&gt; a</code>
 <br>
 <br>
-<code>for (floorNum = 0; floorNum &lt; floors.length; floorNum++) {</code><br>
-<code>&emsp; &emsp;floors[floorNum].on(&ldquo;up_button_pressed&rdquo;, function() {</code><br>
-<code>&emsp; &emsp; &emsp; &emsp;upButtonFloors.add(floorNum);</code><br>
-<code>&emsp; &emsp;}); </code><br>
-<code>&emsp; &emsp;floors[floorNum].on(&ldquo;down_button_pressed&rdquo;, function() {</code><br>
-<code>&emsp; &emsp; &emsp; &emsp;downButtonFloors.add(floorNum); </code><br>
-<code>&emsp; &emsp;});</code><br>
-<code>}</code><br>
+Now, let&rsquo;s check the type of <code>foldr</code>:
 <br>
-This question turned my meeting with Wolfram into a JavaScript Closure meeting (instead of a meeting about ways to have the Heartbeat monitors rotate between different URLs). Wolfram taught me about the call stack and what happens with asynchronous instructions. We worked through a more general example in TDD bin that asynchronously added values to an array. We went over what works (and <i>why</i>) and what doesn&rsquo;t (and <i>why</i>). It was a lot to digest, but going through this example made everything a lot clearer. In the end, we learned that simply adding a &ldquo;let&rdquo; will reduce the scope of <i>floorNum</i> to just the body of the for loop, so when an event happens, the handler calls a function with the intended value. Though I know this is not a complete answer to &ldquo;why this works.&rdquo;
+<code>foldr :: Foldable t =&gt; (a -&gt; b -&gt; b) -&gt; b -&gt; t a -&gt; b</code>
 <br>
 <br>
-If I were a more seasoned JavaScript programmer, I would have added the <i>let</i> in the first place and therefore would not have run into this problem. But I&rsquo;m glad I did because it led me to ask Wolfram, which led to an in depth explanation of what is happening under the hood and how to fix it. If I had added the <i>let</i>, I would have no real understanding of the call stack, what happens when we call setTimeout(), and how asynchronous instructions are handled in JavaScript (which is single threaded, which I&rsquo;m sure most of you know).
+Do you see the problem? The type of <code>const</code> does not align with the type required by <code>foldr</code>. The solution is fairly simple: apply <code>flip</code> to <code>const</code>:
+<br>
+<code>foldr (flip const) &lsquo;a&rsquo; [1..5]</code><br>
+The type of <code>(flip const)</code> is:
+<br>
+<code>(flip const) :: b -&gt; c -&gt; c</code>
 <br>
 <br>
-Regarding the Heartbeat monitors, there are quite a few chrome extensions that rotate between different URLs (one has the name &ldquo;Rotisserie,&rdquo; which kind of displeases me because it makes me think of chicken) which, as of now, seems like the route I will take. The cool thing about this is that anyone who wants to add a feature may create their own application and add the link to the list of URLs on rotate. Alvaro was saying how this would be good for future apprentices/interns to contribute to as well. It would be an interesting why to learn how to create a web application while also adding value to the company!
+This is a solution that took me quite some time to figure out. To no avail, I was filling my notebook with scribbles and parentheses. The solution <code>:t</code> was just waiting for my in my REPL 😄
 <br>
 <br>
-So, my day flew by and it has come to an end. Next week I will move on to Haskell lists 😄.
+Another thing that doesn&rsquo;t work:
+<br>
+<code>foldl (:) [] [1..3]</code>  (The (:) is the cons function that prepends a head to a list)
+<br>
+I really had no idea why this didn&rsquo;t work as I wrote it out. Here&rsquo;s what I wrote:
+<br>
+(([] : 1) : 2) : 3
+<br>
+([1] : 2) : 3
+<br>
+([2, 1]) : 3
+<br>
+[3, 2, 1]
 <br>
 <br>
-And the sun is finally out 😎
+But, no! The REPL throws an error because the type of the (:) function is <code>(:) :: a -&gt; [a] -&gt; [a]</code>. The first argument must be some object of type a, and the second must be a list that contains objects of type a, and the function returns a list that contains objects of type a. The arguments cannot be switched.
+<br>
+<br>
+The topic of folding is very confusing for me, but checking the types of the functions in these exercises help me see the errors and how to fix them. I&rsquo;ll take more time tomorrow to work through the chapter.
+<br>
+<br>
+I also met with Peri today to discuss my progress and the plan for the coming month. One suggestion he made is to rehearse my Haskell learnings through blog posts or lightning talks, hence the small exercise example above. Once I understand foldr and foldl better, I plan to write a more in-depth blog post on the topic. This is just a way to deepen my understanding of the topic. I shouldn&rsquo;t treat it like a university course and mechanically work through the book and exercises just to get it done. I should treat it as a topic that I want to learn and, more importantly, teach others about (of course this is not to say that I haven&rsquo;t been enjoying Haskell - because I do! Suprisingly!) Writing blog posts about any of the things I am learning is a way to articulate my thoughts, and I think this is especially helpful for something like functional programming, which confused and angered me in a previous life 🍃
+<br>
+<br>
+After this, I met with Ugurcan to talk about the Heartbeat project and my goals. The first goal he suggested is to create a simple &ldquo;Hello World&rdquo; application and deploy it, just to learn about docker and the dust platform. This was a great suggestion, because it is something that I need to understand before I can move on with this project.
+<br>
+<br>
+I made many new plans today. I have also added 3 trainings/workshops to my TODO list thanks to Peri&rsquo;s and Ugurcan&rsquo;s suggestions.
+<br>
+<br>
+So much to do! So much to see! So much to learn! 🤓
 <br>
 <br>
 <br></p>
@@ -252,7 +285,7 @@ And the sun is finally out 😎
 
 <nav class='entry-nav'>
   <div class='container'><div class='prev-entry sep-before'>
-      <a href='/posts/day14/'>
+      <a href='/posts/day15/'>
         <span aria-hidden='true'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
   
   <line x1="20" y1="12" x2="4" y2="12"/>
@@ -260,17 +293,7 @@ And the sun is finally out 😎
   
 </svg>
  Previous</span>
-        <span class='screen-reader-text'>Previous post: </span>Day 14: Errors, Errors, go away</a>
-    </div><div class='next-entry sep-before'>
-      <a href='/posts/day16/'>
-        <span class='screen-reader-text'>Next post: </span>Blog 16: New plans<span aria-hidden='true'>Next <svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
-  
-  <line x1="4" y1="12" x2="20" y2="12"/>
-  <polyline points="14 6 20 12 14 18"/>
-  
-</svg>
-</span>
-      </a>
+        <span class='screen-reader-text'>Previous post: </span>Day 15: Meetings galore</a>
     </div></div>
 </nav>
 

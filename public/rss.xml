@@ -4,10 +4,20 @@
     <link>https://leahchung.netlify.com/</link>
     <description>Recent content on Leah&#39;s apprenticeship</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 12 Jul 2019 12:50:23 +0200</lastBuildDate>
+    <lastBuildDate>Wed, 17 Jul 2019 12:50:23 +0200</lastBuildDate>
     
         <atom:link href="https://leahchung.netlify.com/rss.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Blog 16: New plans</title>
+      <link>https://leahchung.netlify.com/posts/day16/</link>
+      <pubDate>Wed, 17 Jul 2019 12:50:23 +0200</pubDate>
+      
+      <guid>https://leahchung.netlify.com/posts/day16/</guid>
+      <description>For some reason, the task of blogging has totally escaped me the past couple of days. I&amp;rsquo;ve completed the Haskell chapters on recursion and lists, and I feel pretty accomplished! I&amp;rsquo;m currently learning about folding lists, which is not as pleasant. Here&amp;rsquo;s an exercise from the book: The following fold has an error. Fix it and then test it in your REPL. foldr const &amp;lsquo;a&amp;rsquo; [1..5]
+If we check the type of const (a function that takes two arguments and returns the first), we get: const :: a -&amp;gt; b -&amp;gt; a Now, let&amp;rsquo;s check the type of foldr: foldr :: Foldable t =&amp;gt; (a -&amp;gt; b -&amp;gt; b) -&amp;gt; b -&amp;gt; t a -&amp;gt; b Do you see the problem?</description>
+    </item>
     
     <item>
       <title>Day 15: Meetings galore</title>
