@@ -2,21 +2,27 @@
 <html lang='en'><head>
   <meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'>
-<meta name='description' content='For some reason, the task of blogging has totally escaped me the past couple of days. I&rsquo;ve completed the Haskell chapters on recursion and lists, and I feel pretty accomplished! I&rsquo;m currently learning about folding lists, which is not as pleasant. Here&rsquo;s an exercise from the book: The following fold has an error. Fix it and then test it in your REPL. foldr const &lsquo;a&rsquo; [1..5]
-If we check the type of const (a function that takes two arguments and returns the first), we get: const :: a -&gt; b -&gt; a Now, let&rsquo;s check the type of foldr: foldr :: Foldable t =&gt; (a -&gt; b -&gt; b) -&gt; b -&gt; t a -&gt; b Do you see the problem?'>
+<meta name='description' content='Today was a Haskell day. My current endeavors include foldr and foldl, and believe me: the going got tough. One thing that confused me is the following: Prelude&gt; foldr const 0 ([1..3] &#43;&#43; undefined)
+&gt;1
+This works!
+(Note that simply concatenating undefined to a list throws an error, because the list - in its entirety - is evaluated, and the (&#43;&#43;) function requires two list arguments.)
+(Also note that const takes two arguments and returns the first argument.'>
 <meta name='theme-color' content='#ffcd00'>
 
-<meta property='og:title' content='Blog 16: New plans • Leah&#39;s apprenticeship'>
-<meta property='og:description' content='For some reason, the task of blogging has totally escaped me the past couple of days. I&rsquo;ve completed the Haskell chapters on recursion and lists, and I feel pretty accomplished! I&rsquo;m currently learning about folding lists, which is not as pleasant. Here&rsquo;s an exercise from the book: The following fold has an error. Fix it and then test it in your REPL. foldr const &lsquo;a&rsquo; [1..5]
-If we check the type of const (a function that takes two arguments and returns the first), we get: const :: a -&gt; b -&gt; a Now, let&rsquo;s check the type of foldr: foldr :: Foldable t =&gt; (a -&gt; b -&gt; b) -&gt; b -&gt; t a -&gt; b Do you see the problem?'>
-<meta property='og:url' content='https://leahchung.netlify.com/posts/day16/'>
+<meta property='og:title' content='Blog 17: It takes a village!! • Leah&#39;s apprenticeship'>
+<meta property='og:description' content='Today was a Haskell day. My current endeavors include foldr and foldl, and believe me: the going got tough. One thing that confused me is the following: Prelude&gt; foldr const 0 ([1..3] &#43;&#43; undefined)
+&gt;1
+This works!
+(Note that simply concatenating undefined to a list throws an error, because the list - in its entirety - is evaluated, and the (&#43;&#43;) function requires two list arguments.)
+(Also note that const takes two arguments and returns the first argument.'>
+<meta property='og:url' content='https://leahchung.netlify.com/posts/day17/'>
 <meta property='og:site_name' content='Leah&#39;s apprenticeship'>
-<meta property='og:type' content='article'><meta property='article:section' content='posts'><meta property='article:published_time' content='2019-07-17T12:50:23&#43;02:00'/><meta property='article:modified_time' content='2019-07-17T12:50:23&#43;02:00'/><meta name='twitter:card' content='summary'>
+<meta property='og:type' content='article'><meta property='article:section' content='posts'><meta property='article:published_time' content='2019-07-18T12:50:23&#43;02:00'/><meta property='article:modified_time' content='2019-07-18T12:50:23&#43;02:00'/><meta name='twitter:card' content='summary'>
 
 <meta name="generator" content="Hugo 0.55.6" />
 
-  <title>Blog 16: New plans • Leah&#39;s apprenticeship</title>
-  <link rel='canonical' href='https://leahchung.netlify.com/posts/day16/'>
+  <title>Blog 17: It takes a village!! • Leah&#39;s apprenticeship</title>
+  <link rel='canonical' href='https://leahchung.netlify.com/posts/day17/'>
   
   
   <link rel='icon' href='/favicon.ico'>
@@ -119,7 +125,7 @@ if (!doNotTrack) {
     <style>.widget-breadcrumbs li:after{content:'\2f '}</style>
   <section class='widget widget-breadcrumbs sep-after'>
     <nav id='breadcrumbs'>
-      <ol><li><a href='/'>Leah&#39;s apprenticeship</a></li><li><a href='/posts/'>Posts</a></li><li><span>Blog 16: New plans</span></li></ol>
+      <ol><li><a href='/'>Leah&#39;s apprenticeship</a></li><li><a href='/posts/'>Posts</a></li><li><span>Blog 17: It takes a village!!</span></li></ol>
     </nav>
   </section>
 <script type="application/javascript">
@@ -155,7 +161,7 @@ if (!doNotTrack) {
   <header class='header entry-header'>
   <div class='container sep-after'>
     <div class='header-info'>
-      <h1 class='title'>Blog 16: New plans</h1>
+      <h1 class='title'>Blog 17: It takes a village!!</h1>
       
 
     </div>
@@ -169,7 +175,7 @@ if (!doNotTrack) {
   
 </svg>
 <span class='screen-reader-text'>Posted on </span>
-  <time class='entry-date' datetime='2019-07-17T12:50:23&#43;02:00'>2019, Jul 17</time>
+  <time class='entry-date' datetime='2019-07-18T12:50:23&#43;02:00'>2019, Jul 18</time>
 </span>
 
   
@@ -194,65 +200,63 @@ if (!doNotTrack) {
   
 
   <div class='container entry-content'>
-  <p>For some reason, the task of blogging has totally escaped me the past couple of days. I&rsquo;ve completed the Haskell chapters on recursion and lists, and I feel pretty accomplished! I&rsquo;m currently learning about folding lists, which is not as pleasant. Here&rsquo;s an exercise from the book:
+  <p>Today was a Haskell day. My current endeavors include foldr and foldl, and believe me: the going got tough.
 <br>
 <br>
-The following fold has an error. Fix it and then test it in your REPL.
+One thing that confused me is the following:
 <br>
-<code>foldr const &lsquo;a&rsquo; [1..5]</code><br>
+<code>Prelude&gt; foldr const 0 ([1..3] ++ undefined)</code><br>
+<code>&gt;1</code><br>
+This works!<br>
+(Note that simply concatenating <i>undefined</i> to a list throws an error, because the list - in its entirety - is evaluated, and the (++) function requires two list arguments.)<br>
+(Also note that <i>const</i> takes two arguments and returns the first argument.)<br>
+(Also also note that foldr works like so: <br>
+<code>foldr f z (x:xs) = f x (foldr f z xs)</code>)<br>
 <br>
-If we check the type of <code>const</code> (a function that takes two arguments and returns the first), we get:
+Let&rsquo;s name our list ([1..3] ++ undefined) <i>lst</i>. Here is what happens first:
 <br>
-<code>const :: a -&gt; b -&gt; a</code>
+<code>foldr const 0 lst = const (head lst) (foldr const 0 (tail lst))</code>
 <br>
-<br>
-Now, let&rsquo;s check the type of <code>foldr</code>:
-<br>
-<code>foldr :: Foldable t =&gt; (a -&gt; b -&gt; b) -&gt; b -&gt; t a -&gt; b</code>
-<br>
-<br>
-Do you see the problem? The type of <code>const</code> does not align with the type required by <code>foldr</code>. The solution is fairly simple: apply <code>flip</code> to <code>const</code>:
-<br>
-<code>foldr (flip const) &lsquo;a&rsquo; [1..5]</code><br>
-The type of <code>(flip const)</code> is:
-<br>
-<code>(flip const) :: b -&gt; c -&gt; c</code>
+Since the <i>const</i> function just ignores the second argument, 1 is returned.
 <br>
 <br>
-This is a solution that took me quite some time to figure out. To no avail, I was filling my notebook with scribbles and parentheses. The solution <code>:t</code> was just waiting for my in my REPL 😄
+But, when I wrote this out on paper, I was getting so confused:<br>
+<code>(const 1 (const 2 (const 3 (const undefined 0))))</code><br>
+<i>Why doesnt &lsquo;const undefined 0&rsquo; throw an error?</i> Because it is never evaluated as the outer most parentheses are evaluated first, and <b>const just ignores the second argument</b> (bold for emphasis).
 <br>
 <br>
-Another thing that doesn&rsquo;t work:
+As for foldl:<br>
+<code>Prelude&gt; foldr const 0 ([1..3] ++ undefined)</code><br>
+<code>&gt;*** Exception: Prelude.undefined<br>
+&gt;CallStack (from HasCallStack):<br>
+&gt;&emsp;&emsp;&emsp;error, called at libraries/base/GHC/Err.hs:78:14 in base:GHC.Err<br>
+&gt;&emsp;&emsp;&emsp;undefined, called at <interactive>:119:26 in interactive:Ghci20</code><br>
+This doesn&rsquo;t work!<br>
+Here&rsquo;s how it is written out on paper:
 <br>
-<code>foldl (:) [] [1..3]</code>  (The (:) is the cons function that prepends a head to a list)
+<code>((((1 `const` 0) `const` 2) `const` 3) `cons` undefined)</code>
 <br>
-I really had no idea why this didn&rsquo;t work as I wrote it out. Here&rsquo;s what I wrote:
-<br>
-(([] : 1) : 2) : 3
-<br>
-([1] : 2) : 3
-<br>
-([2, 1]) : 3
-<br>
-[3, 2, 1]
-<br>
-<br>
-But, no! The REPL throws an error because the type of the (:) function is <code>(:) :: a -&gt; [a] -&gt; [a]</code>. The first argument must be some object of type a, and the second must be a list that contains objects of type a, and the function returns a list that contains objects of type a. The arguments cannot be switched.
+Here, the outermost parentheses contain <i>undefined</i>, and therefore an error is thrown. (I put the `` around <i>const</i> to make it an infix operator for visual purposes. Otherwise, the expansion looks similar to that of foldr).
 <br>
 <br>
-The topic of folding is very confusing for me, but checking the types of the functions in these exercises help me see the errors and how to fix them. I&rsquo;ll take more time tomorrow to work through the chapter.
+This really confused me. I was thinking: <i>How does foldr know where the end of the list is without having to evaluate the undefined part and foldl doesn&rsquo;t? How does foldr know when to stop looking for more elements in the list and foldl doesn&rsquo;t?</i>
 <br>
 <br>
-I also met with Peri today to discuss my progress and the plan for the coming month. One suggestion he made is to rehearse my Haskell learnings through blog posts or lightning talks, hence the small exercise example above. Once I understand foldr and foldl better, I plan to write a more in-depth blog post on the topic. This is just a way to deepen my understanding of the topic. I shouldn&rsquo;t treat it like a university course and mechanically work through the book and exercises just to get it done. I should treat it as a topic that I want to learn and, more importantly, teach others about (of course this is not to say that I haven&rsquo;t been enjoying Haskell - because I do! Suprisingly!) Writing blog posts about any of the things I am learning is a way to articulate my thoughts, and I think this is especially helpful for something like functional programming, which confused and angered me in a previous life 🍃
+But after some help from Lewis, Frank, Francesco, and Daniel (and God (kidding)), it all makes sense. It was funny to see the confusion this question caused, but it thankfully came to a resolution 😄
+<br></p>
+
+<p>Tomorrow I will (start my day at the Ausländerbehörde at 7:30*, then) implement some functions (which I already completed with recursion) using folds such as <i>myOr</i> (a function that applies logical or to a list of booleans), <i>myAny</i> (a function that returns whether or not some value in a list meets a certain condition), and <i>squish</i> (which flattens a list of lists into one list). It will be pretty tough to get out of the recursive mindset and implement these functions with folds, but I&rsquo;m sure I&rsquo;ll come out alive 😅
 <br>
 <br>
-After this, I met with Ugurcan to talk about the Heartbeat project and my goals. The first goal he suggested is to create a simple &ldquo;Hello World&rdquo; application and deploy it, just to learn about docker and the dust platform. This was a great suggestion, because it is something that I need to understand before I can move on with this project.
+I will also do some research on the testing pyramid and Docker (whether that be using online or human sources).
 <br>
 <br>
-I made many new plans today. I have also added 3 trainings/workshops to my TODO list thanks to Peri&rsquo;s and Ugurcan&rsquo;s suggestions.
+Signing off! 👋
 <br>
 <br>
-So much to do! So much to see! So much to learn! 🤓
+<br>
+<br>
+* When I was at the Ausländerbehörde the other day, I ended up waiting in the wrong line for 1.5 hours, only to get to the correct place for Blue Card applications and be told that there were no more spots for the day. At first I was really upset and annoyed that I couldn&rsquo;t get an appointment, but now I realize that maybe it was a blessing because, in said correct place, I saw people wearing suits, and I was wearing running shorts and a t-shirt.
 <br>
 <br>
 <br></p>
@@ -285,7 +289,7 @@ So much to do! So much to see! So much to learn! 🤓
 
 <nav class='entry-nav'>
   <div class='container'><div class='prev-entry sep-before'>
-      <a href='/posts/day15/'>
+      <a href='/posts/day16/'>
         <span aria-hidden='true'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
   
   <line x1="20" y1="12" x2="4" y2="12"/>
@@ -293,17 +297,7 @@ So much to do! So much to see! So much to learn! 🤓
   
 </svg>
  Previous</span>
-        <span class='screen-reader-text'>Previous post: </span>Day 15: Meetings galore</a>
-    </div><div class='next-entry sep-before'>
-      <a href='/posts/day17/'>
-        <span class='screen-reader-text'>Next post: </span>Blog 17: It takes a village!!<span aria-hidden='true'>Next <svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
-  
-  <line x1="4" y1="12" x2="20" y2="12"/>
-  <polyline points="14 6 20 12 14 18"/>
-  
-</svg>
-</span>
-      </a>
+        <span class='screen-reader-text'>Previous post: </span>Blog 16: New plans</a>
     </div></div>
 </nav>
 

@@ -4,10 +4,79 @@
     <link>https://leahchung.netlify.com/posts/</link>
     <description>Recent content in Posts on Leah&#39;s apprenticeship</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 17 Jul 2019 12:50:23 +0200</lastBuildDate>
+    <lastBuildDate>Thu, 18 Jul 2019 12:50:23 +0200</lastBuildDate>
     
         <atom:link href="https://leahchung.netlify.com/posts/rss.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Blog 17: It takes a village!!</title>
+      <link>https://leahchung.netlify.com/posts/day17/</link>
+      <pubDate>Thu, 18 Jul 2019 12:50:23 +0200</pubDate>
+      
+      <guid>https://leahchung.netlify.com/posts/day17/</guid>
+      <description>&lt;p&gt;Today was a Haskell day. My current endeavors include foldr and foldl, and believe me: the going got tough.
+&lt;br&gt;
+&lt;br&gt;
+One thing that confused me is the following:
+&lt;br&gt;
+&lt;code&gt;Prelude&amp;gt; foldr const 0 ([1..3] ++ undefined)&lt;/code&gt;&lt;br&gt;
+&lt;code&gt;&amp;gt;1&lt;/code&gt;&lt;br&gt;
+This works!&lt;br&gt;
+(Note that simply concatenating &lt;i&gt;undefined&lt;/i&gt; to a list throws an error, because the list - in its entirety - is evaluated, and the (++) function requires two list arguments.)&lt;br&gt;
+(Also note that &lt;i&gt;const&lt;/i&gt; takes two arguments and returns the first argument.)&lt;br&gt;
+(Also also note that foldr works like so: &lt;br&gt;
+&lt;code&gt;foldr f z (x:xs) = f x (foldr f z xs)&lt;/code&gt;)&lt;br&gt;
+&lt;br&gt;
+Let&amp;rsquo;s name our list ([1..3] ++ undefined) &lt;i&gt;lst&lt;/i&gt;. Here is what happens first:
+&lt;br&gt;
+&lt;code&gt;foldr const 0 lst = const (head lst) (foldr const 0 (tail lst))&lt;/code&gt;
+&lt;br&gt;
+Since the &lt;i&gt;const&lt;/i&gt; function just ignores the second argument, 1 is returned.
+&lt;br&gt;
+&lt;br&gt;
+But, when I wrote this out on paper, I was getting so confused:&lt;br&gt;
+&lt;code&gt;(const 1 (const 2 (const 3 (const undefined 0))))&lt;/code&gt;&lt;br&gt;
+&lt;i&gt;Why doesnt &amp;lsquo;const undefined 0&amp;rsquo; throw an error?&lt;/i&gt; Because it is never evaluated as the outer most parentheses are evaluated first, and &lt;b&gt;const just ignores the second argument&lt;/b&gt; (bold for emphasis).
+&lt;br&gt;
+&lt;br&gt;
+As for foldl:&lt;br&gt;
+&lt;code&gt;Prelude&amp;gt; foldr const 0 ([1..3] ++ undefined)&lt;/code&gt;&lt;br&gt;
+&lt;code&gt;&amp;gt;*** Exception: Prelude.undefined&lt;br&gt;
+&amp;gt;CallStack (from HasCallStack):&lt;br&gt;
+&amp;gt;&amp;emsp;&amp;emsp;&amp;emsp;error, called at libraries/base/GHC/Err.hs:78:14 in base:GHC.Err&lt;br&gt;
+&amp;gt;&amp;emsp;&amp;emsp;&amp;emsp;undefined, called at &lt;interactive&gt;:119:26 in interactive:Ghci20&lt;/code&gt;&lt;br&gt;
+This doesn&amp;rsquo;t work!&lt;br&gt;
+Here&amp;rsquo;s how it is written out on paper:
+&lt;br&gt;
+&lt;code&gt;((((1 `const` 0) `const` 2) `const` 3) `cons` undefined)&lt;/code&gt;
+&lt;br&gt;
+Here, the outermost parentheses contain &lt;i&gt;undefined&lt;/i&gt;, and therefore an error is thrown. (I put the `` around &lt;i&gt;const&lt;/i&gt; to make it an infix operator for visual purposes. Otherwise, the expansion looks similar to that of foldr).
+&lt;br&gt;
+&lt;br&gt;
+This really confused me. I was thinking: &lt;i&gt;How does foldr know where the end of the list is without having to evaluate the undefined part and foldl doesn&amp;rsquo;t? How does foldr know when to stop looking for more elements in the list and foldl doesn&amp;rsquo;t?&lt;/i&gt;
+&lt;br&gt;
+&lt;br&gt;
+But after some help from Lewis, Frank, Francesco, and Daniel (and God (kidding)), it all makes sense. It was funny to see the confusion this question caused, but it thankfully came to a resolution 😄
+&lt;br&gt;&lt;/p&gt;
+
+&lt;p&gt;Tomorrow I will (start my day at the Ausländerbehörde at 7:30*, then) implement some functions (which I already completed with recursion) using folds such as &lt;i&gt;myOr&lt;/i&gt; (a function that applies logical or to a list of booleans), &lt;i&gt;myAny&lt;/i&gt; (a function that returns whether or not some value in a list meets a certain condition), and &lt;i&gt;squish&lt;/i&gt; (which flattens a list of lists into one list). It will be pretty tough to get out of the recursive mindset and implement these functions with folds, but I&amp;rsquo;m sure I&amp;rsquo;ll come out alive 😅
+&lt;br&gt;
+&lt;br&gt;
+I will also do some research on the testing pyramid and Docker (whether that be using online or human sources).
+&lt;br&gt;
+&lt;br&gt;
+Signing off! 👋
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+* When I was at the Ausländerbehörde the other day, I ended up waiting in the wrong line for 1.5 hours, only to get to the correct place for Blue Card applications and be told that there were no more spots for the day. At first I was really upset and annoyed that I couldn&amp;rsquo;t get an appointment, but now I realize that maybe it was a blessing because, in said correct place, I saw people wearing suits, and I was wearing running shorts and a t-shirt.
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Blog 16: New plans</title>

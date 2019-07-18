@@ -4,10 +4,23 @@
     <link>https://leahchung.netlify.com/</link>
     <description>Recent content on Leah&#39;s apprenticeship</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 17 Jul 2019 12:50:23 +0200</lastBuildDate>
+    <lastBuildDate>Thu, 18 Jul 2019 12:50:23 +0200</lastBuildDate>
     
         <atom:link href="https://leahchung.netlify.com/rss.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Blog 17: It takes a village!!</title>
+      <link>https://leahchung.netlify.com/posts/day17/</link>
+      <pubDate>Thu, 18 Jul 2019 12:50:23 +0200</pubDate>
+      
+      <guid>https://leahchung.netlify.com/posts/day17/</guid>
+      <description>Today was a Haskell day. My current endeavors include foldr and foldl, and believe me: the going got tough. One thing that confused me is the following: Prelude&amp;gt; foldr const 0 ([1..3] ++ undefined)
+&amp;gt;1
+This works!
+(Note that simply concatenating undefined to a list throws an error, because the list - in its entirety - is evaluated, and the (++) function requires two list arguments.)
+(Also note that const takes two arguments and returns the first argument.</description>
+    </item>
     
     <item>
       <title>Blog 16: New plans</title>
