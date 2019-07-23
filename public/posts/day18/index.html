@@ -2,27 +2,19 @@
 <html lang='en'><head>
   <meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'>
-<meta name='description' content='Today was a Haskell day. My current endeavors include foldr and foldl, and believe me: the going got tough. One thing that confused me is the following: Prelude&gt; foldr const 0 ([1..3] &#43;&#43; undefined)
-&gt;1
-This works!
-(Note that simply concatenating undefined to a list throws an error, because the list - in its entirety - is evaluated, and the (&#43;&#43;) function requires two list arguments.)
-(Also note that const takes two arguments and returns the first argument.'>
+<meta name='description' content='I first started today with a kata, in which we are creating a simple assembly code parser. Kay had brought up that we should start our katas by discussing a goal, which is something that we overlooked before. Our current code supports the &ldquo;mov&rdquo; (move an integer value into some register), &ldquo;dec&rdquo; (decrement the value contained in some register), &ldquo;inc&rdquo; (increment the value in some register), and &ldquo;jnz&rdquo; (&ldquo;jump not zero&rdquo;: jump some number of instructions forward or backward as long as some register does not contain 0) commands.'>
 <meta name='theme-color' content='#ffcd00'>
 
-<meta property='og:title' content='Post 17: It takes a village!! • Leah&#39;s apprenticeship'>
-<meta property='og:description' content='Today was a Haskell day. My current endeavors include foldr and foldl, and believe me: the going got tough. One thing that confused me is the following: Prelude&gt; foldr const 0 ([1..3] &#43;&#43; undefined)
-&gt;1
-This works!
-(Note that simply concatenating undefined to a list throws an error, because the list - in its entirety - is evaluated, and the (&#43;&#43;) function requires two list arguments.)
-(Also note that const takes two arguments and returns the first argument.'>
-<meta property='og:url' content='https://leahchung.netlify.com/posts/day17/'>
+<meta property='og:title' content='Post 18: Good practices • Leah&#39;s apprenticeship'>
+<meta property='og:description' content='I first started today with a kata, in which we are creating a simple assembly code parser. Kay had brought up that we should start our katas by discussing a goal, which is something that we overlooked before. Our current code supports the &ldquo;mov&rdquo; (move an integer value into some register), &ldquo;dec&rdquo; (decrement the value contained in some register), &ldquo;inc&rdquo; (increment the value in some register), and &ldquo;jnz&rdquo; (&ldquo;jump not zero&rdquo;: jump some number of instructions forward or backward as long as some register does not contain 0) commands.'>
+<meta property='og:url' content='https://leahchung.netlify.com/posts/day18/'>
 <meta property='og:site_name' content='Leah&#39;s apprenticeship'>
-<meta property='og:type' content='article'><meta property='article:section' content='posts'><meta property='article:published_time' content='2019-07-18T12:50:23&#43;02:00'/><meta property='article:modified_time' content='2019-07-18T12:50:23&#43;02:00'/><meta name='twitter:card' content='summary'>
+<meta property='og:type' content='article'><meta property='article:section' content='posts'><meta property='article:published_time' content='2019-07-23T12:50:23&#43;02:00'/><meta property='article:modified_time' content='2019-07-23T12:50:23&#43;02:00'/><meta name='twitter:card' content='summary'>
 
 <meta name="generator" content="Hugo 0.55.6" />
 
-  <title>Post 17: It takes a village!! • Leah&#39;s apprenticeship</title>
-  <link rel='canonical' href='https://leahchung.netlify.com/posts/day17/'>
+  <title>Post 18: Good practices • Leah&#39;s apprenticeship</title>
+  <link rel='canonical' href='https://leahchung.netlify.com/posts/day18/'>
   
   
   <link rel='icon' href='/favicon.ico'>
@@ -125,7 +117,7 @@ if (!doNotTrack) {
     <style>.widget-breadcrumbs li:after{content:'\2f '}</style>
   <section class='widget widget-breadcrumbs sep-after'>
     <nav id='breadcrumbs'>
-      <ol><li><a href='/'>Leah&#39;s apprenticeship</a></li><li><a href='/posts/'>Posts</a></li><li><span>Post 17: It takes a village!!</span></li></ol>
+      <ol><li><a href='/'>Leah&#39;s apprenticeship</a></li><li><a href='/posts/'>Posts</a></li><li><span>Post 18: Good practices</span></li></ol>
     </nav>
   </section>
 <script type="application/javascript">
@@ -161,7 +153,7 @@ if (!doNotTrack) {
   <header class='header entry-header'>
   <div class='container sep-after'>
     <div class='header-info'>
-      <h1 class='title'>Post 17: It takes a village!!</h1>
+      <h1 class='title'>Post 18: Good practices</h1>
       
 
     </div>
@@ -175,7 +167,7 @@ if (!doNotTrack) {
   
 </svg>
 <span class='screen-reader-text'>Posted on </span>
-  <time class='entry-date' datetime='2019-07-18T12:50:23&#43;02:00'>2019, Jul 18</time>
+  <time class='entry-date' datetime='2019-07-23T12:50:23&#43;02:00'>2019, Jul 23</time>
 </span>
 
   
@@ -200,63 +192,42 @@ if (!doNotTrack) {
   
 
   <div class='container entry-content'>
-  <p>Today was a Haskell day. My current endeavors include foldr and foldl, and believe me: the going got tough.
+  <p>I first started today with a kata, in which we are creating a simple assembly code parser. Kay had brought up that we should start our katas by discussing a goal, which is something that we overlooked before. Our current code supports the &ldquo;mov&rdquo; (move an integer value into some register), &ldquo;dec&rdquo; (decrement the value contained in some register), &ldquo;inc&rdquo; (increment the value in some register), and &ldquo;jnz&rdquo; (&ldquo;jump not zero&rdquo;: jump some number of instructions forward or backward as long as some register does not contain 0) commands.
 <br>
 <br>
-One thing that confused me is the following:
+Today, we refactored our code. We created a state object which holds the registers, program counter (<i>pc</i>), error status, and the program (a list of <i>commands</i>). This is much more readable, and it is good design to wrap all of these attributes in one object. We then modified our functions to be contained in a dictionary, where the key is the command and the value is the function that handles this command. It looks like this:
 <br>
-<code>Prelude&gt; foldr const 0 ([1..3] ++ undefined)</code><br>
-<code>&gt;1</code><br>
-This works!<br>
-(Note that simply concatenating <i>undefined</i> to a list throws an error, because the list - in its entirety - is evaluated, and the (++) function requires two list arguments.)<br>
-(Also note that <i>const</i> takes two arguments and returns the first argument.)<br>
-(Also also note that foldr works like so: <br>
-<code>foldr f z (x:xs) = f x (foldr f z xs)</code>)<br>
+<code>const Interpreters = {<br>
+&emsp;&emsp;&ldquo;mov&rdquo;: movCommand,<br>
+&emsp;&emsp;&ldquo;inc&rdquo;: incCommand,<br>
+&emsp;&emsp;&ldquo;dec&rdquo;: decCommand,<br>
+&emsp;&emsp;&ldquo;jnz&rdquo;: jnzCommand<br>
+}
+</code>
 <br>
-Let&rsquo;s name our list ([1..3] ++ undefined) <i>lst</i>. Here is what happens first:
-<br>
-<code>foldr const 0 lst = const (head lst) (foldr const 0 (tail lst))</code>
-<br>
-Since the <i>const</i> function just ignores the second argument, 1 is returned.
-<br>
-<br>
-But, when I wrote this out on paper, I was getting so confused:<br>
-<code>(const 1 (const 2 (const 3 (const undefined 0))))</code><br>
-<i>Why doesnt &lsquo;const undefined 0&rsquo; throw an error?</i> Because it is never evaluated as the outer most parentheses are evaluated first, and <b>const just ignores the second argument</b> (bold for emphasis).
+That way, an instruction can be called like so:<br>
+<code>const command = commands[state.pc];<br>
+const [instruction, &hellip;args] = command.split(&rsquo; &lsquo;);<br>
+Interpreters[instruction](state, args);
+</code>
 <br>
 <br>
-As for foldl:<br>
-<code>Prelude&gt; foldl const 0 ([1..3] ++ undefined)</code><br>
-<code>&gt;*** Exception: Prelude.undefined<br>
-&gt;CallStack (from HasCallStack):<br>
-&gt;&emsp;&emsp;&emsp;error, called at libraries/base/GHC/Err.hs:78:14 in base:GHC.Err<br>
-&gt;&emsp;&emsp;&emsp;undefined, called at <interactive>:119:26 in interactive:Ghci20</code><br>
-This doesn&rsquo;t work!<br>
-Here&rsquo;s how it is written out on paper:
-<br>
-<code>((((1 `const` 0) `const` 2) `const` 3) `cons` undefined)</code>
-<br>
-Here, the outermost parentheses contain <i>undefined</i>, and therefore an error is thrown. (I put the `` around <i>const</i> to make it an infix operator for visual purposes. Otherwise, the expansion looks similar to that of foldr).
+Right now, we do not have a class object to wrap the state object and these methods into one thing. We discussed this, but it was brought up that because we only have one state instance, it might not be necessary to create this class object. Maybe this is still up for debate, because passing the state object with each call of these methods does not seem necessary either.
 <br>
 <br>
-This really confused me. I was thinking: <i>How does foldr know where the end of the list is without having to evaluate the undefined part and foldl doesn&rsquo;t? How does foldr know when to stop looking for more elements in the list and foldl doesn&rsquo;t?</i>
+It does feel more beneficial when we do the katas this way, because I am learning about design and programming with a goal other than to just solve the kata (this is not to say that we ignored good coding practices, but it wasn&rsquo;t specifically a goal that we discussed every day). Also, because this kata has many parts (where more instructions are added), it was a good idea to do the refactoring (kind of) in the beginning to make our lives easier later 😄
 <br>
 <br>
-But after some help from Lewis, Frank, Francesco, and Daniel (and God (kidding)), it all makes sense. It was funny to see the confusion this question caused, but it thankfully came to a resolution 😄
-<br></p>
-
-<p>Tomorrow I will (start my day at the Ausländerbehörde at 7:30*, then) implement some functions (which I already completed with recursion) using folds such as <i>myOr</i> (a function that applies logical or to a list of booleans), <i>myAny</i> (a function that returns whether or not some value in a list meets a certain condition), and <i>squish</i> (which flattens a list of lists into one list). It will be pretty tough to get out of the recursive mindset and implement these functions with folds, but I&rsquo;m sure I&rsquo;ll come out alive 😅
+I also worked on Docker today. I worked on the tutorial found <a href="https://docs.docker.com/get-started/">here</a>. I am just not sure how much of the tutorial is applicable to the deployment process at HolidayCheck because of dust and kubernetes. Peri gave me and Markus the Dust platform training, and I surprisingly did not have many questions during the training. But, more and more questions arose as I was completing this docker tutorial and as I began the process of deploying the Hello World app (as the first step in the Heartbeat monitor journey). More on this tomorrow :)
 <br>
 <br>
-I will also do some research on the testing pyramid and Docker (whether that be using online or human sources).
+I ended my day with a meeting with Álvaro (oh, and writing this blog post) concerning the whole compensation process. I learned a lot about his team&rsquo;s tenets, how/when/why salaries increase at HolidayCheck, and the north of Spain 🌄.
 <br>
 <br>
-Signing off! 👋
+See you tomorrow 👋
 <br>
 <br>
-<br>
-<br>
-* When I was at the Ausländerbehörde the other day, I ended up waiting in the wrong line for 1.5 hours, only to get to the correct place for Blue Card applications and be told that there were no more spots for the day. At first I was really upset and annoyed that I couldn&rsquo;t get an appointment, but now I realize that maybe it was a blessing because, in said correct place, I saw people wearing suits, and I was wearing running shorts and a t-shirt.
+P.S. Sorry I&rsquo;ve been MIA the past few (business) days. 😅
 <br>
 <br>
 <br></p>
@@ -289,7 +260,7 @@ Signing off! 👋
 
 <nav class='entry-nav'>
   <div class='container'><div class='prev-entry sep-before'>
-      <a href='/posts/day16/'>
+      <a href='/posts/day17/'>
         <span aria-hidden='true'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
   
   <line x1="20" y1="12" x2="4" y2="12"/>
@@ -297,17 +268,7 @@ Signing off! 👋
   
 </svg>
  Previous</span>
-        <span class='screen-reader-text'>Previous post: </span>Blog 16: New plans</a>
-    </div><div class='next-entry sep-before'>
-      <a href='/posts/day18/'>
-        <span class='screen-reader-text'>Next post: </span>Post 18: Good practices<span aria-hidden='true'>Next <svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
-  
-  <line x1="4" y1="12" x2="20" y2="12"/>
-  <polyline points="14 6 20 12 14 18"/>
-  
-</svg>
-</span>
-      </a>
+        <span class='screen-reader-text'>Previous post: </span>Post 17: It takes a village!!</a>
     </div></div>
 </nav>
 

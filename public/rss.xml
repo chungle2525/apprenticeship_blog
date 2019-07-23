@@ -4,13 +4,22 @@
     <link>https://leahchung.netlify.com/</link>
     <description>Recent content on Leah&#39;s apprenticeship</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 18 Jul 2019 12:50:23 +0200</lastBuildDate>
+    <lastBuildDate>Tue, 23 Jul 2019 12:50:23 +0200</lastBuildDate>
     
         <atom:link href="https://leahchung.netlify.com/rss.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Blog 17: It takes a village!!</title>
+      <title>Post 18: Good practices</title>
+      <link>https://leahchung.netlify.com/posts/day18/</link>
+      <pubDate>Tue, 23 Jul 2019 12:50:23 +0200</pubDate>
+      
+      <guid>https://leahchung.netlify.com/posts/day18/</guid>
+      <description>I first started today with a kata, in which we are creating a simple assembly code parser. Kay had brought up that we should start our katas by discussing a goal, which is something that we overlooked before. Our current code supports the &amp;ldquo;mov&amp;rdquo; (move an integer value into some register), &amp;ldquo;dec&amp;rdquo; (decrement the value contained in some register), &amp;ldquo;inc&amp;rdquo; (increment the value in some register), and &amp;ldquo;jnz&amp;rdquo; (&amp;ldquo;jump not zero&amp;rdquo;: jump some number of instructions forward or backward as long as some register does not contain 0) commands.</description>
+    </item>
+    
+    <item>
+      <title>Post 17: It takes a village!!</title>
       <link>https://leahchung.netlify.com/posts/day17/</link>
       <pubDate>Thu, 18 Jul 2019 12:50:23 +0200</pubDate>
       

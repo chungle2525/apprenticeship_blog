@@ -30,7 +30,7 @@ But, when I wrote this out on paper, I was getting so confused:<br>
 <br>
 <br>
 As for foldl:<br>
-<code>Prelude> foldr const 0 ([1..3] ++ undefined)</code><br>
+<code>Prelude> foldl const 0 ([1..3] ++ undefined)</code><br>
 <code>>*** Exception: Prelude.undefined<br>
 >CallStack (from HasCallStack):<br>
 >&emsp;&emsp;&emsp;error, called at libraries/base/GHC/Err.hs:78:14 in base:GHC.Err<br>

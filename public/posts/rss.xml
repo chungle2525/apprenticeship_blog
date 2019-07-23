@@ -4,13 +4,61 @@
     <link>https://leahchung.netlify.com/posts/</link>
     <description>Recent content in Posts on Leah&#39;s apprenticeship</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 18 Jul 2019 12:50:23 +0200</lastBuildDate>
+    <lastBuildDate>Tue, 23 Jul 2019 12:50:23 +0200</lastBuildDate>
     
         <atom:link href="https://leahchung.netlify.com/posts/rss.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Blog 17: It takes a village!!</title>
+      <title>Post 18: Good practices</title>
+      <link>https://leahchung.netlify.com/posts/day18/</link>
+      <pubDate>Tue, 23 Jul 2019 12:50:23 +0200</pubDate>
+      
+      <guid>https://leahchung.netlify.com/posts/day18/</guid>
+      <description>&lt;p&gt;I first started today with a kata, in which we are creating a simple assembly code parser. Kay had brought up that we should start our katas by discussing a goal, which is something that we overlooked before. Our current code supports the &amp;ldquo;mov&amp;rdquo; (move an integer value into some register), &amp;ldquo;dec&amp;rdquo; (decrement the value contained in some register), &amp;ldquo;inc&amp;rdquo; (increment the value in some register), and &amp;ldquo;jnz&amp;rdquo; (&amp;ldquo;jump not zero&amp;rdquo;: jump some number of instructions forward or backward as long as some register does not contain 0) commands.
+&lt;br&gt;
+&lt;br&gt;
+Today, we refactored our code. We created a state object which holds the registers, program counter (&lt;i&gt;pc&lt;/i&gt;), error status, and the program (a list of &lt;i&gt;commands&lt;/i&gt;). This is much more readable, and it is good design to wrap all of these attributes in one object. We then modified our functions to be contained in a dictionary, where the key is the command and the value is the function that handles this command. It looks like this:
+&lt;br&gt;
+&lt;code&gt;const Interpreters = {&lt;br&gt;
+&amp;emsp;&amp;emsp;&amp;ldquo;mov&amp;rdquo;: movCommand,&lt;br&gt;
+&amp;emsp;&amp;emsp;&amp;ldquo;inc&amp;rdquo;: incCommand,&lt;br&gt;
+&amp;emsp;&amp;emsp;&amp;ldquo;dec&amp;rdquo;: decCommand,&lt;br&gt;
+&amp;emsp;&amp;emsp;&amp;ldquo;jnz&amp;rdquo;: jnzCommand&lt;br&gt;
+}
+&lt;/code&gt;
+&lt;br&gt;
+That way, an instruction can be called like so:&lt;br&gt;
+&lt;code&gt;const command = commands[state.pc];&lt;br&gt;
+const [instruction, &amp;hellip;args] = command.split(&amp;rsquo; &amp;lsquo;);&lt;br&gt;
+Interpreters[instruction](state, args);
+&lt;/code&gt;
+&lt;br&gt;
+&lt;br&gt;
+Right now, we do not have a class object to wrap the state object and these methods into one thing. We discussed this, but it was brought up that because we only have one state instance, it might not be necessary to create this class object. Maybe this is still up for debate, because passing the state object with each call of these methods does not seem necessary either.
+&lt;br&gt;
+&lt;br&gt;
+It does feel more beneficial when we do the katas this way, because I am learning about design and programming with a goal other than to just solve the kata (this is not to say that we ignored good coding practices, but it wasn&amp;rsquo;t specifically a goal that we discussed every day). Also, because this kata has many parts (where more instructions are added), it was a good idea to do the refactoring (kind of) in the beginning to make our lives easier later 😄
+&lt;br&gt;
+&lt;br&gt;
+I also worked on Docker today. I worked on the tutorial found &lt;a href=&#34;https://docs.docker.com/get-started/&#34;&gt;here&lt;/a&gt;. I am just not sure how much of the tutorial is applicable to the deployment process at HolidayCheck because of dust and kubernetes. Peri gave me and Markus the Dust platform training, and I surprisingly did not have many questions during the training. But, more and more questions arose as I was completing this docker tutorial and as I began the process of deploying the Hello World app (as the first step in the Heartbeat monitor journey). More on this tomorrow :)
+&lt;br&gt;
+&lt;br&gt;
+I ended my day with a meeting with Álvaro (oh, and writing this blog post) concerning the whole compensation process. I learned a lot about his team&amp;rsquo;s tenets, how/when/why salaries increase at HolidayCheck, and the north of Spain 🌄.
+&lt;br&gt;
+&lt;br&gt;
+See you tomorrow 👋
+&lt;br&gt;
+&lt;br&gt;
+P.S. Sorry I&amp;rsquo;ve been MIA the past few (business) days. 😅
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Post 17: It takes a village!!</title>
       <link>https://leahchung.netlify.com/posts/day17/</link>
       <pubDate>Thu, 18 Jul 2019 12:50:23 +0200</pubDate>
       
@@ -41,7 +89,7 @@ But, when I wrote this out on paper, I was getting so confused:&lt;br&gt;
 &lt;br&gt;
 &lt;br&gt;
 As for foldl:&lt;br&gt;
-&lt;code&gt;Prelude&amp;gt; foldr const 0 ([1..3] ++ undefined)&lt;/code&gt;&lt;br&gt;
+&lt;code&gt;Prelude&amp;gt; foldl const 0 ([1..3] ++ undefined)&lt;/code&gt;&lt;br&gt;
 &lt;code&gt;&amp;gt;*** Exception: Prelude.undefined&lt;br&gt;
 &amp;gt;CallStack (from HasCallStack):&lt;br&gt;
 &amp;gt;&amp;emsp;&amp;emsp;&amp;emsp;error, called at libraries/base/GHC/Err.hs:78:14 in base:GHC.Err&lt;br&gt;
