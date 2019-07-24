@@ -4,19 +4,24 @@
   
   <url>
     <loc>https://leahchung.netlify.com/</loc>
-    <lastmod>2019-07-23T12:50:23+02:00</lastmod>
+    <lastmod>2019-07-24T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://leahchung.netlify.com/posts/day19/</loc>
+    <lastmod>2019-07-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://leahchung.netlify.com/posts/</loc>
+    <lastmod>2019-07-24T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://leahchung.netlify.com/posts/day18/</loc>
     <lastmod>2019-07-23T12:50:23+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://leahchung.netlify.com/posts/</loc>
-    <lastmod>2019-07-23T12:50:23+02:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>

@@ -4,10 +4,19 @@
     <link>https://leahchung.netlify.com/</link>
     <description>Recent content on Leah&#39;s apprenticeship</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 23 Jul 2019 12:50:23 +0200</lastBuildDate>
+    <lastBuildDate>Wed, 24 Jul 2019 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://leahchung.netlify.com/rss.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Post 19: Interview Blues (and deployment whew&#39;s)</title>
+      <link>https://leahchung.netlify.com/posts/day19/</link>
+      <pubDate>Wed, 24 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://leahchung.netlify.com/posts/day19/</guid>
+      <description>I wanted to start this blog post with a relfection on the Software Crafter chapter about interviews. Sandro talks about how software crafters should (and shouldn&amp;rsquo;t) interview cadidates. He writes that having phone interviews, writing code on paper or a white board, and only testing algorithmic knowlege or easily google-able problems (as opposed to giving a problem closely related to the actual work done during the job) are recipes for disaster.</description>
+    </item>
     
     <item>
       <title>Post 18: Good practices</title>
