@@ -4,10 +4,44 @@
     <link>https://leahchung.netlify.com/posts/</link>
     <description>Recent content in Posts on Leah&#39;s apprenticeship</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 24 Jul 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 30 Jul 2019 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://leahchung.netlify.com/posts/rss.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Post 20: Async nightmares!!!!</title>
+      <link>https://leahchung.netlify.com/posts/day20/</link>
+      <pubDate>Tue, 30 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://leahchung.netlify.com/posts/day20/</guid>
+      <description>&lt;p&gt;Hello to all 😄
+&lt;br&gt;
+&lt;br&gt;
+The past few days have been spent working on a chrome extension. The purpose of this chrome extension is to be able to rotate between a set of URLs on the heartbeat monitors to give employees more insight on what&amp;rsquo;s happening at HolidayCheck.
+&lt;br&gt;
+&lt;br&gt;
+Now, you&amp;rsquo;re probably thinking &lt;i&gt;an extension that rotates between tabs already exists&lt;/i&gt;, and you&amp;rsquo;d be correct. But we want &lt;i&gt;this&lt;/i&gt; extension to get some links from &lt;i&gt;somewhere&lt;/i&gt;, open them up automatically, and &lt;i&gt;then&lt;/i&gt; rotate between those tabs. Manually opening tabs every day for every monitor would be painful. So, up until yesterday, my extension opened specific urls (found in the code itself) in their own tab, and rotated between the tabs. Yesterday I attempted to put these links in an excel file in my One Drive, give my extension access to this file, and then use the Microsoft Graph API to fetch the data inside this file. Sadly, it didn&amp;rsquo;t work. My app cannot be authorized to access any files unless it is logged in as someone, which would also be painful to do on all of the monitors.
+&lt;br&gt;
+&lt;br&gt;
+So today I migrated this url file to good old Google Sheets. You can actually &lt;i&gt;easily&lt;/i&gt; turn this Google Sheets document into an endpoint that serves you JSON. It&amp;rsquo;s quite cool. Check it out &lt;a href=&#34;https://medium.com/@scottcents/how-to-convert-google-sheets-to-json-in-just-3-steps-228fe2c24e6&#34;&gt;here&lt;/a&gt;.
+&lt;br&gt;
+&lt;br&gt;
+But of course things never pan out that easy. Because I have little experience with asynchronous things (for lack of a better term), I was accessing a dictionary of urls that didn&amp;rsquo;t have what I needed because the GET request to my Google Sheets didn&amp;rsquo;t finish yet. Bad, bad, bad. I should&amp;rsquo;ve known better. I was just going crazy because I initialized my dictionary with dummy values, printed it out, and then printed the keys. When I extended the dictionary in the console, the urls were indeed there, but they were not being printed out in the place where I printed the keys. So it was printing these things when the urls weren&amp;rsquo;t added yet, then adding the urls by the time I got there to extend the dictionary object 🥵
+&lt;br&gt;
+&lt;br&gt;
+With Sebastian&amp;rsquo;s help with promises, I got the functionality I wanted (and much, much cleaner code). But of course things never pan out that easy&amp;hellip;
+&lt;br&gt;
+&lt;br&gt;
+In the sheet of URLs, a duration can also be included in an entry. This represents, in milliseconds, how long a url should be displayed. I want to create a for loop (&lt;i&gt;I think&lt;/i&gt;) that has a promise in it (&lt;i&gt;I think&lt;/i&gt;) so that the url does not change until the previous url has been shown for the desired amount of time. I tried a solution that used recursion, but since I want to infinitely rotate the urls (until the browser window is closed), this creates stacks on stacks on stacks.
+&lt;br&gt;
+&lt;br&gt;
+Tomorrow, I will read about promises and hopefully solve this problem.
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Post 19: Interview Blues (and deployment whew&#39;s)</title>

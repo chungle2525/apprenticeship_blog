@@ -2,19 +2,19 @@
 <html lang='en'><head>
   <meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'>
-<meta name='description' content='I wanted to start this blog post with a relfection on the Software Crafter chapter about interviews. Sandro talks about how software crafters should (and shouldn&rsquo;t) interview cadidates. He writes that having phone interviews, writing code on paper or a white board, and only testing algorithmic knowlege or easily google-able problems (as opposed to giving a problem closely related to the actual work done during the job) are recipes for disaster.'>
+<meta name='description' content='Hello to all 😄 The past few days have been spent working on a chrome extension. The purpose of this chrome extension is to be able to rotate between a set of URLs on the heartbeat monitors to give employees more insight on what&rsquo;s happening at HolidayCheck. Now, you&rsquo;re probably thinking an extension that rotates between tabs already exists, and you&rsquo;d be correct. But we want this extension to get some links from somewhere, open them up automatically, and then rotate between those tabs.'>
 <meta name='theme-color' content='#ffcd00'>
 
-<meta property='og:title' content='Post 19: Interview Blues (and deployment whew&#39;s) • Leah&#39;s apprenticeship'>
-<meta property='og:description' content='I wanted to start this blog post with a relfection on the Software Crafter chapter about interviews. Sandro talks about how software crafters should (and shouldn&rsquo;t) interview cadidates. He writes that having phone interviews, writing code on paper or a white board, and only testing algorithmic knowlege or easily google-able problems (as opposed to giving a problem closely related to the actual work done during the job) are recipes for disaster.'>
-<meta property='og:url' content='https://leahchung.netlify.com/posts/day19/'>
+<meta property='og:title' content='Post 20: Async nightmares!!!! • Leah&#39;s apprenticeship'>
+<meta property='og:description' content='Hello to all 😄 The past few days have been spent working on a chrome extension. The purpose of this chrome extension is to be able to rotate between a set of URLs on the heartbeat monitors to give employees more insight on what&rsquo;s happening at HolidayCheck. Now, you&rsquo;re probably thinking an extension that rotates between tabs already exists, and you&rsquo;d be correct. But we want this extension to get some links from somewhere, open them up automatically, and then rotate between those tabs.'>
+<meta property='og:url' content='https://leahchung.netlify.com/posts/day20/'>
 <meta property='og:site_name' content='Leah&#39;s apprenticeship'>
-<meta property='og:type' content='article'><meta property='article:section' content='posts'><meta property='article:published_time' content='2019-07-24T00:00:00Z'/><meta property='article:modified_time' content='2019-07-24T00:00:00Z'/><meta name='twitter:card' content='summary'>
+<meta property='og:type' content='article'><meta property='article:section' content='posts'><meta property='article:published_time' content='2019-07-30T00:00:00Z'/><meta property='article:modified_time' content='2019-07-30T00:00:00Z'/><meta name='twitter:card' content='summary'>
 
 <meta name="generator" content="Hugo 0.55.6" />
 
-  <title>Post 19: Interview Blues (and deployment whew&#39;s) • Leah&#39;s apprenticeship</title>
-  <link rel='canonical' href='https://leahchung.netlify.com/posts/day19/'>
+  <title>Post 20: Async nightmares!!!! • Leah&#39;s apprenticeship</title>
+  <link rel='canonical' href='https://leahchung.netlify.com/posts/day20/'>
   
   
   <link rel='icon' href='/favicon.ico'>
@@ -117,7 +117,7 @@ if (!doNotTrack) {
     <style>.widget-breadcrumbs li:after{content:'\2f '}</style>
   <section class='widget widget-breadcrumbs sep-after'>
     <nav id='breadcrumbs'>
-      <ol><li><a href='/'>Leah&#39;s apprenticeship</a></li><li><a href='/posts/'>Posts</a></li><li><span>Post 19: Interview Blues (and deployment whew&#39;s)</span></li></ol>
+      <ol><li><a href='/'>Leah&#39;s apprenticeship</a></li><li><a href='/posts/'>Posts</a></li><li><span>Post 20: Async nightmares!!!!</span></li></ol>
     </nav>
   </section>
 <script type="application/javascript">
@@ -153,7 +153,7 @@ if (!doNotTrack) {
   <header class='header entry-header'>
   <div class='container sep-after'>
     <div class='header-info'>
-      <h1 class='title'>Post 19: Interview Blues (and deployment whew&#39;s)</h1>
+      <h1 class='title'>Post 20: Async nightmares!!!!</h1>
       
 
     </div>
@@ -167,7 +167,7 @@ if (!doNotTrack) {
   
 </svg>
 <span class='screen-reader-text'>Posted on </span>
-  <time class='entry-date' datetime='2019-07-24T00:00:00Z'>2019, Jul 24</time>
+  <time class='entry-date' datetime='2019-07-30T00:00:00Z'>2019, Jul 30</time>
 </span>
 
   
@@ -178,7 +178,7 @@ if (!doNotTrack) {
   <polyline points="12 6 12 12 15 15"/>
   
 </svg>
-4 mins read
+3 mins read
 </span>
 
 
@@ -192,36 +192,28 @@ if (!doNotTrack) {
   
 
   <div class='container entry-content'>
-  <p>I wanted to start this blog post with a relfection on the Software Crafter chapter about interviews. Sandro talks about how software crafters should (and shouldn&rsquo;t) interview cadidates. He writes that having phone interviews, writing code on paper or a white board, and only testing algorithmic knowlege or easily google-able problems (as opposed to giving a problem closely related to the actual work done during the job) are recipes for disaster. Or, rather, <i>not</i> recipes for success.
+  <p>Hello to all 😄
 <br>
 <br>
-This chapter really surprised me because Sandro is talking down upon many interviewing techniques that I had experienced over, and over again while I was interviewing for my first full-time job just several months ago. I thought these methods were <i>good</i> and <i>normal</i>. I thought interviewing was something that will always feel like an uncomfortable and unnatural interrogation. I had a few great interviews where the interviewer was kind, personable, and did not make me feel like every word I spoke had the potential to kill me*. <i>I got lucky with those interviews because they were the exceptions</i>, I thought.
+The past few days have been spent working on a chrome extension. The purpose of this chrome extension is to be able to rotate between a set of URLs on the heartbeat monitors to give employees more insight on what&rsquo;s happening at HolidayCheck.
 <br>
 <br>
-But Sandro emphasizes that we should treat the candidate like a peer in order to have the highest potential to see what it is like to actually work <i>with</i> this person. And he reminds the reader that the candidate is also interviewing the company to see if he/she would enjoy working there.
+Now, you&rsquo;re probably thinking <i>an extension that rotates between tabs already exists</i>, and you&rsquo;d be correct. But we want <i>this</i> extension to get some links from <i>somewhere</i>, open them up automatically, and <i>then</i> rotate between those tabs. Manually opening tabs every day for every monitor would be painful. So, up until yesterday, my extension opened specific urls (found in the code itself) in their own tab, and rotated between the tabs. Yesterday I attempted to put these links in an excel file in my One Drive, give my extension access to this file, and then use the Microsoft Graph API to fetch the data inside this file. Sadly, it didn&rsquo;t work. My app cannot be authorized to access any files unless it is logged in as someone, which would also be painful to do on all of the monitors.
 <br>
 <br>
-I remember one technical interview (that surprisingly did not blatantly test an algorithm) where the question was incorrect. The interviewer wanted me to do something with converting US Dollars to Euros (I don&rsquo;t remember the exact problem), and the conversion rate was reversed (stating that in order to convert US Dollars to Euros, one must <i>multiply</i> by, for example, 1.2 instead of <i>divide</i>). When I brought up the mistake to the interviewer, I was really shocked to see his reaction. He was very taken aback and said &ldquo;oh, uh&hellip; yeah, you&rsquo;re right. Let&rsquo;s carry on with the correct way.&rdquo; But as I kept working through the problem, the interviewer acted very distant and did not seem to be paying full attention. After some time had passed, he finally said, &ldquo;honestly I have no idea if you&rsquo;re going in the right direction because my solution was based around multiplying the conversion rate instead of dividing. Can you start over and solve the problem by multiplying?&rdquo;. Of course I did what he asked and, as a result, did not get as far in solving the problem as I would have liked.
+So today I migrated this url file to good old Google Sheets. You can actually <i>easily</i> turn this Google Sheets document into an endpoint that serves you JSON. It&rsquo;s quite cool. Check it out <a href="https://medium.com/@scottcents/how-to-convert-google-sheets-to-json-in-just-3-steps-228fe2c24e6">here</a>.
 <br>
 <br>
-Leaving this interview, I was definitely annoyed by the interviewer. The problem for me is not about who was right and who was wrong. Nor was it about him asking me to solve the problem twice. The problem is that he was not able to accept a solution that was different from his own. He had me sovle the problem again just so my solution was more in-line with his. Was he testing to see if my solution would be the exact same as his? Would any solution different to his own result in a &ldquo;docking&rdquo; of points? Who knows?
+But of course things never pan out that easy. Because I have little experience with asynchronous things (for lack of a better term), I was accessing a dictionary of urls that didn&rsquo;t have what I needed because the GET request to my Google Sheets didn&rsquo;t finish yet. Bad, bad, bad. I should&rsquo;ve known better. I was just going crazy because I initialized my dictionary with dummy values, printed it out, and then printed the keys. When I extended the dictionary in the console, the urls were indeed there, but they were not being printed out in the place where I printed the keys. So it was printing these things when the urls weren&rsquo;t added yet, then adding the urls by the time I got there to extend the dictionary object 🥵
 <br>
 <br>
-In this situation, I would retrospectively say that this interviewer did not move on to the next round of <i>my</i> interviews. Of course I cannot judge a company based on one employee, but it still left a sour taste in my mouth.
+With Sebastian&rsquo;s help with promises, I got the functionality I wanted (and much, much cleaner code). But of course things never pan out that easy&hellip;
 <br>
 <br>
-On another note, today I worked on docker, dust, and dmc (oh my!) and I finally deployed my Hello World app! Hooray!!!!
-<br>
-I was having a problem where my dmc deploy command would just cause the possible dmc commands to be printed to the terminal, so I knew I was doing <i>something</i> wrong, but I didn&rsquo;t know what. I seeked others for help which led me closer to my goal, no doubt. But I was still stuck and I had no idea why! I finally sent out an S.O.S. to Peri, and he really did save my shi(p/t). Some problems were as follows: I was using the wrong dmc (😅), there was a typo in my command (silly mistake, but hard for me to catch because the command was so long - I also learned from Peri that it can be reduced by omitting things already included in the deploymate.json file), I had an incorrect health check path (&ldquo;/health&rdquo; instead of &ldquo;/_health&rdquo;), and there was a misallocation of memory (as npm start takes up a lot of memory. This is something that needs to be changed, but more on this tomorrow).
+In the sheet of URLs, a duration can also be included in an entry. This represents, in milliseconds, how long a url should be displayed. I want to create a for loop (<i>I think</i>) that has a promise in it (<i>I think</i>) so that the url does not change until the previous url has been shown for the desired amount of time. I tried a solution that used recursion, but since I want to infinitely rotate the urls (until the browser window is closed), this creates stacks on stacks on stacks.
 <br>
 <br>
-Now I will go to the grocery store and continue reading about microservices later tonight.
-<br>
-<br>
-Merry mittwoch!
-<br>
-<br>
-* <i>Dramatized</i>
+Tomorrow, I will read about promises and hopefully solve this problem.
 <br>
 <br>
 <br></p>
@@ -254,7 +246,7 @@ Merry mittwoch!
 
 <nav class='entry-nav'>
   <div class='container'><div class='prev-entry sep-before'>
-      <a href='/posts/day18/'>
+      <a href='/posts/day19/'>
         <span aria-hidden='true'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
   
   <line x1="20" y1="12" x2="4" y2="12"/>
@@ -262,17 +254,7 @@ Merry mittwoch!
   
 </svg>
  Previous</span>
-        <span class='screen-reader-text'>Previous post: </span>Post 18: Good practices</a>
-    </div><div class='next-entry sep-before'>
-      <a href='/posts/day20/'>
-        <span class='screen-reader-text'>Next post: </span>Post 20: Async nightmares!!!!<span aria-hidden='true'>Next <svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
-  
-  <line x1="4" y1="12" x2="20" y2="12"/>
-  <polyline points="14 6 20 12 14 18"/>
-  
-</svg>
-</span>
-      </a>
+        <span class='screen-reader-text'>Previous post: </span>Post 19: Interview Blues (and deployment whew&#39;s)</a>
     </div></div>
 </nav>
 

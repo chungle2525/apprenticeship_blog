@@ -4,10 +4,19 @@
     <link>https://leahchung.netlify.com/</link>
     <description>Recent content on Leah&#39;s apprenticeship</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 24 Jul 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 30 Jul 2019 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://leahchung.netlify.com/rss.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Post 20: Async nightmares!!!!</title>
+      <link>https://leahchung.netlify.com/posts/day20/</link>
+      <pubDate>Tue, 30 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://leahchung.netlify.com/posts/day20/</guid>
+      <description>Hello to all 😄 The past few days have been spent working on a chrome extension. The purpose of this chrome extension is to be able to rotate between a set of URLs on the heartbeat monitors to give employees more insight on what&amp;rsquo;s happening at HolidayCheck. Now, you&amp;rsquo;re probably thinking an extension that rotates between tabs already exists, and you&amp;rsquo;d be correct. But we want this extension to get some links from somewhere, open them up automatically, and then rotate between those tabs.</description>
+    </item>
     
     <item>
       <title>Post 19: Interview Blues (and deployment whew&#39;s)</title>
