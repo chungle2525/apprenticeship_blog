@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang='en'><head>
+  <meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='description' content='The last time you heard from me was when I was struggling with Javscript promises. Here&rsquo;s what I said about the problem in the previous post: &ldquo;In the sheet of URLs, a duration can also be included in an entry. This represents, in milliseconds, how long a url should be displayed. I want to create a for loop (I think) that has a promise in it (I think) so that the url does not change until the previous url has been shown for the desired amount of time.'>
+<meta name='theme-color' content='#ffcd00'>
+
+<meta property='og:title' content='Post 21: Promises vs. Async/await • Leah&#39;s apprenticeship'>
+<meta property='og:description' content='The last time you heard from me was when I was struggling with Javscript promises. Here&rsquo;s what I said about the problem in the previous post: &ldquo;In the sheet of URLs, a duration can also be included in an entry. This represents, in milliseconds, how long a url should be displayed. I want to create a for loop (I think) that has a promise in it (I think) so that the url does not change until the previous url has been shown for the desired amount of time.'>
+<meta property='og:url' content='https://leahchung.netlify.com/posts/post21/'>
+<meta property='og:site_name' content='Leah&#39;s apprenticeship'>
+<meta property='og:type' content='article'><meta property='article:section' content='posts'><meta property='article:published_time' content='2019-08-05T00:00:00Z'/><meta property='article:modified_time' content='2019-08-05T00:00:00Z'/><meta name='twitter:card' content='summary'>
+
+<meta name="generator" content="Hugo 0.55.6" />
+
+  <title>Post 21: Promises vs. Async/await • Leah&#39;s apprenticeship</title>
+  <link rel='canonical' href='https://leahchung.netlify.com/posts/post21/'>
+  
+  
+  <link rel='icon' href='/favicon.ico'>
+<link rel='stylesheet' href='/assets/css/main.6a060eb7.css'><link rel='stylesheet' href='/css/custom.css'><style>
+:root{--color-accent:#ffcd00;}
+</style>
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-143667056-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+  
+
+</head>
+<body class='page type-posts layout-rss has-sidebar'>
+
+  <div class='site'><div id='sidebar' class='sidebar'>
+  <a class='screen-reader-text' href='#main-menu'>Skip to Main Menu</a>
+
+  <div class='container'><section class='widget widget-about sep-after'>
+  <header>
+    
+    <div class='logo'>
+      <a href='/'>
+        <img src='/images/logo.png'>
+      </a>
+    </div>
+    
+    <h2 class='title site-title '>
+      <a href='/'>
+      Leah&#39;s apprenticeship
+      </a>
+    </h2>
+    <div class='desc'>
+    I&#39;m Leah, welcome to my blog! Here, I&#39;ll share my insights throughout my software engineer apprenticeship at HolidayCheck
+    </div>
+  </header>
+
+</section>
+<section class='widget widget-search sep-after'>
+  <header>
+    <h4 class='title widget-title'>Search</h4>
+  </header>
+
+  <form action='/search' id='search-form' class='search-form'>
+    <label>
+      <span class='screen-reader-text'>Search</span>
+      <input id='search-term' class='search-term' type='search' name='q' placeholder='Search&hellip;'>
+    </label></form>
+
+</section>
+<section class='widget widget-taxonomy_cloud sep-after'>
+  <header>
+    <h4 class='title widget-title'>Tags</h4>
+  </header>
+
+  <div class='container list-container'>
+  <ul class='list taxonomy-cloud'><span>Not a single Tag!</span></ul>
+</div>
+
+
+</section>
+</div>
+
+  <div class='sidebar-overlay'></div>
+</div><div class='main'><nav id='main-menu' class='menu main-menu' aria-label='Main Menu'>
+  <div class='container'>
+    <a class='screen-reader-text' href='#content'>Skip to Content</a>
+
+<button id='sidebar-toggler' class='sidebar-toggler' aria-controls='sidebar'>
+  <span class='screen-reader-text'>Toggle Sidebar</span>
+  <span class='open'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="3" y1="12" x2="21" y2="12" />
+  <line x1="3" y1="6" x2="21" y2="6" />
+  <line x1="3" y1="18" x2="21" y2="18" />
+  
+</svg>
+</span>
+  <span class='close'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="18" y1="6" x2="6" y2="18" />
+  <line x1="6" y1="6" x2="18" y2="18" />
+  
+</svg>
+</span>
+</button>
+    <ul></ul>
+  </div>
+</nav><div class='header-widgets'>
+        <div class='container'>
+    
+    <style>.widget-breadcrumbs li:after{content:'\2f '}</style>
+  <section class='widget widget-breadcrumbs sep-after'>
+    <nav id='breadcrumbs'>
+      <ol><li><a href='/'>Leah&#39;s apprenticeship</a></li><li><a href='/posts/'>Posts</a></li><li><span>Post 21: Promises vs. Async/await</span></li></ol>
+    </nav>
+  </section>
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-143667056-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+        </div>
+        <div class='container'>
+          <link href="" rel="alternate" type="application/rss+xml" title="Leah&#39;s apprenticeship" />
+        </div>
+      </div>
+
+      <header id='header' class='header site-header'>
+        <div class='container sep-after'>
+          <div class='header-info'>
+          </div>
+        </div>
+      </header>
+
+      <main id='content'>
+
+
+<article lang='en' class='entry'>
+  <header class='header entry-header'>
+  <div class='container sep-after'>
+    <div class='header-info'>
+      <h1 class='title'>Post 21: Promises vs. Async/await</h1>
+      
+
+    </div>
+    <div class='entry-meta'>
+  <span class='posted-on'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+  <line x1="16" y1="2" x2="16" y2="6"/>
+  <line x1="8" y1="2" x2="8" y2="6"/>
+  <line x1="3" y1="10" x2="21" y2="10"/>
+  
+</svg>
+<span class='screen-reader-text'>Posted on </span>
+  <time class='entry-date' datetime='2019-08-05T00:00:00Z'>2019, Aug 05</time>
+</span>
+
+  
+  
+<span class='reading-time'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <circle cx="12" cy="12" r="10"/>
+  <polyline points="12 6 12 12 15 15"/>
+  
+</svg>
+4 mins read
+</span>
+
+
+</div>
+
+
+  </div>
+</header>
+
+  
+  
+
+  <div class='container entry-content'>
+  <p><script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+<body onload="prettyprint()">
+The last time you heard from me was when I was struggling with Javscript promises. Here&rsquo;s what I said about the problem in the previous post:
+<br>
+<div style="margin-left: 1em;"">&ldquo;In the sheet of URLs, a duration can also be included in an entry. This represents, in milliseconds, how long a url should be displayed. I want to create a for loop (<i>I think</i>) that has a promise in it (<i>I think</i>) so that the url does not change until the previous url has been shown for the desired amount of time. I tried a solution that used recursion, but since I want to infinitely rotate the urls (until the browser window is closed), this creates stacks on stacks on stacks.&rdquo;</div>
+<br>
+I have learned 2 <b>grand</b> things since then: <br>
+&emsp;&emsp;1. I don&rsquo;t actually need to use promises here because there is nothing asynchronous happening, so setTimeout is our better friend here<br>
+&emsp;&emsp;2. Using setTimeout in a recursive function is good! There will only be one frame for the function on the stack at one time (<a href="https://develoger.com/settimeout-vs-setinterval-cff85142555b">https://develoger.com/settimeout-vs-setinterval-cff85142555b</a>)<br>
+<br>
+<br>
+So with these 2 things in mind, I got what I needed. I created a function <i>setDurations</i> where for a each tab, I call setTimeout with the specific tab&rsquo;s duration. After this duration has passed, the (recursive) callback function to switch to the next tab is called. Here is my code:
+<br>
+<pre class="prettyprint"><code>function setDurations (urlSettings, openTabs, tabIdx, time) {
+    setTimeout(function() {
+        chrome.tabs.update(openTabs[tabIdx].id, {active: true});
+        const nextTabIdx = (tabIdx + 1) % openTabs.length;
+        setDurations(urlSettings, openTabs, nextTabIdx, getDuration(urlSettings, openTabs[tabIdx].url));
+    }, time);
+}
+</pre></code>
+And it works like a charm 😄
+<br>
+<br>
+My next endeavor was to handle faulty urls in the google sheets document. My goal was to create a fetch request to the given url, and then open that url in a new tab if (and only if) the status returned is &ldquo;ok.&rdquo; When playing around with recursive promises again, I hoped that I could make this better. Because we want to move on to check the next url no matter the result of current fetch, a recursive call is needed in both the .then() and the .catch() blocks. I did not like that. Here&rsquo;s what I had (note that the &ldquo;async&rdquo; before the function definition makes it so the function returns a promise, with the returned value being the &ldquo;resolved&rdquo; value of the promise):
+<br>
+<pre class="prettyprint"><code>async function recursiveCheckUrls(entries, settings, index) {
+    if (index === entries.length) return settings;
+    let urlString = entries[index][&lsquo;gsx$url&rsquo;][&lsquo;$t&rsquo;];
+    let duration = entries[index][&lsquo;gsx$duration&rsquo;][&lsquo;$t&rsquo;];
+    fetch(urlString)
+        .then(() =&gt; {
+            settings[urlString] = duration;
+            recursiveCheckUrls(entries, settings, index + 1);
+        })
+        .catch((err) =&gt; {
+            console.log(urlString + &ldquo;: &ldquo; + err);
+            recursiveCheckUrls(entries, settings, index + 1);
+        });
+}
+</code></pre>
+While reading about other approaches, I came across the &ldquo;async/await&rdquo; method, which allowed for a non-recursive method:
+<br>
+<pre class="prettyprint"><code>async function checkUrls(entries, settings, index) {
+    for (let i = 0; i &lt;= entries.length; ++i) {
+        if (i === entries.length) return settings;
+        let urlString = entries[i][&lsquo;gsx$url&rsquo;][&lsquo;$t&rsquo;];
+        let duration = entries[i][&lsquo;gsx$duration&rsquo;][&lsquo;$t&rsquo;];
+        await fetch(urlString)
+            .then(() =&gt; {
+                settings[urlString] = duration;
+            })
+            .catch((err) =&gt; {
+                console.log(urlString + &ldquo;: &ldquo; + err);
+            });
+    }
+}
+</code></pre>
+So here, I wait for the current url to be fetched (and either added to the map of urls or not), and then move on to the next. Later, I showed my code to Ewa because she has been working a lot with promises and async/await. She told me that usually awaits are used to get rid of multiple .then() blocks. She sent me a really nice <a href="https://hackernoon.com/6-reasons-why-javascripts-async-await-blows-promises-away-tutorial-c7ec10518dd9">link</a>, too.<br><br>
+One thing this article talks about is nicer error handling, where all errors (synchronous and asyncronous) can be handled by one try/catch block when we use await. In my case, I want to stay in the function and continue as normal if an error is thrown, so I put a catch block in the for loop:
+<br>
+<pre class="prettyprint"><code>async function checkUrls(entries, settings, index) {
+    for (let i = 0; i &lt;= entries.length; ++i) {
+        if (i === entries.length) return settings;
+        let urlString = entries[i][&lsquo;gsx$url&rsquo;][&lsquo;$t&rsquo;];
+        let duration = entries[i][&lsquo;gsx$duration&rsquo;][&lsquo;$t&rsquo;];
+        try {
+            let response = await fetch(urlString);
+            if (response.ok) {
+                settings[urlString] = duration;
+            }
+        } catch (err) {
+            console.log(urlString + &ldquo;: &ldquo; + err);
+        }
+    }
+}
+</code></pre>
+This code is much nicer for me to read, though I&rsquo;m still searching for some improvements&hellip; (if you have any suggestions, please reach out 😄)
+<br>
+<br>
+That was a lot of code, but it was worth writing down here. Besides all of this refactoring, today I also read about testing chrome extensions. I set up Selenium to automatically open Chrome with the extension already installed. This took me much longer than anticipated. But now it works - and tomorrow I will actually start testing. My plan is to create a dummy set of urls, and then loop through the html of the open tabs to make sure that valid urls were opened, and those that are invalid were not.
+<br>
+<br>
+Until then, friends.
+<br>
+<br>
+<br>
+</body></p>
+
+</div>
+
+  
+<footer class='entry-footer'>
+  <div id="disqus_thread"></div>
+  <script>
+    
+
+    
+
+    (function() { 
+      var d = document, s = d.createElement('script');
+      s.src = 'https://https-leahchung-netlify-com-1.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+  <div class='container sep-before'>
+  </div>
+</footer>
+
+
+</article>
+
+<nav class='entry-nav'>
+  <div class='container'><div class='prev-entry sep-before'>
+      <a href='/posts/day20/'>
+        <span aria-hidden='true'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="20" y1="12" x2="4" y2="12"/>
+  <polyline points="10 18 4 12 10 6"/>
+  
+</svg>
+ Previous</span>
+        <span class='screen-reader-text'>Previous post: </span>Post 20: Async nightmares!!!!</a>
+    </div></div>
+</nav>
+
+
+
+
+      </main>
+
+      <footer id='footer' class='footer'>
+        <div class='container sep-before'><section class='widget widget-social_menu sep-after'><nav aria-label='Social Menu'>
+    <ul><li>
+        <a href='mailto:leah.chung@holidaycheck.com' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'>Contact via Email</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+  <polyline points="22,6 12,13 2,6"/>
+  
+</svg>
+</a>
+      </li></ul>
+  </nav>
+</section><div class='copyright'>
+  <p> &copy; 2017-2019 MunifTanjim </p>
+</div>
+
+        </div>
+      </footer>
+
+    </div>
+  </div><script>window.__assets_js_src="/assets/js/"</script>
+
+<script src='/assets/js/main.67d669ac.js'></script><script src='/js/custom.js'></script>
+
+</body>
+
+</html>
+

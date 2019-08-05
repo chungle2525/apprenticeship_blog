@@ -4,10 +4,107 @@
     <link>https://leahchung.netlify.com/posts/</link>
     <description>Recent content in Posts on Leah&#39;s apprenticeship</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 30 Jul 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 05 Aug 2019 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://leahchung.netlify.com/posts/rss.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Post 21: Promises vs. Async/await</title>
+      <link>https://leahchung.netlify.com/posts/post21/</link>
+      <pubDate>Mon, 05 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://leahchung.netlify.com/posts/post21/</guid>
+      <description>&lt;p&gt;&lt;script src=&#34;https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js&#34;&gt;&lt;/script&gt;
+&lt;body onload=&#34;prettyprint()&#34;&gt;
+The last time you heard from me was when I was struggling with Javscript promises. Here&amp;rsquo;s what I said about the problem in the previous post:
+&lt;br&gt;
+&lt;div style=&#34;margin-left: 1em;&#34;&#34;&gt;&amp;ldquo;In the sheet of URLs, a duration can also be included in an entry. This represents, in milliseconds, how long a url should be displayed. I want to create a for loop (&lt;i&gt;I think&lt;/i&gt;) that has a promise in it (&lt;i&gt;I think&lt;/i&gt;) so that the url does not change until the previous url has been shown for the desired amount of time. I tried a solution that used recursion, but since I want to infinitely rotate the urls (until the browser window is closed), this creates stacks on stacks on stacks.&amp;rdquo;&lt;/div&gt;
+&lt;br&gt;
+I have learned 2 &lt;b&gt;grand&lt;/b&gt; things since then: &lt;br&gt;
+&amp;emsp;&amp;emsp;1. I don&amp;rsquo;t actually need to use promises here because there is nothing asynchronous happening, so setTimeout is our better friend here&lt;br&gt;
+&amp;emsp;&amp;emsp;2. Using setTimeout in a recursive function is good! There will only be one frame for the function on the stack at one time (&lt;a href=&#34;https://develoger.com/settimeout-vs-setinterval-cff85142555b&#34;&gt;https://develoger.com/settimeout-vs-setinterval-cff85142555b&lt;/a&gt;)&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+So with these 2 things in mind, I got what I needed. I created a function &lt;i&gt;setDurations&lt;/i&gt; where for a each tab, I call setTimeout with the specific tab&amp;rsquo;s duration. After this duration has passed, the (recursive) callback function to switch to the next tab is called. Here is my code:
+&lt;br&gt;
+&lt;pre class=&#34;prettyprint&#34;&gt;&lt;code&gt;function setDurations (urlSettings, openTabs, tabIdx, time) {
+    setTimeout(function() {
+        chrome.tabs.update(openTabs[tabIdx].id, {active: true});
+        const nextTabIdx = (tabIdx + 1) % openTabs.length;
+        setDurations(urlSettings, openTabs, nextTabIdx, getDuration(urlSettings, openTabs[tabIdx].url));
+    }, time);
+}
+&lt;/pre&gt;&lt;/code&gt;
+And it works like a charm 😄
+&lt;br&gt;
+&lt;br&gt;
+My next endeavor was to handle faulty urls in the google sheets document. My goal was to create a fetch request to the given url, and then open that url in a new tab if (and only if) the status returned is &amp;ldquo;ok.&amp;rdquo; When playing around with recursive promises again, I hoped that I could make this better. Because we want to move on to check the next url no matter the result of current fetch, a recursive call is needed in both the .then() and the .catch() blocks. I did not like that. Here&amp;rsquo;s what I had (note that the &amp;ldquo;async&amp;rdquo; before the function definition makes it so the function returns a promise, with the returned value being the &amp;ldquo;resolved&amp;rdquo; value of the promise):
+&lt;br&gt;
+&lt;pre class=&#34;prettyprint&#34;&gt;&lt;code&gt;async function recursiveCheckUrls(entries, settings, index) {
+    if (index === entries.length) return settings;
+    let urlString = entries[index][&amp;lsquo;gsx$url&amp;rsquo;][&amp;lsquo;$t&amp;rsquo;];
+    let duration = entries[index][&amp;lsquo;gsx$duration&amp;rsquo;][&amp;lsquo;$t&amp;rsquo;];
+    fetch(urlString)
+        .then(() =&amp;gt; {
+            settings[urlString] = duration;
+            recursiveCheckUrls(entries, settings, index + 1);
+        })
+        .catch((err) =&amp;gt; {
+            console.log(urlString + &amp;ldquo;: &amp;ldquo; + err);
+            recursiveCheckUrls(entries, settings, index + 1);
+        });
+}
+&lt;/code&gt;&lt;/pre&gt;
+While reading about other approaches, I came across the &amp;ldquo;async/await&amp;rdquo; method, which allowed for a non-recursive method:
+&lt;br&gt;
+&lt;pre class=&#34;prettyprint&#34;&gt;&lt;code&gt;async function checkUrls(entries, settings, index) {
+    for (let i = 0; i &amp;lt;= entries.length; ++i) {
+        if (i === entries.length) return settings;
+        let urlString = entries[i][&amp;lsquo;gsx$url&amp;rsquo;][&amp;lsquo;$t&amp;rsquo;];
+        let duration = entries[i][&amp;lsquo;gsx$duration&amp;rsquo;][&amp;lsquo;$t&amp;rsquo;];
+        await fetch(urlString)
+            .then(() =&amp;gt; {
+                settings[urlString] = duration;
+            })
+            .catch((err) =&amp;gt; {
+                console.log(urlString + &amp;ldquo;: &amp;ldquo; + err);
+            });
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+So here, I wait for the current url to be fetched (and either added to the map of urls or not), and then move on to the next. Later, I showed my code to Ewa because she has been working a lot with promises and async/await. She told me that usually awaits are used to get rid of multiple .then() blocks. She sent me a really nice &lt;a href=&#34;https://hackernoon.com/6-reasons-why-javascripts-async-await-blows-promises-away-tutorial-c7ec10518dd9&#34;&gt;link&lt;/a&gt;, too.&lt;br&gt;&lt;br&gt;
+One thing this article talks about is nicer error handling, where all errors (synchronous and asyncronous) can be handled by one try/catch block when we use await. In my case, I want to stay in the function and continue as normal if an error is thrown, so I put a catch block in the for loop:
+&lt;br&gt;
+&lt;pre class=&#34;prettyprint&#34;&gt;&lt;code&gt;async function checkUrls(entries, settings, index) {
+    for (let i = 0; i &amp;lt;= entries.length; ++i) {
+        if (i === entries.length) return settings;
+        let urlString = entries[i][&amp;lsquo;gsx$url&amp;rsquo;][&amp;lsquo;$t&amp;rsquo;];
+        let duration = entries[i][&amp;lsquo;gsx$duration&amp;rsquo;][&amp;lsquo;$t&amp;rsquo;];
+        try {
+            let response = await fetch(urlString);
+            if (response.ok) {
+                settings[urlString] = duration;
+            }
+        } catch (err) {
+            console.log(urlString + &amp;ldquo;: &amp;ldquo; + err);
+        }
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+This code is much nicer for me to read, though I&amp;rsquo;m still searching for some improvements&amp;hellip; (if you have any suggestions, please reach out 😄)
+&lt;br&gt;
+&lt;br&gt;
+That was a lot of code, but it was worth writing down here. Besides all of this refactoring, today I also read about testing chrome extensions. I set up Selenium to automatically open Chrome with the extension already installed. This took me much longer than anticipated. But now it works - and tomorrow I will actually start testing. My plan is to create a dummy set of urls, and then loop through the html of the open tabs to make sure that valid urls were opened, and those that are invalid were not.
+&lt;br&gt;
+&lt;br&gt;
+Until then, friends.
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;/body&gt;&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Post 20: Async nightmares!!!!</title>

@@ -4,10 +4,19 @@
     <link>https://leahchung.netlify.com/</link>
     <description>Recent content on Leah&#39;s apprenticeship</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 30 Jul 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 05 Aug 2019 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://leahchung.netlify.com/rss.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Post 21: Promises vs. Async/await</title>
+      <link>https://leahchung.netlify.com/posts/post21/</link>
+      <pubDate>Mon, 05 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://leahchung.netlify.com/posts/post21/</guid>
+      <description>The last time you heard from me was when I was struggling with Javscript promises. Here&amp;rsquo;s what I said about the problem in the previous post: &amp;ldquo;In the sheet of URLs, a duration can also be included in an entry. This represents, in milliseconds, how long a url should be displayed. I want to create a for loop (I think) that has a promise in it (I think) so that the url does not change until the previous url has been shown for the desired amount of time.</description>
+    </item>
     
     <item>
       <title>Post 20: Async nightmares!!!!</title>
