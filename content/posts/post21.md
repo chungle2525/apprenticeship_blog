@@ -28,7 +28,7 @@ So with these 2 things in mind, I got what I needed. I created a function <i>set
 And it works like a charm :smile:
 <br>
 <br>
-My next endeavor was to handle faulty urls in the google sheets document. My goal was to create a fetch request to the given url, and then open that url in a new tab if (and only if) the status returned is "ok." When playing around with recursive promises again, I hoped that I could make this better. Because we want to move on to check the next url no matter the result of current fetch, a recursive call is needed in both the .then() and the .catch() blocks. I did not like that. Here's what I had (note that the "async" before the function definition makes it so the function returns a promise, with the returned value being the "resolved" value of the promise):
+My next endeavor was to handle faulty urls in the google sheets document. My goal was to create a fetch request to the given url, and then add that url to my set if (and only if) the status returned is "ok." When playing around with recursive promises again, I hoped that I could make this better. Because we want to move on to check the next url no matter the result of current fetch, a recursive call is needed in both the .then() and the .catch() blocks, which is not ideal. I could not get my recursive solution to work originally (more about this later), but here's what I came up with after some research (note that the "async" before the function definition makes it so the function returns a promise, with the returned value being the "resolved" value of the promise):
 <br>
 <pre class="prettyprint"><code>async function recursiveCheckUrls(entries, settings, index) {
     if (index === entries.length) return settings;
@@ -45,7 +45,7 @@ My next endeavor was to handle faulty urls in the google sheets document. My goa
         });
 }
 </code></pre>
-While reading about other approaches, I came across the "async/await" method, which allowed for a non-recursive method:
+While reading about other approaches, I came across the "async/await" method, which allowed for a non-recursive method (and also allowed me to understand why my recursive approach was not working!!):
 <br>
 <pre class="prettyprint"><code>async function checkUrls(entries, settings, index) {
 	for (let i = 0; i <= entries.length; ++i) {
