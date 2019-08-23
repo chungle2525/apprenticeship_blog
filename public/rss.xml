@@ -4,10 +4,19 @@
     <link>https://leahchung.netlify.com/</link>
     <description>Recent content on Leah&#39;s apprenticeship</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 05 Aug 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 23 Aug 2019 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://leahchung.netlify.com/rss.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Post 22: My week with UI/UX</title>
+      <link>https://leahchung.netlify.com/posts/post22/</link>
+      <pubDate>Fri, 23 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://leahchung.netlify.com/posts/post22/</guid>
+      <description>Hello - it&amp;rsquo;s been a minute hasn&amp;rsquo;t it!? The current status of the Chrome extension is &amp;ldquo;Under Review.&amp;rdquo; I gave my extension permission to access all urls (because any url could be entered to the Google Sheets document), and this leads to a longer review time. I don&amp;rsquo;t automatically see a way around this because asking someone to add the url permission to the code every time they want to add a site to the rotation is not ideal.</description>
+    </item>
     
     <item>
       <title>Post 21: Promises vs. Async/await</title>
