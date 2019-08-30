@@ -4,10 +4,19 @@
     <link>https://leahchung.netlify.com/</link>
     <description>Recent content on Leah&#39;s apprenticeship</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 23 Aug 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 30 Aug 2019 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://leahchung.netlify.com/rss.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Post 23: My week with CRM</title>
+      <link>https://leahchung.netlify.com/posts/post23/</link>
+      <pubDate>Fri, 30 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://leahchung.netlify.com/posts/post23/</guid>
+      <description>I spent this week with the CRM team. I first spoke with Joana, who is a Senior CRM Manager, and she gave me a rundown on what the CRM teams. She showed me the Epi tool that the team uses to create emails and define their recipients. She also showed me the amount of fields related to each user that they have to consider - and let me tell you, it is overwhelming.</description>
+    </item>
     
     <item>
       <title>Post 22: My week with UI/UX</title>
